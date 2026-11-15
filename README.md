@@ -6,11 +6,11 @@
 
 ## Deliverables
 
-| | Deliverable | Location |
-|---|---|---|
-| 1 | Google Colab notebook (runs top to bottom, all outputs saved) | [`deliverables/1_Colab_Notebook/VoltRelay_Analysis.ipynb`](deliverables/1_Colab_Notebook/VoltRelay_Analysis.ipynb) |
-| 2 | Analysis report (PDF, 31 pages) | [`deliverables/2_Analysis_Report/VoltRelay_Analysis_Report.pdf`](deliverables/2_Analysis_Report/VoltRelay_Analysis_Report.pdf) |
-| 3 | 3-minute video: slide deck and timed narration script (the team records the video from them) | [`deliverables/3_Video/`](deliverables/3_Video/) |
+|     | Deliverable                                                   | Location                                                                                                                       |
+| --- | ------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
+| 1   | Google Colab notebook (runs top to bottom, all outputs saved) | [`deliverables/1_Colab_Notebook/VoltRelay_Analysis.ipynb`](deliverables/1_Colab_Notebook/VoltRelay_Analysis.ipynb)             |
+| 2   | Analysis report (PDF, 31 pages)                               | [`deliverables/2_Analysis_Report/VoltRelay_Analysis_Report.pdf`](deliverables/2_Analysis_Report/VoltRelay_Analysis_Report.pdf) |
+| 3   | 3-minute video: slide deck and video                          | [`deliverables/3_Video/`](deliverables/3_Video/)                                                                               |
 
 ## The answer in one paragraph
 
@@ -51,22 +51,21 @@ traces back to two equipment problems, not to growth, so the budget should fix t
 
 ## Repository map
 
-| Folder | Contents |
-|---|---|
-| `deliverables/` | The three submission items (see above) |
-| `analysis/` | One script per question, in jupytext percent format (q0 data prep, q1–q8 analyses, q9 synthesis); `verify/` holds the independent re-derivations |
-| `src/` | Shared definitions (`common.py`), the audited cleaning pipeline (`clean.py`), notebook and report builders |
-| `outputs/` | Every figure, table and written finding, including the verification reports |
-| `deck/` | Builder for the video deck (pptxgenjs), its narration script and the data it uses |
-| `docs/` | Problem statement and the shared analysis brief |
-| `working/report/` | Markdown sources of the report |
+| Folder          | Contents                                                                                                                                         |
+| --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `deliverables/` | The three submission items (see above)                                                                                                           |
+| `analysis/`     | One script per question, in jupytext percent format (q0 data prep, q1–q8 analyses, q9 synthesis); `verify/` holds the independent re-derivations |
+| `src/`          | Shared definitions (`common.py`), the audited cleaning pipeline (`clean.py`), notebook and report builders                                       |
+| `outputs/`      | Every figure, table and written finding, including the verification reports                                                                      |
+| `docs/`         | Problem statement and the shared analysis brief                                                                                                  |
 
 ## Reproduce
 
-**Colab (simplest):** open the notebook with the badge above and choose *Runtime → Run all*. It downloads the organisers'
+**Colab (simplest):** open the notebook with the badge above and choose _Runtime → Run all_. It downloads the organisers'
 data from their public Google Drive folder and runs end to end (~10–15 minutes including the download).
 
 **Locally (Python 3.12):**
+
 ```bash
 pip install polars pyarrow pandas numpy scipy statsmodels scikit-learn lightgbm shap lifelines matplotlib seaborn nbformat nbconvert gdown
 # put the 8 CSVs from the organisers' Drive folder into "Hackathon Data Set _ Gradient/"
@@ -75,4 +74,5 @@ python analysis/q1_network_performance.py                 # ...each analysis scr
 python src/make_notebook.py                               # assemble and execute the notebook
 python src/make_report.py                                 # build the PDF report
 ```
+
 The dataset itself is not in this repository (836 MB; the clean event table alone is 228 MB).
