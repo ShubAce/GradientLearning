@@ -47,6 +47,7 @@ Thumbs.db
 desktop.ini
 ~$*
 deck
+working
 # Your recorded video: a 3-minute 1080p export is usually 20-80 MB and is fine to commit. GitHub rejects files over
 # 100 MB; if yours is larger, share it via Drive/YouTube instead and uncomment the next line.
 # deliverables/3_Video/*.mp4
