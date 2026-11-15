@@ -1,0 +1,359 @@
+metric,value
+H1 attempts x,2.403248729355326
+H1 swaps x,2.428711115932761
+H1 revenue x,2.6266542963048045
+H1 failures x,2.0668054539657534
+H1 avg monthly active riders x,2.182163634529374
+H1-24 failure rate %,7.042567917410738
+H1-25 failure rate %,6.056642245904071
+H1-24 cm1/swap,0.6361385299129638
+H1-24 cm2/swap,-17.427788932173645
+H1-24 wear/swap,37.68117565844071
+H1-24 fixed/swap,18.063927462086607
+H1-24 total cm2 per month (M),-2.0348221616167756
+Jul-Aug-24 cm1/swap,6.748975878118521
+Jul-Aug-24 cm2/swap,-7.148713125068728
+Jul-Aug-24 wear/swap,37.52566732020428
+Jul-Aug-24 fixed/swap,13.89768900318725
+Jul-Aug-24 total cm2 per month (M),-1.1091192669978505
+H1-25 cm1/swap,-6.391577674993083
+H1-25 cm2/swap,-17.871270075445715
+H1-25 wear/swap,53.02001945460304
+H1-25 fixed/swap,11.47969240045263
+H1-25 total cm2 per month (M),-5.067753076749129
+Q2-24 cm1/swap,0.948995119896734
+Q2-24 cm2/swap,-15.858738157475354
+Q2-24 wear/swap,37.6275629655013
+Q2-24 fixed/swap,16.807733277372087
+Q2-24 total cm2 per month (M),-1.990012612706585
+Q2-25 cm1/swap,-5.558699511988683
+Q2-25 cm2/swap,-17.322272085300053
+Q2-25 wear/swap,52.926031413978265
+Q2-25 fixed/swap,11.76357257331137
+Q2-25 total cm2 per month (M),-5.174768951402111
+Jan-24 -> Jun-25 swaps x,2.9292035398230087
+Jan-24 -> Jun-25 revenue x,3.1765469967423963
+Jan-24 revenue (M),6.198803397743225
+Jun-25 revenue (M),19.690790316497804
+Jan-24 active stations,90.0
+Jun-25 active stations,149.0
+Index Jun-25 swaps (H1-24 avg=100),259.6804768865339
+Index Jun-25 revenue,281.6164152816103
+Index Jun-25 riders,242.10243131452395
+Jan-24->Jun-25 failures x,6.256759879824359
+Jan-24->Jun-25 swaps x,2.9292035398230087
+Jan-24 fail rate %,3.996194979589575
+Jun-25 fail rate %,8.161425785077128
+Q1-24->Q1-25 failures x,2.4264760352618713
+Q1-24->Q1-25 swaps x,2.4845152471667085
+Q1-24 fail rate %,3.9815830767234153
+Q1-25 fail rate %,3.8922180592738886
+Q2-24->Q2-25 failures x,1.9448769462581617
+Q2-24->Q2-25 swaps x,2.3806684004027083
+Q2-24 fail rate %,9.524948571975314
+Q2-25 fail rate %,7.919205594622977
+H1-24->H1-25 failures x,2.0668054539657534
+H1-24->H1-25 swaps x,2.428711115932761
+H1-24 fail rate %,7.042567917410738
+H1-25 fail rate %,6.056642245904071
+Jun-24->Jun-25 failures x,1.8834701544455266
+Jun-24->Jun-25 swaps x,2.316595354523227
+Jun-24 fail rate %,9.853304085549768
+Jun-25 fail rate %,8.161425785077128
+May-24 fail rate %,11.92898895864906
+May-25 fail rate %,9.54077534361078
+May-24 stockout % of attempts,7.816242867818059
+May-24 abandoned % of attempts,3.8075550496197335
+Jul-Mar months fail rate range min %,3.817834161630873
+Jul-Mar months fail rate range max %,4.005637360324331
+"System error rate, all months min %",0.27235050325636473
+"System error rate, all months max %",0.31643989754106233
+"Cancel rate, all months min %",0.3946011737252986
+"Cancel rate, all months max %",0.45673899531388584
+Q1 network rate 2024 %,3.9815830767234153
+Q1 network rate 2025 %,3.8922180592738886
+Q1 within-Launch term pp,-0.0728048904496215
+Q1 new-station mix term pp,-0.016560126999905576
+Q1-25 new-station share of attempts %,25.65239658677846
+Q1-25 new-station fail rate %,3.9170272098129497
+Q1-25 Launch fail rate %,3.883658076982705
+"Q1 network change pp, paired-cluster CI lo",-0.16902336066127432
+"Q1 network change pp, paired-cluster CI hi",-0.011257588484301641
+"Q1 network change pp, unpaired CI lo",-0.18054609055771553
+"Q1 network change pp, unpaired CI hi",-0.0004302879308180152
+Q1 Launch pooled change pp,-0.09792499974071028
+Q1 Launch pooled change CI lo,-0.17937951014201373
+Q1 Launch pooled change CI hi,-0.018849598470498562
+Q1 Launch median station change pp,-0.11119857256200322
+Q1 Launch stations worse (n of 90),33.0
+Q1 Launch Wilcoxon p,0.03957892139165575
+Q1 Launch attempts growth %,84.54470911643601
+"Q1 Spearman(demand growth, fail change) rho",-0.06314359797505865
+Q1 Spearman p,0.5543531337799055
+Q2 network rate 2024 %,9.524948571975314
+Q2 network rate 2025 %,7.919205594622977
+Q2 within-Launch term pp,0.01905170667605588
+Q2 new-station mix term pp,-1.6247946840283929
+Q2-25 new-station share of attempts %,36.55841519767593
+Q2-25 new-station fail rate %,5.080569144576931
+Q2-25 Launch fail rate %,9.554978885271268
+"Q2 network change pp, paired-cluster CI lo",-2.0885187076328355
+"Q2 network change pp, paired-cluster CI hi",-1.1443959568626467
+"Q2 network change pp, unpaired CI lo",-2.9809484651368927
+"Q2 network change pp, unpaired CI hi",-0.2278222502943053
+Q2 Launch pooled change pp,0.030030313295953404
+Q2 Launch pooled change CI lo,-0.2101574277285575
+Q2 Launch pooled change CI hi,0.26351787770928914
+Q2 Launch median station change pp,-0.12150571077224302
+Q2 Launch stations worse (n of 90),41.0
+Q2 Launch Wilcoxon p,0.04487664508245712
+Q2 Launch attempts growth %,48.40453523417692
+"Q2 Spearman(demand growth, fail change) rho",-0.006527554842161583
+Q2 Spearman p,0.9513107608978821
+May-24 Launch fail rate %,11.92898895864906
+May-25 New fail rate %,5.555378002205213
+May-25 Launch fail rate %,11.89124237212261
+Q1-24 Launch Gen1 fail rate % (n=51),3.909562182415439
+Q1-24 Launch Gen2 fail rate % (n=39),4.078887147552806
+Q1-25 Launch Gen1 fail rate % (n=51),3.852675232307746
+Q1-25 Launch Gen2 fail rate % (n=39),3.93022009232517
+Q1-25 New Gen2 fail rate % (n=23),3.9603188220430194
+Q1-25 New Gen3 fail rate % (n=28),3.853700830519303
+Q2-24 Launch Gen1 fail rate % (n=51),12.643535472658431
+Q2-24 Launch Gen2 fail rate % (n=39),5.252416451713484
+Q2-25 Launch Gen1 fail rate % (n=51),12.408559915663748
+Q2-25 Launch Gen2 fail rate % (n=39),5.231516389787496
+Q2-25 New Gen2 fail rate % (n=23),5.871933096582441
+Q2-25 New Gen3 fail rate % (n=37),4.69353925096628
+Q2-25 Launch attempts per slot-day (days with activity),5.042753104883283
+Q2-25 Launch attempts per station-day,75.75335775335775
+Q2-25 New attempts per slot-day (days with activity),4.824948041782505
+Q2-25 New attempts per station-day,67.58393194706994
+Q2-25 Launch attempts per slot-day (calendar active days),5.042753104883283
+Q2-25 New attempts per slot-day (calendar active days),4.823906414442615
+Q2-25 Gen1 stations,51.0
+Q2-25 Gen1 share of stations %,34.0
+Q2-25 Gen1 share of attempts %,38.21731212273976
+Q2-25 Gen1 failures,46376.0
+Q2-25 network failures,77445.0
+Q2-25 Gen1 share of failures %,59.88249725611724
+Q2-25 hot-city Gen1 stations,36.0
+Q2-25 hot-city Gen1 share of failures %,52.58312350700497
+Q2-25 hot-city Gen1 fail rate %,15.200650981885236
+What-if Gen1->same-city Gen2: avoided failures Q2-25,20177.024103103187
+What-if network Q2-25 rate after %,5.855986508043632
+Q2-25 D9 Launch fail rate %,12.49692799213566
+Q2-25 D9 New fail rate %,4.4973467413292685
+Q2-25 D10 Launch fail rate %,10.726104521230875
+Q2-25 D10 New fail rate %,4.800643560430098
+"Q2-25 new-station share, deciles 1-3 min",0.5333333333333333
+"Q2-25 new-station share, deciles 1-3 max",0.7333333333333333
+"Q2-25 Spearman(decile demand, decile rate)",0.709090909090909
+Launch busiest 2024 quintile Q2 rate 2024 %,11.688082757341004
+Launch busiest 2024 quintile Q2 rate 2025 %,11.415271896215636
+Launch busiest quintile attempt growth %,65.62972584311359
+Launch quintiles max |change| pp,0.4853422424484961
+"Completed wait mean, min over months",4.048791236748206
+"Completed wait mean, max over months",4.070129508737224
+"Completed wait p90, min over months",7.05
+"Completed wait p90, max over months",7.1
+"Completed wait mean by hour, min",4.048461985321205
+"Completed wait mean by hour, max",4.087850800302162
+Ref wear Kyron 2W Rs/swap,103.87788381794331
+Ref wear Cellora 2W Rs/swap,31.854428223875896
+Ref wear Amptek 2W Rs/swap,31.88012011745514
+Ref wear Kyron 3W Rs/swap,107.19883030058945
+Ref wear Cellora 3W Rs/swap,76.19206066955644
+Kyron/Cellora 2W wear ratio,3.261018627861717
+Kyron share Aug-24 %,2.7812824699421106
+Kyron share Sep-24 %,18.888242932665403
+Kyron share Jun-25 %,24.33541339595509
+"Kyron share of 2W issues, Jan-24 %",0.0
+bridge H1-24->Jul-Aug-24 cm1 change,6.112837348205551
+bridge H1-24->Jul-Aug-24 Kyron share effect,0.008784744150026657
+bridge H1-24->Jul-Aug-24 price effect,5.152495594439887
+bridge H1-24->Jul-Aug-24 pilot effect,0.00017187239718567882
+bridge H1-24->Jul-Aug-24 kWh effect,0.7095274482106612
+bridge H1-24->Jul-Aug-24 discount effect,0.049629792133820225
+bridge H1-24->Jul-Aug-24 Kyron effect M/month,0.0013629486625045609
+bridge H1-24->Jul-Aug-24 cm2 start,-17.427788932173556
+bridge H1-24->Jul-Aug-24 cm2 end,-7.148713125068758
+bridge Jul-Aug-24->H1-25 cm1 change,-13.140553553111658
+bridge Jul-Aug-24->H1-25 Kyron share effect,-15.822451134897365
+bridge Jul-Aug-24->H1-25 price effect,0.0
+bridge Jul-Aug-24->H1-25 pilot effect,1.70571909613958
+bridge Jul-Aug-24->H1-25 kWh effect,2.530316233641381
+bridge Jul-Aug-24->H1-25 discount effect,-1.6884154917202776
+bridge Jul-Aug-24->H1-25 Kyron effect M/month,-4.486769831247656
+bridge Jul-Aug-24->H1-25 cm2 start,-7.148713125068758
+bridge Jul-Aug-24->H1-25 cm2 end,-17.871270075445743
+bridge H1-24->H1-25 cm1 change,-7.027716204906107
+bridge H1-24->H1-25 Kyron share effect,-15.814202084422574
+bridge H1-24->H1-25 price effect,5.122033732548387
+bridge H1-24->H1-25 pilot effect,1.7058966794678752
+bridge H1-24->H1-25 kWh effect,3.2475453701986265
+bridge H1-24->H1-25 discount effect,-1.6386974788506974
+bridge H1-24->H1-25 Kyron effect M/month,-4.4844306493793615
+bridge H1-24->H1-25 cm2 start,-17.427788932173556
+bridge H1-24->H1-25 cm2 end,-17.871270075445743
+bridge Q2-24->Q2-25 cm1 change,-6.507694631885515
+bridge Q2-24->Q2-25 Kyron share effect,-15.609570207997837
+bridge Q2-24->Q2-25 price effect,5.131081423950488
+bridge Q2-24->Q2-25 pilot effect,1.7292473330264804
+bridge Q2-24->Q2-25 kWh effect,3.675609276679416
+bridge Q2-24->Q2-25 discount effect,-1.62997555479681
+bridge Q2-24->Q2-25 Kyron effect M/month,-4.663124956086234
+bridge Q2-24->Q2-25 cm2 start,-15.858738157475306
+bridge Q2-24->Q2-25 cm2 end,-17.322272085300114
+ZipDrop discount rate Jul-Aug-24 %,12.000000241292092
+ZipDrop discount rate H1-25 %,28.000001001396974
+ZipDrop share of H1-25 swaps %,15.422185834294785
+ZipDrop share of partner-billed H1-25 swaps %,23.419724635533903
+"ZipDrop amendment cost Rs/swap (network, H1-25)",-1.6668463998161418
+ZipDrop amendment cost M/month (H1-25),-0.47266735578813
+Pilot net adjustment Rs per pilot-city swap,4.970542135362146
+Pilot net adjustment M/month (H1-25),0.4838184882534345
+Kyron 2W excess wear vs Cellora M/month (H1-25),-4.4842599006488895
+Kyron 2W swaps per month (H1-25),62290.666666666664
+Kyron 3W excess wear vs Cellora M/month (H1-25),-0.23137693021750505
+Kyron 3W swaps per month (H1-25),7478.833333333333
+H1-24 cm1 actual,0.6361385299130058
+H1-24 cm1 Kyron-at-Cellora,1.532051076088758
+H1-24 cm2 Kyron-at-Cellora,-16.5318763859978
+H1-24 uplift M/month,0.1046043597913577
+Jul-Aug-24 cm1 actual,6.748975878118557
+Jul-Aug-24 cm1 Kyron-at-Cellora,7.609738272396623
+Jul-Aug-24 cm2 Kyron-at-Cellora,-6.287950730790692
+Jul-Aug-24 uplift M/month,0.13354685509104475
+H1-25 cm1 actual,-6.391577674993101
+H1-25 cm1 Kyron-at-Cellora,10.237965656307624
+H1-25 cm2 Kyron-at-Cellora,-1.2417267441450175
+H1-25 uplift M/month,4.715636830866391
+Q2-25 cm1 actual,-5.558699511988717
+Q2-25 cm1 Kyron-at-Cellora,10.895635138887426
+Q2-25 cm2 Kyron-at-Cellora,-0.8679374344239701
+Q2-25 uplift M/month,4.915485661929485
+Jun-25 cm1 actual,-5.0408136780441035
+Jun-25 cm1 Kyron-at-Cellora,11.410598201352121
+Jun-25 cm2 Kyron-at-Cellora,-0.26602022369311307
+Jun-25 uplift M/month,4.9880022761854175
+"Sensitivity base vs event wear, max |diff| Rs/month",9.313225746154785e-09
+EOL70/s0 H1-25 cm1,-6.3915776749930755
+EOL70/s0 H1-25 cm2,-17.871270075445704
+EOL70/s0 chg Jul-Aug-24 -> H1-25,-13.140553553111616
+EOL70/s0 chg H1-24 -> H1-25,-7.027716204906028
+EOL70/s0 chg Q1-24 -> Q1-25 (no post-EOL issues),-7.591312159742975
+EOL70/s20 H1-25 cm1,4.21242621592752
+EOL70/s20 H1-25 cm2,-7.267266184525109
+EOL70/s20 chg Jul-Aug-24 -> H1-25,-10.041683126231849
+EOL70/s20 chg H1-24 -> H1-25,-3.9599474456735706
+EOL70/s20 chg Q1-24 -> Q1-25 (no post-EOL issues),-4.515076410592039
+EOL60/s0 H1-25 cm1,7.1390668876374095
+EOL60/s0 H1-25 cm2,-4.34062551281522
+EOL60/s0 chg Jul-Aug-24 -> H1-25,-9.187175070346157
+EOL60/s0 chg H1-24 -> H1-25,-3.1140261241038862
+EOL60/s0 chg Q1-24 -> Q1-25 (no post-EOL issues),-3.6665906465113896
+EOL60/s20 H1-25 cm1,15.03694186603195
+EOL60/s20 H1-25 cm2,3.5572494655793214
+EOL60/s20 chg Jul-Aug-24 -> H1-25,-6.878980340019437
+EOL60/s20 chg H1-24 -> H1-25,-0.8289953810318273
+EOL60/s20 chg Q1-24 -> Q1-25 (no post-EOL issues),-1.3752992000067525
+2W kWh/swap Jan-24,2.0686841011047363
+2W kWh/swap Jun-25,1.5710151195526123
+2W SoH in Jan-24,98.8614730834961
+2W SoH in Jun-25,75.35807037353516
+2W SoC in Jan-24,9.311310768127441
+2W SoC in Jun-25,9.263654708862305
+2W km Jan-24,70.5079345703125
+2W km Jun-25,47.965118408203125
+2W km change %,-31.972027402999647
+2W non-Kyron SoH in Jun-25,80.7838363647461
+2W non-Kyron km Jun-25,52.74262237548828
+2W km null share overall %,0.4048331093939138
+Q2-25 failures followed by own completed swap within 60 min %,5.307961942914371
+Q2-25 failures followed by own completed swap within 180 min %,11.515958147747938
+Q2-25 failures followed by own completed swap within 1440 min %,59.54062672956803
+Q2-25 failures never followed by a completed swap in Q2-25 %,2.013041513332042
+Q2-25 revenue per completed swap,64.88857817550797
+"Q2-25 failures x revenue/swap, Rs M (upper bound of lost revenue)",5.025295936802215
+Kyron 2W lifetime wear charged / purchase cost,1.3047634649184228
+Kyron 2W mean cycles issued,401.70758122743683
+Kyron 2W mean cycles to 70% EOL,308.9006470666387
+Kyron issues past EOL Apr-Jun-25 (count),122204.0
+"Kyron issues past EOL, May-25 %",70.15165786204732
+"Kyron issues past EOL, Jun-25 %",90.09134771766236
+Jul-Aug-24 cm1 base (uncapped),6.748975878118539
+Jul-Aug-24 cm1 (a) wear capped at EOL,6.748975878118539
+Jul-Aug-24 cm1 (b) post-EOL at Cellora wear,6.748975878118539
+Jul-Aug-24 post-EOL wear Rs per network swap,0.0
+Jul-Aug-24 post-EOL wear M/month,0.0
+Jul-Aug-24 cm2 (a) wear capped,-7.14871312506871
+H1-24 cm1 base (uncapped),0.6361385299130962
+H1-24 cm1 (a) wear capped at EOL,0.6361385299130962
+H1-24 cm1 (b) post-EOL at Cellora wear,0.6361385299130962
+H1-24 post-EOL wear Rs per network swap,0.0
+H1-24 post-EOL wear M/month,0.0
+H1-24 cm2 (a) wear capped,-17.42778893217351
+H1-25 cm1 base (uncapped),-6.391577674993119
+H1-25 cm1 (a) wear capped at EOL,1.1881627240322512
+H1-25 cm1 (b) post-EOL at Cellora wear,-1.1266668290375565
+H1-25 post-EOL wear Rs per network swap,7.57974039902537
+H1-25 post-EOL wear M/month,2.1493857216615577
+H1-25 cm2 (a) wear capped,-10.291529676420378
+Q2-24 cm1 base (uncapped),0.9489951198968232
+Q2-24 cm1 (a) wear capped at EOL,0.9489951198968232
+Q2-24 cm1 (b) post-EOL at Cellora wear,0.9489951198968232
+Q2-24 post-EOL wear Rs per network swap,0.0
+Q2-24 post-EOL wear M/month,0.0
+Q2-24 cm2 (a) wear capped,-15.858738157475264
+Q2-25 cm1 base (uncapped),-5.558699511988759
+Q2-25 cm1 (a) wear capped at EOL,8.831216109960847
+Q2-25 cm1 (b) post-EOL at Cellora wear,4.43657985669907
+Q2-25 post-EOL wear Rs per network swap,14.389915621949607
+Q2-25 post-EOL wear M/month,4.2987714433231154
+Q2-25 cm2 (a) wear capped,-2.932356463350523
+Jun-25 cm1 base (uncapped),-5.040813678044165
+Jun-25 cm1 (a) wear capped at EOL,18.042219884155255
+Jun-25 cm1 (b) post-EOL at Cellora wear,10.916721615162373
+Jun-25 post-EOL wear Rs per network swap,23.083033562199418
+Jun-25 post-EOL wear M/month,6.998683443924615
+Jun-25 cm2 (a) wear capped,6.365601459110069
+"Kyron excess wear Rs/swap H1-25, base",-16.629543331300795
+"Kyron excess wear M/month H1-25, base",-4.715636830866411
+"Kyron excess-wear change Jul-Aug-24 -> H1-25, base",-15.768780937022726
+"Kyron excess wear Rs/swap H1-25, (a) cap",-9.049802932275423
+"Kyron excess wear M/month H1-25, (a) cap",-2.566251109204853
+"Kyron excess-wear change Jul-Aug-24 -> H1-25, (a) cap",-8.189040537997354
+"Kyron excess wear Rs/swap H1-25, (b) replacement",-11.364632485345233
+"Kyron excess wear M/month H1-25, (b) replacement",-3.2226669397639336
+"Kyron excess-wear change Jul-Aug-24 -> H1-25, (b) replacement",-10.503870091067164
+Cellora 2W mean cycles to EOL,1006.6119871524639
+"Kyron 2W lifetime shortfall vs Cellora life, Rs M (one-off)",30.7018673962591
+"Kyron 2W total purchase cost, Rs M",44.294633
+bridge Q1-24->Q1-25 cm1 change,-7.5913121597430155
+bridge Q1-24->Q1-25 cm1 end,-7.318572950876711
+bridge Q1-24->Q1-25 Kyron share effect,-16.04195655116924
+bridge Q1-24->Q1-25 price effect,5.11182196059263
+bridge Q1-24->Q1-25 Kyron effect M/month,-4.30573600079773
+bridge Q1-24->Q1-25 cm2 end,-18.482306077997187
+bridge Jul-Aug-24->Oct-24-Mar-25 cm1 change,-14.283901713006959
+bridge Jul-Aug-24->Oct-24-Mar-25 cm1 end,-7.534925834888402
+bridge Jul-Aug-24->Oct-24-Mar-25 Kyron share effect,-15.99714610900745
+bridge Jul-Aug-24->Oct-24-Mar-25 price effect,0.0
+bridge Jul-Aug-24->Oct-24-Mar-25 Kyron effect M/month,-3.9874912981874875
+bridge Jul-Aug-24->Oct-24-Mar-25 cm2 end,-19.163670241679405
+Oct-24..Mar-25 post-EOL wear (should be 0),0.0
+"H1-25 2W kWh per swap, lowest populated SoH band",1.5065109729766846
+"H1-25 2W kWh per swap, highest populated SoH band",1.7755393981933594
+"H1-25 2W km per swap, lowest populated SoH band",34.89118194580078
+"H1-25 2W km per swap, highest populated SoH band",57.00644302368164
+2W Rs per km Jan-24,0.7912938391630897
+2W Rs per km Jun-25,1.265440022544185
+2W Rs per km change Jan-24 -> Jun-25 %,59.9203683782721
+2W Rs per km H1-24 -> H1-25 change %,42.3040982967684
+Kyron 2W issued SoH Sep-24,98.16641235351562
+Kyron 2W issued SoH Nov-24,92.42233276367188
+Cellora 2W issued SoH Sep-24,91.71686553955078
+Cellora 2W issued SoH Nov-24,89.80681610107422
+What-if Gen1->same-city Gen3: avoided failures Q2-25,28492.6465970148
+What-if Gen1->same-city Gen3: network Q2-25 rate after %,5.00566532298898

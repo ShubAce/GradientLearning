@@ -1,0 +1,8 @@
+definition,pairs,pct_of_attempts,share_offline_involved
+"D0 documented: same station+type+both batteries, <=180 s, >=1 offline_batch",0,0.0,
+"D1 ignore battery IDs: same station+type, <=180 s, >=1 offline_batch",1368,0.03585862266191557,1.0
+"D2 any sync mode: same station+type, <=180 s",5633,0.1476546940457386,0.24285460678146636
+"D3 any event type: same station, <=180 s",6373,0.1670519022108099,0.24085987760866154
+"D4 same returned pack (battery_in), <=300 s, any station",6,0.00015727466079787532,0.0
+D5 identical timestamp (0 s gap),33,0.0008650106343883143,0.12121212121212122
+"D6 wide window: same station+type, <=600 s",18654,0.48896692042059436,0.23769700868446444

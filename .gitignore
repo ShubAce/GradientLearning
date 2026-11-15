@@ -1,0 +1,52 @@
+# ---------------------------------------------------------------------------------------------
+# Team Praise · VoltRelay hackathon repo
+# Keeps: code (analysis/, src/, deck/), docs/, deliverables/, outputs/ (figures, tables, findings),
+#        working/report (report sources).
+# Drops: the dataset and derived data (too large for GitHub; the notebook re-downloads it from the
+#        organisers' Google Drive folder), build artefacts, local tooling, caches.
+# ---------------------------------------------------------------------------------------------
+
+# Dataset (836 MB raw CSVs) and derived Parquet (events.parquet alone is 228 MB > GitHub's 100 MB limit)
+Hackathon Data Set _ Gradient/
+data/
+*.csv.gz
+
+# Deck build artefacts
+deck/node_modules/
+deck/out/
+deck/.render.lock
+
+# Draft renders, superseded drafts and regenerable build intermediates
+working/deck_png/
+working/deck_contact_sheet.png
+working/old_deck_v1/
+working/ai_voice_backup/
+working/report/*.html
+
+# Local tooling (installed skills, editor/agent state, private Jupyter kernel)
+.claude/
+.agents/
+.playwright-mcp/
+.nbkernel/
+skills-lock.json
+
+# Logs and scratch output
+*.log
+outputs/notebook_build.log
+outputs/profile_raw.txt
+
+# Python / Jupyter / OS noise
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.venv/
+venv/
+.env
+.DS_Store
+Thumbs.db
+desktop.ini
+~$*
+deck
+# Your recorded video: a 3-minute 1080p export is usually 20-80 MB and is fine to commit. GitHub rejects files over
+# 100 MB; if yours is larger, share it via Drive/YouTube instead and uncomment the next line.
+# deliverables/3_Video/*.mp4

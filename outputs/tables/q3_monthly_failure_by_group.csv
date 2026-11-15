@@ -1,0 +1,66 @@
+month,grp,fail
+2024-01-01,"Legacy hotspots (23 Gen1 stations, Delhi/Jaipur/Hyd)",3.8798944440482135
+2024-01-01,Other legacy stations (67),4.036841318111571
+2024-02-01,"Legacy hotspots (23 Gen1 stations, Delhi/Jaipur/Hyd)",3.80007683978904
+2024-02-01,Other legacy stations (67),4.078621031746032
+2024-03-01,"Legacy hotspots (23 Gen1 stations, Delhi/Jaipur/Hyd)",3.854632487245701
+2024-03-01,Other legacy stations (67),3.9795838766117257
+2024-04-01,"Legacy hotspots (23 Gen1 stations, Delhi/Jaipur/Hyd)",12.049592055979792
+2024-04-01,Other legacy stations (67),4.457958751983078
+2024-05-01,"Legacy hotspots (23 Gen1 stations, Delhi/Jaipur/Hyd)",19.22882191488795
+2024-05-01,Other legacy stations (67),9.336374477106244
+2024-06-01,"Legacy hotspots (23 Gen1 stations, Delhi/Jaipur/Hyd)",18.391668177932072
+2024-06-01,Other legacy stations (67),6.781256699695193
+2024-07-01,"Legacy hotspots (23 Gen1 stations, Delhi/Jaipur/Hyd)",3.9678627760252367
+2024-07-01,Other legacy stations (67),3.9087891118527103
+2024-08-01,"Legacy hotspots (23 Gen1 stations, Delhi/Jaipur/Hyd)",3.9821473995791226
+2024-08-01,New stations (Wave 1 + 2),3.662921348314607
+2024-08-01,Other legacy stations (67),3.7794846832278663
+2024-09-01,"Legacy hotspots (23 Gen1 stations, Delhi/Jaipur/Hyd)",3.8640107832859067
+2024-09-01,New stations (Wave 1 + 2),4.028436018957346
+2024-09-01,Other legacy stations (67),3.975187838546217
+2024-10-01,"Legacy hotspots (23 Gen1 stations, Delhi/Jaipur/Hyd)",3.95110695829599
+2024-10-01,New stations (Wave 1 + 2),3.9721021329448014
+2024-10-01,Other legacy stations (67),3.9160045402951194
+2024-11-01,"Legacy hotspots (23 Gen1 stations, Delhi/Jaipur/Hyd)",3.7075082272822386
+2024-11-01,New stations (Wave 1 + 2),3.904930347171161
+2024-11-01,Other legacy stations (67),3.828574460505272
+2024-12-01,"Legacy hotspots (23 Gen1 stations, Delhi/Jaipur/Hyd)",4.004184243920842
+2024-12-01,New stations (Wave 1 + 2),3.90129510206257
+2024-12-01,Other legacy stations (67),3.945292673223864
+2025-01-01,"Legacy hotspots (23 Gen1 stations, Delhi/Jaipur/Hyd)",3.7447854347896388
+2025-01-01,New stations (Wave 1 + 2),3.8962115559976787
+2025-01-01,Other legacy stations (67),3.942159383033419
+2025-02-01,"Legacy hotspots (23 Gen1 stations, Delhi/Jaipur/Hyd)",3.792723263506064
+2025-02-01,New stations (Wave 1 + 2),3.775248111616031
+2025-02-01,Other legacy stations (67),3.9070375339780177
+2025-03-01,"Legacy hotspots (23 Gen1 stations, Delhi/Jaipur/Hyd)",3.7580023343826263
+2025-03-01,New stations (Wave 1 + 2),4.034935276162467
+2025-03-01,Other legacy stations (67),3.9369565500788695
+2025-04-01,"Legacy hotspots (23 Gen1 stations, Delhi/Jaipur/Hyd)",11.993137291074788
+2025-04-01,New stations (Wave 1 + 2),4.487658937920718
+2025-04-01,Other legacy stations (67),4.662302520089652
+2025-05-01,"Legacy hotspots (23 Gen1 stations, Delhi/Jaipur/Hyd)",18.994619685620847
+2025-05-01,New stations (Wave 1 + 2),5.555378002205213
+2025-05-01,Other legacy stations (67),9.290528579061549
+2025-06-01,"Legacy hotspots (23 Gen1 stations, Delhi/Jaipur/Hyd)",18.663127499686137
+2025-06-01,New stations (Wave 1 + 2),5.1191320608718085
+2025-06-01,Other legacy stations (67),6.79139949176421
+2024-01-01,Network average,3.996194979589575
+2024-02-01,Network average,4.005637360324331
+2024-03-01,Network average,3.9469243622774455
+2024-04-01,Network average,6.4849485623027965
+2024-05-01,Network average,11.928988958649057
+2024-06-01,Network average,9.853304085549768
+2024-07-01,Network average,3.9242193082404744
+2024-08-01,Network average,3.828300769686205
+2024-09-01,Network average,3.9536780635809623
+2024-10-01,Network average,3.934504411414037
+2024-11-01,Network average,3.817834161630873
+2024-12-01,Network average,3.948970226231485
+2025-01-01,Network average,3.888234849384903
+2025-02-01,Network average,3.850640006059229
+2025-03-01,Network average,3.932539285356821
+2025-04-01,Network average,5.887704915378812
+2025-05-01,Network average,9.54077534361078
+2025-06-01,Network average,8.161425785077128

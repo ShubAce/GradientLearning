@@ -1,0 +1,14 @@
+level,metric,value
+station,gini_attempts,0.29428827361876586
+station,gini_failures,0.38339990590782425
+station,gini_positive_excess,0.6826344202628216
+station,gini_failure_rate,0.14910756872547382
+station,top10pct_share_attempts,0.18602132329851098
+station,top10pct_share_failures,0.2468786730171018
+station,top10pct_share_excess,0.42922371241691976
+station_hour,gini_observed,0.8626230734347143
+station_hour,gini_null_flat_rate,0.8419138492399179
+station_hour,gini_null_station_month_rate,0.8569885767647045
+station_hour,top10pct_share_observed,0.6812918635443169
+station_hour,top10pct_share_null_flat_rate,0.61705696649861
+station_hour,top10pct_share_null_station_month_rate,0.6641760713813115

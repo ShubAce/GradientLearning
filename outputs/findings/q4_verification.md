@@ -1,0 +1,64 @@
+# Q4 verification: battery and equipment performance
+
+Verifier script: `analysis/verify/q4_verify.py`. It is fresh code built on the `src/common.py` loaders and runs in about 8 s. Log: `outputs/tables/q4v_run_log.txt`. Tables: `q4v_cohorts.csv`, `q4v_monthly_economics.csv`, `q4v_weekly_gap.csv`.
+
+**Bottom line.** Almost every number in `q4.md` reproduces exactly from the clean data. The core story holds: lots KY-2407/08/09 fade about 3-4x faster, the recorded retirement never happened, and 122,204 swaps handed out a pack below 70% SoH. Three things are wrong, and they need fixing before the judges see them:
+
+1. **Range per SoH point is overstated by 18-30%.**
+2. **The ₹4.31 Cr excess wear includes ₹1.37 Cr charged on packs that were already past end-of-life.** As a result, Recommendation 1's "₹49.9 L a month" CM1 gain has the wrong sign.
+3. **"Per cycle" is the wrong mechanism.** SoH in this data falls with calendar time, not with how often a pack is issued.
+
+Several framing over-claims also need softening. **needs_fix = true.**
+
+## Verdict table
+
+| # | Claim (analyst) | Recomputed | Verdict |
+|---|---|---|---|
+| H | One bad batch. 3.26x faster per cycle. ₹4.31 Cr excess wear. ₹16.64 per H1-25 swap. CM1 +10.25 → -6.39. Issued at 60.6% SoH on 30-Jun | All numbers reproduce exactly under the brief's per-swap wear model (4.311 Cr; 16.64; -6.39 vs +10.25; 60.58%). However, ₹1.37 Cr of the 4.31 Cr is wear charged after each pack passed its own 70% point: Kyron 2W swaps were charged ₹5.78 Cr against a fleet purchase value of ₹4.43 Cr. Capped at purchase value the total is **₹2.94 Cr**, the H1-25 gap is **₹8.61 per swap**, and actual H1-25 CM1 is **+₹1.64**. Per day, the 2W fade ratio is **3.78x**. "Not a bad supplier" over-claims: the three lots are 89% of Kyron's packs. | **corrected** |
+| 1 | Kyron 2W fades 3.26x per cycle (0.0947 vs 0.0290; n = 1,385 vs 3,035). Binned 9.3 vs 2.9 per 100 cycles. Mean below 70% at about 330 cycles. 308 vs 1,005/1,004 cycles to EOL | 0.09472 vs 0.02903 = 3.262x; Mann-Whitney p ≈ 0. Binned 9.34 vs 2.88. First bin below 70: 330. EOL 308.4 / 1,005.2 / 1,003.7. Own slopes match `clean.py` to 2e-7. In the same calendar window (issues from 10-Sep-24) the ratio is 3.35x. **But** fade is calendar-driven (see M1): per day the ratio is 0.1324 vs 0.0351 = **3.78x**, and days to 70% are **221 vs 832**. Cellora's 1,005 cycles is a projection: the most any Cellora pack was issued is 725 times, at about 80% SoH. | confirmed (needs a mechanism note) |
+| 2 | Lot defect KY-2407/08/09. 3W fast lots 0.0775 vs 0.0326 (2.38x, p = 4.3e-45). Later lots 1.00x (p = 0.50). KW H = 166.4. BMS F = 1.10 / 1.41. All 53 retired 3W are from the bad lots | Every figure reproduces. No other lot exceeds 1.06x the reference. Caveats: all Kyron 2W packs come from these three lots, so lot and supplier cannot be separated for 2W. Kyron 2W IDs are also issued 83.5% in the hot heavy cities, against 44.5% for Cellora. The clean evidence is 3W, where exposure is equal (48.8% vs 47.6%). | confirmed |
+| 3 | Same price (₹31,981.68 vs ₹31,986.49, p = 0.90; 3W p = 0.99). Initial SoH 99.20 vs 99.18 (p = 0.29) | Identical | confirmed |
+| 4 | Range falls 0.86 km (2W) and 1.31 km (3W) per SoH point (1.22-1.33% of new-pack range). FE 0.551, reliability 0.59, corrected 0.94. SoC r = 0.0049. Q2-25 Kyron 39.5 vs 53.4 km | The year-on-year ratios reproduce (0.862 and 1.306), and so do the SoC r and the Q2 medians. However, the light-city design is not "stable": swaps per active day stepped up from 1.288 to 1.313 (+1.9%) when Kyron arrived, which inflates the year-on-year km drop. Using a de-noised SoH (each pack's own fitted SoH-vs-time trajectory) within **day x city** gives 0.66-0.69 km for 2W and 0.94-0.98 km for 3W. Within month x city it gives 0.72-0.73 and 1.01-1.02. Light cities Oct-24 to Jun-25, when swap frequency was flat, give 0.74. Actual reliability is about 0.70, not 0.59, so "corrected 0.94" is wrong. The data fit **range ∝ SoH: about 1.0% of new-pack range per point (≈0.7 km 2W, ≈1.0 km 3W).** | **corrected** |
+| 5 | Kyron range at equal SoH: -4.84 km pooled vs -1.79 km (-3.2%) within city x month (Simpson's paradox). 3W -0.33 / -0.01 | -4.84 and -1.79 (177,652 swaps). It survives de-noising: -1.76 linear and -1.82 quadratic. 3W: -0.33 / -0.01. | confirmed |
+| 6 | Within-rider DiD +0.125 [0.115, 0.135], +9.8% on 1.281. Placebo +0.011. Dose +0.041 per 10 pts, R² 0.995. Rider-week FE and first-pack tests null. Chain match 0.03% | +0.1253 [0.1153, 0.1353], p = 1e-132, 5,278 riders. Placebo +0.0111. Two extra placebos (Apr/May-24 and Jun/Jul-24) are null. Dose +0.0407, intercept -0.0048, R² 0.994. **But** the R² comes from two clusters: within each cluster the Kyron share varies by less than 1 pp. The heavy-minus-light gap was full size in the first week, when Kyron packs were at 98% SoH and healthier than the 92% fleet. It never tracked Kyron's decline (weekly r = -0.04, p = 0.79, while Kyron SoH fell from 98 to 61). FE panel tests not recomputed. | confirmed (numbers); causal link to the fast fade not supported |
+| 7 | 35,644 extra swaps in Q2-25 (8.6% / 4.4% / 4.0%; 392 a day). Upper bound 55,754. ₹21.0 L paid | 35,644; 0.0865 / 0.0444 / 0.0398; 392 a day; ₹21.01 L at ₹58.94 per swap. Upper bound not recomputed (its slope matches). These swaps are not caused by degradation (see #6), so they should not be counted as a benefit of pulling the bad lots. | confirmed (numbers) |
+| 8 | Ageing does not raise swap frequency. Same-day gap flat (r = 0.0019). Light cities 1.313-1.325 swaps a day; SoH 91.2 → 79.2; km 63.3 → 54.4 | r = 0.0019. 1.313-1.325; 91.2 → 79.2; 63.3 → 54.4 | confirmed |
+| 9 | Retirement never happened: 35,183 swaps from all 1,385 Kyron 2W packs; 4,342 from all 253 3W; 2,169 vs 2,199 a day; 1,095 vs 1,099 packs; share 24.0 vs 24.2%. 122,204 swaps below EOL (121,172 2W); 62.4% of Q2 Kyron 2W; 21.9% of Jun-25. DiD -0.004 | All identical. The 53 retired 3W packs were also issued after 15 Jun (926 swaps). 99.94% of June Kyron 2W issues were below 70%. Sep-24 telemetry DiD +0.0044. The June triple differences (+0.74 pp, +0.05) were not recomputed. A same-station June 2024 vs 2025 comparison confirms there was no inventory shock (see M7). | confirmed |
+| 10 | Wear ₹103.84 vs ₹31.85; CM1 -59.67 vs +12.56. Excess ₹4.01 Cr + ₹30.3 L = ₹4.31 Cr. ₹3.63 Cr from Nov-24. Jun-25 ₹49.9 L. Payback 42.5% vs 139.5% | Arithmetic identical: `wear_cost` matches price x slope / (init - 70) exactly; 4.0082 + 0.3034 - 0.0007 Cr; 3.625 Cr; 49.92 L; payback 42.6% vs 139.6%. **Capped at each pack's purchase value:** 2W ₹2.66 Cr + 3W ₹0.29 Cr = **₹2.94 Cr**. With a per-day reference: ₹4.64 Cr uncapped, ₹3.16 Cr capped. In June, **₹48.3 L of the ₹49.9 L** was charged on swaps where the pack was already past its own end-of-life cycle (89.9% of June Kyron issues). From Nov-24 the capped figure is **₹2.26 Cr**, not ₹3.63 Cr. | **corrected** |
+| 11 | Quarantine only at cabinet ≥ 39°C. Kyron arrival DiD: quarantine 0, cabinet +0.13°C. June stockouts heavy 10.08 / 7.46% vs light 2.10 / 2.14% | Share of station-hours with any quarantine: 0 below 39°C, 0.93% at 39°C+. DiD: quarantine 0, cabinet +0.126°C. Stockouts reproduce, but the heavy-city fall is entirely new stations: at the same stations it is **10.08% → 9.93%** (light 2.10% → 2.19%). | confirmed (with that note) |
+| R1 | Pull and replace: wear per swap ₹52.96 → ₹36.49, CM1 -5.04 → +11.42, "worth about ₹49.9 L a month" | Arithmetic holds under the uncapped model, but the gain is an artefact. Almost all of the June excess sits on packs that are already fully depreciated. A 1:1 replacement **adds about ₹19.8 L a month** of depreciation: new packs ₹27.1 L against ₹7.3 L still depreciating on Kyron (later-lot 3W packs net out). The case for pulling the lots rests on service: 99.9% of June Kyron 2W issues were below 70% SoH, and Kyron returned packs delivered a median 39.5 km against 53.4 km (-26%). Safety and the warranty claim add to it. | **refuted (impact framing)** |
+| R3 | "Acting by Nov-2024 would have avoided ₹3.63 Cr" | ₹2.26 Cr when capped, and only recoverable through a warranty or replacement claim. Replacing the lots in Nov-24 without a refund would have written off about 80% of their value. | corrected |
+| R6 | More pack IDs did not raise charged inventory or cut stockouts | Strengthened. At the same heavy-city stations in June, charged-2W inventory went 7.81 → 7.78 and stockouts 10.08% → 9.93%, despite +33.5% 2W pack IDs. | confirmed |
+
+## Methodology issues
+
+- **M1. Calendar ageing, not cycling.** All Cellora 2W packs share the same service window. Within that cohort, packs issued 558 to 725 times lost the same SoH: the elasticity of SoH lost with respect to issue count is -0.03 (1 would mean per-cycle wear). Spearman(issues, loss per issue) is -0.61, while Spearman(issues, loss per day) is -0.02. Kyron and Cellora 3W show the same pattern.
+  - "Per cycle" ratios and "cycles to EOL" therefore depend on how often an ID happens to be issued. Kyron IDs are issued 1.37 times a day against 1.18 for Cellora.
+  - Report per-day figures: **3.78x for 2W and 2.40x for 3W bad lots; 221 vs 832 days to 70%.**
+  - Cross-question: under this data, wear behaves like time-based depreciation, not a variable per-swap cost. This matters for Q1/Q5's CM1 and means the extra swaps add no wear.
+- **M2. Depreciation beyond cost.** The per-swap wear model keeps charging ₹103.84 per swap after a pack reaches 70% SoH. Report a capped figure alongside the brief's model: ₹2.94-3.16 Cr to date, and an H1-25 gap of ₹8.61 per swap.
+- **M3. Range design.** The year-on-year design in the light cities absorbs a non-SoH step: light-city swaps per active day rose 1.9% when Kyron arrived. On top of that, the reliability correction used issue-reading noise and a month-only variance. The cleanest estimate compares packs on the same day in the same city, using each pack's de-noised SoH.
+- **M4. Dose-response.** The two clusters sit at 8.4-8.5% and 38.7-39.4% Kyron, so an R² of 0.995 adds nothing beyond the two-group DiD. Present it as a two-group contrast. The light cities also stepped up by about +0.03, which supports the direction.
+- **M5. Causal over-reach on extra swaps.** The swap-frequency step appeared when Kyron packs were new and healthier than the fleet, and it stayed flat as they degraded. It cannot be caused by the fast fade, so pulling the bad lots may not remove it. Pack-level tests are null, and the range penalty at equal SoH (-3.2%) is too small to explain +9.8% visits.
+- **M6. Supplier framing.** KY-2407/08/09 account for 1,461 of 1,638 Kyron packs (89%) and every Kyron 2W pack. "Not a bad supplier" rests on 177 3W packs.
+- **M7. Composition.** The all-station June stockout fall in the heavy cities (10.08% → 7.46%) comes from new stations. Use same-station figures.
+- **M8. Right-censoring.** Cellora and Amptek life (1,005 cycles or 832 days) is extrapolated beyond the observed range. Label it "projected" in the text and in `q4_06`.
+
+## Missed angles (worth adding)
+
+1. **Negative control.** 3W riders in the same cities and windows show a DiD of +0.006 [-0.012, +0.024], p = 0.52. The jump is specific to 2W, where Kyron 2W arrived, rather than a city-wide shock.
+2. **Duplicate check.** The extra heavy-city swaps are not near-duplicate records. There are no records under 5 km. The whole km distribution shifted down (median 65.7 → 57.3 km, p10 56.7 → 48.6) and the median gap shortened from 1,370 to 1,146 minutes. Same-station gaps under 30 minutes rose only from 1.15% to 1.64%. These are real, earlier visits.
+3. **Range is proportional to SoH**, at about 1% of new-pack range per point for both 2W and 3W. That is a simpler and more defensible rule for operations and for CX messaging.
+4. **Warranty basis as lost-life value.** Price x (1 - life ratio): ₹3.07-3.25 Cr for 2W plus about ₹0.30 Cr for 3W, so ₹3.4-3.55 Cr in total. This is a cleaner claim than uncapped excess wear.
+5. **Same-station June test.** It strengthens Rec 6 and the "no inventory shock" finding.
+
+## Figure review (all six open and are legible)
+
+| Figure | Status |
+|---|---|
+| `q4_01` | Accurate. The title says "per cycle"; say "per issue" or "per day" (3.8x). |
+| `q4_02` | Accurate and clear. |
+| `q4_03` | **Fix.** "~0.9 km per 2W swap" and "0.86 / 1.31 km per SoH point" are overstated. Should be ≈0.7 and ≈1.0 km (≈1% per point). The subtitle "where swap frequency was stable" is false: light cities rose 1.9% at Kyron's arrival. |
+| `q4_04` | Mostly fine. The right panel's "R² 0.995" overstates a two-cluster fit. |
+| `q4_05` | Accurate. |
+| `q4_06` | **Fix.** The title's ₹4.31 Cr needs the capped ₹2.94 Cr (or a range). Label "1005 cycles" for Cellora/Amptek as projected. The cumulative line includes ₹9.1 L of Jan-Aug 2024 3W excess that has no bar (the Sep-24 point is 32 L against a 23 L bar). |

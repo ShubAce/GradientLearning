@@ -1,0 +1,57 @@
+hour,wait_min,swaps,slice,city,charger_generation,fail_rate_pct,month
+0.0,4.071236546204065,20781.0,completed wait by hour,,,,
+1.0,4.084235088231004,20571.0,completed wait by hour,,,,
+2.0,4.070967612053277,20697.0,completed wait by hour,,,,
+3.0,4.064638332849821,20682.0,completed wait by hour,,,,
+4.0,4.048461985321205,23526.0,completed wait by hour,,,,
+5.0,4.062909272325565,23385.0,completed wait by hour,,,,
+6.0,4.05659923395405,51607.0,completed wait by hour,,,,
+7.0,4.077862202851596,51854.0,completed wait by hour,,,,
+8.0,4.053956157409196,155298.0,completed wait by hour,,,,
+9.0,4.056539835696243,219715.0,completed wait by hour,,,,
+10.0,4.083081706423979,127901.0,completed wait by hour,,,,
+11.0,4.06306240338459,94231.0,completed wait by hour,,,,
+12.0,4.053879738562092,344250.0,completed wait by hour,,,,
+13.0,4.057640407941608,351096.0,completed wait by hour,,,,
+14.0,4.064837432183437,156304.0,completed wait by hour,,,,
+15.0,4.061883523443463,96523.0,completed wait by hour,,,,
+16.0,4.072992348568245,98108.0,completed wait by hour,,,,
+17.0,4.069456835437851,113882.0,completed wait by hour,,,,
+18.0,4.067919704357613,212058.0,completed wait by hour,,,,
+19.0,4.06509744318093,426676.0,completed wait by hour,,,,
+20.0,4.058021872663407,424853.0,completed wait by hour,,,,
+21.0,4.06121474700794,337560.0,completed wait by hour,,,,
+22.0,4.056977425804073,171730.0,completed wait by hour,,,,
+23.0,4.087850800302162,23387.0,completed wait by hour,,,,
+,4.058497798291686,12566.0,"May-25 completed wait, other city x generation cells",Jaipur,Gen3,5.477707006369427,
+,4.073045495866895,31534.0,"May-25 completed wait, other city x generation cells",Mumbai,Gen2,4.178643831885988,
+,4.076463655717761,8768.0,"May-25 completed wait, other city x generation cells",Mumbai,Gen3,4.156692056583243,
+,4.097445992327882,13208.0,"May-25 completed wait, other city x generation cells",Bengaluru,Gen3,4.139575205895102,
+,4.085488711260693,11885.0,"May-25 completed wait, other city x generation cells",Pune,Gen3,4.723217841497411,
+,4.036052678892485,11124.0,"May-25 completed wait, other city x generation cells",Hyderabad,Gen2,9.331713244228434,
+,4.049618963412067,15834.0,"May-25 completed wait, other city x generation cells",Delhi NCR,Gen2,9.284288565725692,
+,4.060125125981707,17529.0,"May-25 completed wait, other city x generation cells",Delhi NCR,Gen3,5.751619986076153,
+,4.0617862771245,16498.0,"May-25 completed wait, other city x generation cells",Hyderabad,Gen3,5.0741652826298616,
+,4.040960642299702,23748.0,"May-25 completed wait, other city x generation cells",Pune,Gen2,6.964863705494677,
+,4.039892406372854,8055.0,"May-25 completed wait, other city x generation cells",Pune,Gen1,12.82465782950749,
+,4.040277399282372,29356.0,"May-25 completed wait, other city x generation cells",Bengaluru,Gen2,4.509962740968735,
+,4.055297566838839,20522.0,"May-25 completed wait, other city x generation cells",Bengaluru,Gen1,5.781535648994515,
+,4.056275178184071,74221.0,"May-25 completed wait, hot-city Gen1",,,18.979727015082577,
+,11.71481886700705,,abandoned wait by month,,,,2024-01-01
+,11.704128547970914,,abandoned wait by month,,,,2024-02-01
+,11.570392029456356,,abandoned wait by month,,,,2024-03-01
+,11.729789380754195,,abandoned wait by month,,,,2024-04-01
+,11.759118977745171,,abandoned wait by month,,,,2024-05-01
+,11.566212354363596,,abandoned wait by month,,,,2024-06-01
+,11.703968253968252,,abandoned wait by month,,,,2024-07-01
+,11.766392801251955,,abandoned wait by month,,,,2024-08-01
+,11.824420862810376,,abandoned wait by month,,,,2024-09-01
+,11.595221445221446,,abandoned wait by month,,,,2024-10-01
+,11.68409974834134,,abandoned wait by month,,,,2024-11-01
+,11.775215863453814,,abandoned wait by month,,,,2024-12-01
+,11.74436917866215,,abandoned wait by month,,,,2025-01-01
+,11.760885479342159,,abandoned wait by month,,,,2025-02-01
+,11.812976253765727,,abandoned wait by month,,,,2025-03-01
+,11.726358425454757,,abandoned wait by month,,,,2025-04-01
+,11.720636324912348,,abandoned wait by month,,,,2025-05-01
+,11.673613543490951,,abandoned wait by month,,,,2025-06-01

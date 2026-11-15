@@ -1,0 +1,4 @@
+cohort,margin_before_wear,cycles_to_eol_med,purchase_cost_mean,cycles_med,lifetime_margin_to_eol,cycles_to_pay_back,cost_recovered_by_eol
+Amptek,44.44,1004.0,31995.0,642.0,44618.0,720.0,1.395
+Cellora,44.41,1005.0,31983.0,643.0,44632.0,720.0,1.395
+Kyron 2407/2408/2409,44.17,308.0,31982.0,402.0,13604.0,724.0,0.425

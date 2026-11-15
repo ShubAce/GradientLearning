@@ -1,0 +1,125 @@
+{
+  "steps": [
+    {
+      "step": "stations",
+      "total": 152,
+      "test_stations": 2,
+      "test_ids": [
+        "STN-TST-01",
+        "STN-TST-02"
+      ],
+      "decommissioned": [
+        "STN-DEL-051"
+      ],
+      "competitor_nearby": 10
+    },
+    {
+      "step": "riders_city_standardisation",
+      "raw_variants": 21,
+      "clean_cities": 6,
+      "rows_recoded": 585,
+      "city_vs_zone_mismatch": 0
+    },
+    {
+      "step": "exclude_test_stations",
+      "raw_events": 3877013,
+      "test_events": 62031,
+      "test_completed": 59134,
+      "test_revenue_inr": 3930760.0,
+      "test_zero_value_events": 2897
+    },
+    {
+      "step": "firmware_timestamp_fix",
+      "events_shifted": 139490,
+      "check": [
+        {
+          "station_firmware": "v3.2.0",
+          "mean_hour_raw": 10.4,
+          "mean_hour_fixed": 15.13
+        },
+        {
+          "station_firmware": "v3.2.1",
+          "mean_hour_raw": 15.18,
+          "mean_hour_fixed": 15.18
+        }
+      ]
+    },
+    {
+      "step": "near_duplicate_detection",
+      "duplicates_found": 0,
+      "loose_candidates_same_battery_in_300s": 3,
+      "offline_batch_rows": 591114
+    },
+    {
+      "step": "outliers",
+      "km_negative": 7687,
+      "km_gt_200": 7600,
+      "readings_above_100_clipped": {
+        "soc_in_pct": 0,
+        "soh_in_pct": 3298,
+        "soc_out_pct": 3634,
+        "soh_out_pct": 2752
+      }
+    },
+    {
+      "step": "drop_constant_fields",
+      "values": {
+        "attempt_seq": [
+          1
+        ],
+        "payment_mode": [
+          "partner_invoice"
+        ]
+      }
+    },
+    {
+      "step": "battery_wear_model",
+      "packs_used_before_recorded_commission": 5154
+    },
+    {
+      "step": "cost_model",
+      "completed_swaps": 3586675,
+      "revenue_per_swap": 63.9,
+      "energy_cost_per_swap": 19.49,
+      "wear_cost_per_swap": 48.47,
+      "fixed_cost_per_swap": 13.2,
+      "cm1_per_swap": -4.06,
+      "cm2_per_swap": -17.26
+    },
+    {
+      "step": "events_written",
+      "rows": 3814982,
+      "cols": 63
+    },
+    {
+      "step": "hourly_telemetry",
+      "rows_clean": 1461456,
+      "telemetry_by_connectivity": [
+        {
+          "connectivity_tier": "fair",
+          "missing": null,
+          "partial": 11004,
+          "ok": 267660
+        },
+        {
+          "connectivity_tier": "good",
+          "missing": null,
+          "partial": 9790,
+          "ok": 964682
+        },
+        {
+          "connectivity_tier": "poor",
+          "missing": 9384,
+          "partial": 16193,
+          "ok": 208999
+        }
+      ]
+    },
+    {
+      "step": "tickets",
+      "total": 44000,
+      "outside_window": 86,
+      "csat_missing_share": 0.656
+    }
+  ]
+}

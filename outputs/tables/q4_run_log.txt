@@ -1,0 +1,559 @@
+packs: 6500 | packs with < 50 issued cycles: 0 | min issues per pack: 320
+Cellora/Amptek reference loss per cycle: {'3W_4.8kWh': 0.0327, '2W_2.1kWh': 0.0291}
+fast-fade lots (median slope > 1.5x reference): ['KY-2407', 'KY-2408', 'KY-2409']
+shape: (15, 6)
+┌──────────┬───────────┬───────────────────┬──────────┬──────────┬──────────┐
+│ supplier ┆ pack_type ┆ manufacturing_lot ┆ loss_med ┆ ref_loss ┆ ratio    │
+│ ---      ┆ ---       ┆ ---               ┆ ---      ┆ ---      ┆ ---      │
+│ str      ┆ str       ┆ str               ┆ f64      ┆ f64      ┆ f64      │
+╞══════════╪═══════════╪═══════════════════╪══════════╪══════════╪══════════╡
+│ Kyron    ┆ 2W_2.1kWh ┆ KY-2407           ┆ 0.094126 ┆ 0.029058 ┆ 3.239203 │
+│ Kyron    ┆ 2W_2.1kWh ┆ KY-2408           ┆ 0.095613 ┆ 0.029058 ┆ 3.290363 │
+│ Kyron    ┆ 2W_2.1kWh ┆ KY-2409           ┆ 0.094474 ┆ 0.029058 ┆ 3.251163 │
+│ Kyron    ┆ 3W_4.8kWh ┆ KY-2407           ┆ 0.078782 ┆ 0.032655 ┆ 2.412569 │
+│ Kyron    ┆ 3W_4.8kWh ┆ KY-2408           ┆ 0.077174 ┆ 0.032655 ┆ 2.36333  │
+│ Kyron    ┆ 3W_4.8kWh ┆ KY-2409           ┆ 0.074843 ┆ 0.032655 ┆ 2.291933 │
+│ Kyron    ┆ 3W_4.8kWh ┆ KY-2410           ┆ 0.034346 ┆ 0.032655 ┆ 1.05178  │
+│ Kyron    ┆ 3W_4.8kWh ┆ KY-2411           ┆ 0.033224 ┆ 0.032655 ┆ 1.017436 │
+│ Kyron    ┆ 3W_4.8kWh ┆ KY-2412           ┆ 0.031926 ┆ 0.032655 ┆ 0.977687 │
+│ Kyron    ┆ 3W_4.8kWh ┆ KY-2413           ┆ 0.031708 ┆ 0.032655 ┆ 0.971    │
+│ Kyron    ┆ 3W_4.8kWh ┆ KY-2414           ┆ 0.03198  ┆ 0.032655 ┆ 0.979328 │
+│ Kyron    ┆ 3W_4.8kWh ┆ KY-2415           ┆ 0.032097 ┆ 0.032655 ┆ 0.982915 │
+│ Kyron    ┆ 3W_4.8kWh ┆ KY-2416           ┆ 0.032771 ┆ 0.032655 ┆ 1.003559 │
+│ Kyron    ┆ 3W_4.8kWh ┆ KY-2417           ┆ 0.031447 ┆ 0.032655 ┆ 0.963025 │
+│ Kyron    ┆ 3W_4.8kWh ┆ KY-2418           ┆ 0.033418 ┆ 0.032655 ┆ 1.023356 │
+└──────────┴───────────┴───────────────────┴──────────┴──────────┴──────────┘
+shape: (7, 15)
+┌───────────┬───────────────┬───────┬───────────────┬───────────────┬────────────┬───────────────┬───────────────┬───────────────┬──────────────┬──────────────┬──────────────┬──────────────┬──────────────┬──────────────┐
+│ pack_type ┆ cohort        ┆ packs ┆ first_seen_mi ┆ first_seen_ma ┆ cycles_med ┆ loss_per_cycl ┆ soh_at_first_ ┆ current_soh_m ┆ retired_in_m ┆ purchase_cos ┆ initial_soh_ ┆ cycles_to_eo ┆ wear_inr_per ┆ share_used_b │
+│ ---       ┆ ---           ┆ ---   ┆ n             ┆ x             ┆ ---        ┆ e_med         ┆ issue         ┆ ean           ┆ aster        ┆ t_mean       ┆ mean         ┆ l_med        ┆ _cycle_med   ┆ efore_commis │
+│ str       ┆ str           ┆ u32   ┆ ---           ┆ ---           ┆ f64        ┆ ---           ┆ ---           ┆ ---           ┆ ---          ┆ ---          ┆ ---          ┆ ---          ┆ ---          ┆ sion         │
+│           ┆               ┆       ┆ date          ┆ date          ┆            ┆ f64           ┆ f32           ┆ f64           ┆ u32          ┆ f64          ┆ f64          ┆ f64          ┆ f64          ┆ ---          │
+│           ┆               ┆       ┆               ┆               ┆            ┆               ┆               ┆               ┆              ┆              ┆              ┆              ┆              ┆ f64          │
+╞═══════════╪═══════════════╪═══════╪═══════════════╪═══════════════╪════════════╪═══════════════╪═══════════════╪═══════════════╪══════════════╪══════════════╪══════════════╪══════════════╪══════════════╪══════════════╡
+│ 2W_2.1kWh ┆ Amptek        ┆ 1098  ┆ 2024-01-01    ┆ 2024-01-07    ┆ 642.0      ┆ 0.0291        ┆ 99.139999     ┆ 79.96         ┆ 0            ┆ 31995.0      ┆ 99.19        ┆ 1004.0       ┆ 31.83        ┆ 1.0          │
+│ 2W_2.1kWh ┆ Cellora       ┆ 3035  ┆ 2024-01-01    ┆ 2024-01-07    ┆ 643.0      ┆ 0.029         ┆ 99.129997     ┆ 79.97         ┆ 0            ┆ 31983.0      ┆ 99.18        ┆ 1005.0       ┆ 31.84        ┆ 0.618        │
+│ 2W_2.1kWh ┆ Kyron 2407/24 ┆ 1385  ┆ 2024-09-10    ┆ 2024-09-12    ┆ 402.0      ┆ 0.0947        ┆ 99.040001     ┆ 60.53         ┆ 1385         ┆ 31982.0      ┆ 99.2         ┆ 308.0        ┆ 103.69       ┆ 0.989        │
+│           ┆ 08/2409       ┆       ┆               ┆               ┆            ┆               ┆               ┆               ┆              ┆              ┆              ┆              ┆              ┆              │
+│ 3W_4.8kWh ┆ Amptek        ┆ 209   ┆ 2024-01-01    ┆ 2024-01-09    ┆ 378.0      ┆ 0.0329        ┆ 99.150002     ┆ 86.51         ┆ 0            ┆ 67822.0      ┆ 99.2         ┆ 888.0        ┆ 76.39        ┆ 1.0          │
+│ 3W_4.8kWh ┆ Cellora       ┆ 520   ┆ 2024-01-01    ┆ 2024-01-11    ┆ 379.0      ┆ 0.0326        ┆ 99.129997     ┆ 86.52         ┆ 0            ┆ 67957.0      ┆ 99.2         ┆ 892.0        ┆ 76.14        ┆ 0.669        │
+│ 3W_4.8kWh ┆ Kyron 2407/24 ┆ 76    ┆ 2024-01-01    ┆ 2024-01-06    ┆ 382.5      ┆ 0.0775        ┆ 99.089996     ┆ 69.22         ┆ 53           ┆ 68238.0      ┆ 99.21        ┆ 378.0        ┆ 180.83       ┆ 1.0          │
+│           ┆ 08/2409       ┆       ┆               ┆               ┆            ┆               ┆               ┆               ┆              ┆              ┆              ┆              ┆              ┆              │
+│ 3W_4.8kWh ┆ Kyron later   ┆ 177   ┆ 2024-01-01    ┆ 2024-01-10    ┆ 378.0      ┆ 0.0324        ┆ 99.199997     ┆ 86.56         ┆ 0            ┆ 67785.0      ┆ 99.26        ┆ 903.0        ┆ 75.06        ┆ 1.0          │
+│           ┆ lots          ┆       ┆               ┆               ┆            ┆               ┆               ┆               ┆              ┆              ┆              ┆              ┆              ┆              │
+└───────────┴───────────────┴───────┴───────────────┴───────────────┴────────────┴───────────────┴───────────────┴───────────────┴──────────────┴──────────────┴──────────────┴──────────────┴──────────────┴──────────────┘
+packs used before their recorded commission date: 5154 of 6500
+Kyron 2W: 1385 packs, all first seen 2024-09-10 .. 2024-09-12; recorded retirement dates: [datetime.date(2025, 6, 15)]; reason: ['end_of_life']
+Kyron 2W added 1,385 packs to a 2W fleet of 4,133 (+33.5%); Kyron = 25.1% of the 2W fleet after Sep-2024
+all other 5115 packs first seen 2024-01-01 .. 2024-01-11 (no other packs were added to the fleet during Jan-2024..Jun-2025)
+Kyron 3W retired in master by cohort: [{'cohort': 'Kyron 2407/2408/2409', 'packs': 76, 'retired': 53, 'soh_now': 69.2}, {'cohort': 'Kyron later lots', 'packs': 177, 'retired': 0, 'soh_now': 86.6}]
+lot-level defect coverage: Kyron 2407/2408/2409 = 1,461 of 1,638 Kyron packs (89.2%): 1,385 2W (= every Kyron 2W pack) + 76 3W; Kyron later lots = 177 packs, all 3W
+
+--- Was Kyron cheaper or healthier at purchase? (Welch t-test, Kyron vs Cellora+Amptek) ---
+2W_2.1kWh purchase_cost_inr: Kyron 31,981.68 vs others 31,986.49 (diff -4.80; Welch p=0.898)
+2W_2.1kWh initial_soh_pct: Kyron 99.20 vs others 99.18 (diff +0.01; Welch p=0.289)
+3W_4.8kWh purchase_cost_inr: Kyron 67,920.95 vs others 67,918.65 (diff +2.30; Welch p=0.990)
+3W_4.8kWh initial_soh_pct: Kyron 99.25 vs others 99.20 (diff +0.05; Welch p=0.107)
+
+--- Degradation per cycle: Kyron vs Cellora ---
+2W_2.1kWh Kyron 2407/2408/2409: median 0.0947 vs Cellora 0.0290 pts/cycle -> 3.26x (n=1385 vs 3035; Mann-Whitney p=0.0e+00)
+3W_4.8kWh Kyron 2407/2408/2409: median 0.0775 vs Cellora 0.0326 pts/cycle -> 2.38x (n=76 vs 520; Mann-Whitney p=4.3e-45)
+3W_4.8kWh Kyron later lots: median 0.0324 vs Cellora 0.0326 pts/cycle -> 1.00x (n=177 vs 520; Mann-Whitney p=5.0e-01)
+
+--- Lot heterogeneity within each supplier x pack type (Kruskal-Wallis on per-pack slopes) ---
+2W_2.1kWh Amptek                : 16 lots, lot medians 0.0287-0.0297, KW H=15.2, p=0.436
+2W_2.1kWh Cellora               : 27 lots, lot medians 0.0286-0.0295, KW H=23.9, p=0.582
+2W_2.1kWh Kyron 2407/2408/2409  :  3 lots, lot medians 0.0941-0.0956, KW H=1.0, p=0.616
+3W_4.8kWh Amptek                : 16 lots, lot medians 0.0312-0.0341, KW H=16.5, p=0.351
+3W_4.8kWh Cellora               : 27 lots, lot medians 0.0312-0.0346, KW H=33.9, p=0.139
+3W_4.8kWh Kyron 2407/2408/2409  :  3 lots, lot medians 0.0748-0.0788, KW H=3.1, p=0.210
+3W_4.8kWh Kyron later lots      :  9 lots, lot medians 0.0314-0.0343, KW H=14.8, p=0.064
+3W Kyron all 12 lots together: KW H=166.4, p=6.5e-30  (the lot split, not the supplier, explains Kyron 3W)
+
+--- BMS firmware (expect null): OLS slope ~ lot FE + BMS version, type-II ANOVA ---
+2W_2.1kWh: F=1.10, p=0.333; BMS-4.1 vs 4.0 -0.00004, BMS-4.2 vs 4.0 -0.00018 pts/cycle (-0.1% / -0.6% of median slope)
+3W_4.8kWh: F=1.41, p=0.244; BMS-4.1 vs 4.0 +0.00036, BMS-4.2 vs 4.0 +0.00004 pts/cycle (+1.1% / +0.1% of median slope)
+issued swaps with a pack: 3586675 | unmatched pack IDs: 0
+Cellora/Amptek reference loss per DAY: {'2W_2.1kWh': 0.03507, '3W_4.8kWh': 0.02344}
+per-pack fade by cohort (medians): per issue, per day, days and issues to 70% SoH, issues per day in service:
+shape: (7, 10)
+┌───────────┬──────────────────────┬───────┬────────────────┬──────────────┬────────────┬──────────────┬────────────────┬────────────┬───────────────────┐
+│ pack_type ┆ cohort               ┆ packs ┆ loss_per_issue ┆ loss_per_day ┆ days_to_70 ┆ issues_to_70 ┆ issues_per_day ┆ max_issues ┆ soh_at_last_issue │
+│ ---       ┆ ---                  ┆ ---   ┆ ---            ┆ ---          ┆ ---        ┆ ---          ┆ ---            ┆ ---        ┆ ---               │
+│ str       ┆ str                  ┆ u32   ┆ f64            ┆ f64          ┆ f64        ┆ f64          ┆ f64            ┆ u32        ┆ f64               │
+╞═══════════╪══════════════════════╪═══════╪════════════════╪══════════════╪════════════╪══════════════╪════════════════╪════════════╪═══════════════════╡
+│ 2W_2.1kWh ┆ Amptek               ┆ 1098  ┆ 0.02912        ┆ 0.03502      ┆ 833.0      ┆ 1004.0       ┆ 1.178          ┆ 722        ┆ 80.0              │
+│ 2W_2.1kWh ┆ Cellora              ┆ 3035  ┆ 0.02903        ┆ 0.03508      ┆ 832.0      ┆ 1005.0       ┆ 1.18           ┆ 725        ┆ 80.0              │
+│ 2W_2.1kWh ┆ Kyron 2407/2408/2409 ┆ 1385  ┆ 0.09472        ┆ 0.13239      ┆ 221.0      ┆ 308.0        ┆ 1.371          ┆ 472        ┆ 60.6              │
+│ 3W_4.8kWh ┆ Amptek               ┆ 209   ┆ 0.03286        ┆ 0.02338      ┆ 1254.0     ┆ 888.0        ┆ 0.694          ┆ 426        ┆ 86.5              │
+│ 3W_4.8kWh ┆ Cellora              ┆ 520   ┆ 0.03257        ┆ 0.02348      ┆ 1240.0     ┆ 892.0        ┆ 0.696          ┆ 431        ┆ 86.5              │
+│ 3W_4.8kWh ┆ Kyron 2407/2408/2409 ┆ 76    ┆ 0.07752        ┆ 0.05634      ┆ 521.0      ┆ 378.0        ┆ 0.704          ┆ 426        ┆ 69.3              │
+│ 3W_4.8kWh ┆ Kyron later lots     ┆ 177   ┆ 0.03243        ┆ 0.0234       ┆ 1250.0     ┆ 903.0        ┆ 0.695          ┆ 439        ┆ 86.5              │
+└───────────┴──────────────────────┴───────┴────────────────┴──────────────┴────────────┴──────────────┴────────────────┴────────────┴───────────────────┘
+per-DAY fade 2W_2.1kWh Kyron 2407/2408/2409: 0.1324 vs Cellora/Amptek 0.0351 pts/day -> 3.775x (per issue: 3.26x vs Cellora)
+per-DAY fade 3W_4.8kWh Kyron 2407/2408/2409: 0.0563 vs Cellora/Amptek 0.0234 pts/day -> 2.404x (per issue: 2.38x vs Cellora)
+per-DAY fade 3W_4.8kWh Kyron later lots: 0.0234 vs Cellora/Amptek 0.0234 pts/day -> 0.998x (per issue: 1.00x vs Cellora)
+2W days to 70% SoH (median pack): Kyron 221 vs Cellora 832, Amptek 833 (Cellora/Amptek figure is a projection: none has reached 70%)
+Cellora 2W: most issues by any pack 725 (issues per pack 558-725); mean SoH at each pack's last issue 80.0% -> its ~1,005-cycle life is projected
+calendar vs cycling, Cellora 2W (3,035 packs): elasticity of SoH lost by 30-Jun-25 w.r.t. issue count -0.027 (1 = per-cycle wear, 0 = calendar ageing); Spearman(issues, loss per issue) -0.61 vs Spearman(issues, loss per day) -0.02
+   same test 2W_2.1kWh Kyron 2407/2408/2409: Spearman(issues, loss per issue) -0.66, Spearman(issues, loss per day) -0.02
+   same test 3W_4.8kWh Cellora: Spearman(issues, loss per issue) -0.62, Spearman(issues, loss per day) -0.08
+2W_2.1kWh Amptek                : 3.4 SoH pts per 100 days (binned fit); mean SoH < 70% from day bin None; last bin day 539 at 80.3%
+2W_2.1kWh Cellora               : 3.4 SoH pts per 100 days (binned fit); mean SoH < 70% from day bin None; last bin day 539 at 80.3%
+2W_2.1kWh Kyron 2407/2408/2409  : 13.1 SoH pts per 100 days (binned fit); mean SoH < 70% from day bin 245.0; last bin day 287 at 61.6%
+3W_4.8kWh Amptek                : 2.3 SoH pts per 100 days (binned fit); mean SoH < 70% from day bin None; last bin day 539 at 86.7%
+3W_4.8kWh Cellora               : 2.3 SoH pts per 100 days (binned fit); mean SoH < 70% from day bin None; last bin day 539 at 86.7%
+3W_4.8kWh Kyron 2407/2408/2409  : 5.4 SoH pts per 100 days (binned fit); mean SoH < 70% from day bin 539.0; last bin day 539 at 69.7%
+3W_4.8kWh Kyron later lots      : 2.3 SoH pts per 100 days (binned fit); mean SoH < 70% from day bin None; last bin day 539 at 86.8%
+first 6 weeks in service (median 32 issues per pack): lot median per-day fade vs Cellora/Amptek in their own first 6 weeks -> KY-2407/08/09 lots 2.40-4.46x, every other lot <= 1.42x; pack-level 1.5x rule flags 99.1% of bad-lot packs and 10.40% of other packs
+   first-6-week reference (Cellora/Amptek median, pts/day): {'2W_2.1kWh': 0.0216, '3W_4.8kWh': 0.0113}; bad-lot ratios: [('2W', 'KY-2407', 4.44), ('2W', 'KY-2408', 4.46), ('2W', 'KY-2409', 4.42), ('3W', 'KY-2407', 3.18), ('3W', 'KY-2408', 2.4), ('3W', 'KY-2409', 2.94)]
+first 8 weeks in service (median 44 issues per pack): lot median per-day fade vs Cellora/Amptek in their own first 8 weeks -> KY-2407/08/09 lots 2.47-4.50x, every other lot <= 1.37x; pack-level 1.5x rule flags 99.4% of bad-lot packs and 4.47% of other packs
+   first-8-week reference (Cellora/Amptek median, pts/day): {'3W_4.8kWh': 0.0117, '2W_2.1kWh': 0.0219}; bad-lot ratios: [('2W', 'KY-2407', 4.49), ('2W', 'KY-2408', 4.5), ('2W', 'KY-2409', 4.43), ('3W', 'KY-2407', 2.63), ('3W', 'KY-2408', 2.47), ('3W', 'KY-2409', 2.88)]
+2W over the same calendar weeks (10-Sep..4-Nov-2024): Kyron 0.0980 vs Cellora 0.0301 / Amptek 0.0300 pts/day -> 3.26x
+2W_2.1kWh Amptek                : 2.88 SoH pts per 100 cycles (binned fit), mean SoH < 70% from cycle bin None, last bin 650 at 80.5%
+2W_2.1kWh Cellora               : 2.88 SoH pts per 100 cycles (binned fit), mean SoH < 70% from cycle bin None, last bin 650 at 80.5%
+2W_2.1kWh Kyron 2407/2408/2409  : 9.34 SoH pts per 100 cycles (binned fit), mean SoH < 70% from cycle bin 330, last bin 410 at 61.9%
+3W_4.8kWh Amptek                : 3.26 SoH pts per 100 cycles (binned fit), mean SoH < 70% from cycle bin None, last bin 370 at 87.1%
+3W_4.8kWh Cellora               : 3.24 SoH pts per 100 cycles (binned fit), mean SoH < 70% from cycle bin None, last bin 370 at 87.2%
+3W_4.8kWh Kyron 2407/2408/2409  : 7.58 SoH pts per 100 cycles (binned fit), mean SoH < 70% from cycle bin None, last bin 390 at 70.5%
+3W_4.8kWh Kyron later lots      : 3.23 SoH pts per 100 cycles (binned fit), mean SoH < 70% from cycle bin None, last bin 370 at 87.3%
+Kyron 2W fade rate vs Cellora 2W: 3.26x per cycle (per-pack medians; binned-curve fit 3.24x)
+SD of SoH readings around each pack's own linear trajectory (reading noise): {'2W_2.1kWh|Amptek': 0.535, '2W_2.1kWh|Cellora': 0.532, '2W_2.1kWh|Kyron 2407/2408/2409': 0.871, '3W_4.8kWh|Amptek': 0.475, '3W_4.8kWh|Cellora': 0.474, '3W_4.8kWh|Kyron 2407/2408/2409': 0.692, '3W_4.8kWh|Kyron later lots': 0.472}
+swaps issuing a pack below 70% SoH: 122204 | by cohort: [{'pack_type': '2W_2.1kWh', 'cohort': 'Kyron 2407/2408/2409', 'len': 121172}, {'pack_type': '3W_4.8kWh', 'cohort': 'Kyron 2407/2408/2409', 'len': 1032}]
+first sub-EOL issue: 2025-04-03 | last: 2025-06-30
+shape: (3, 4)
+┌────────────┬───────┬───────────┬────────────────────┐
+│ month      ┆ len   ┆ all_swaps ┆ share_of_all_swaps │
+│ ---        ┆ ---   ┆ ---       ┆ ---                │
+│ date       ┆ u32   ┆ u32       ┆ f64                │
+╞════════════╪═══════╪═══════════╪════════════════════╡
+│ 2025-04-01 ┆ 4340  ┆ 289261    ┆ 0.015              │
+│ 2025-05-01 ┆ 51391 ┆ 303748    ┆ 0.1692             │
+│ 2025-06-01 ┆ 66473 ┆ 303196    ┆ 0.2192             │
+└────────────┴───────┴───────────┴────────────────────┘
+Q2-2025: 121,172 of 194,295 Kyron 2W issues were below 70% SoH (62.4%)
+Jun-2025: 65,504 of 65,543 Kyron 2W issues were below 70% SoH (99.94%)
+returned pack == pack issued to the same rider at the previous swap in 0.03% of 3,566,737 consecutive swap pairs -> pack IDs do not follow physical packs (per-pack SoH valid, per-pack location/rider not)
+Kyron share of issued 2W packs, Oct-24..14-Jun-25: {'Bengaluru': 0.085, 'Delhi NCR': 0.394, 'Hyderabad': 0.393, 'Jaipur': 0.387, 'Mumbai': 0.084, 'Pune': 0.085}
+Kyron-heavy cities: ['Delhi NCR', 'Hyderabad', 'Jaipur'] | Kyron-light cities: ['Bengaluru', 'Mumbai', 'Pune']
+share of each cohort's issues made in the Kyron-heavy (hot) cities: {'2W Amptek': 0.446, '2W Cellora': 0.445, '2W Kyron 2407/2408/2409': 0.835, '3W Amptek': 0.479, '3W Cellora': 0.476, '3W Kyron 2407/2408/2409': 0.488, '3W Kyron later lots': 0.481}
+within Cellora 2W, Spearman(heavy-city share of issues, fade per issue) = +0.047 (share sd 0.020) -> exposure varies too little within a cohort to test climate; 3W (equal exposure) is the clean lot test
+completed swaps with a returned pack: 3,586,675; km valid: 3,572,191 (99.6%)
+2W km by SoH bin, Kyron-light cities: [{'cohort_in': 'Amptek', 'soh_bin': 79.0, 'km_mean': 54.79999923706055, 'n': 7105}, {'cohort_in': 'Amptek', 'soh_bin': 81.0, 'km_mean': 55.70000076293945, 'n': 30735}, {'cohort_in': 'Amptek', 'soh_bin': 89.0, 'km_mean': 61.5, 'n': 45877}, {'cohort_in': 'Amptek', 'soh_bin': 95.0, 'km_mean': 67.30000305175781, 'n': 32437}, {'cohort_in': 'Amptek', 'soh_bin': 97.0, 'km_mean': 69.0, 'n': 34073}, {'cohort_in': 'Cellora', 'soh_bin': 79.0, 'km_mean': 54.70000076293945, 'n': 19308}, {'cohort_in': 'Cellora', 'soh_bin': 81.0, 'km_mean': 55.599998474121094, 'n': 85705}, {'cohort_in': 'Cellora', 'soh_bin': 89.0, 'km_mean': 61.599998474121094, 'n': 126216}, {'cohort_in': 'Cellora', 'soh_bin': 95.0, 'km_mean': 67.30000305175781, 'n': 89924}, {'cohort_in': 'Cellora', 'soh_bin': 97.0, 'km_mean': 69.0999984741211, 'n': 94377}, {'cohort_in': 'Kyron 2407/2408/2409', 'soh_bin': 61.0, 'km_mean': 41.599998474121094, 'n': 3143}, {'cohort_in': 'Kyron 2407/2408/2409', 'soh_bin': 69.0, 'km_mean': 46.29999923706055, 'n': 5559}, {'cohort_in': 'Kyron 2407/2408/2409', 'soh_bin': 79.0, 'km_mean': 54.099998474121094, 'n': 6163}, {'cohort_in': 'Kyron 2407/2408/2409', 'soh_bin': 81.0, 'km_mean': 55.29999923706055, 'n': 6311}, {'cohort_in': 'Kyron 2407/2408/2409', 'soh_bin': 89.0, 'km_mean': 60.900001525878906, 'n': 6346}, {'cohort_in': 'Kyron 2407/2408/2409', 'soh_bin': 95.0, 'km_mean': 64.80000305175781, 'n': 6368}, {'cohort_in': 'Kyron 2407/2408/2409', 'soh_bin': 97.0, 'km_mean': 66.19999694824219, 'n': 6233}]
+3W km by SoH bin, Kyron-light cities: [{'cohort_in': 'Amptek', 'soh_bin': 89.0, 'km_mean': 85.4000015258789, 'n': 6039}, {'cohort_in': 'Amptek', 'soh_bin': 95.0, 'km_mean': 92.80000305175781, 'n': 6716}, {'cohort_in': 'Amptek', 'soh_bin': 97.0, 'km_mean': 96.19999694824219, 'n': 6215}, {'cohort_in': 'Cellora', 'soh_bin': 89.0, 'km_mean': 85.4000015258789, 'n': 14775}, {'cohort_in': 'Cellora', 'soh_bin': 95.0, 'km_mean': 92.9000015258789, 'n': 16833}, {'cohort_in': 'Cellora', 'soh_bin': 97.0, 'km_mean': 96.19999694824219, 'n': 15643}, {'cohort_in': 'Kyron 2407/2408/2409', 'soh_bin': 69.0, 'km_mean': 66.4000015258789, 'n': 406}, {'cohort_in': 'Kyron 2407/2408/2409', 'soh_bin': 79.0, 'km_mean': 76.5999984741211, 'n': 987}, {'cohort_in': 'Kyron 2407/2408/2409', 'soh_bin': 81.0, 'km_mean': 78.5999984741211, 'n': 1008}, {'cohort_in': 'Kyron 2407/2408/2409', 'soh_bin': 89.0, 'km_mean': 86.5999984741211, 'n': 1039}, {'cohort_in': 'Kyron 2407/2408/2409', 'soh_bin': 95.0, 'km_mean': 93.19999694824219, 'n': 933}, {'cohort_in': 'Kyron 2407/2408/2409', 'soh_bin': 97.0, 'km_mean': 96.19999694824219, 'n': 1042}, {'cohort_in': 'Kyron later lots', 'soh_bin': 89.0, 'km_mean': 85.5, 'n': 5032}, {'cohort_in': 'Kyron later lots', 'soh_bin': 95.0, 'km_mean': 93.0999984741211, 'n': 5659}, {'cohort_in': 'Kyron later lots', 'soh_bin': 97.0, 'km_mean': 96.19999694824219, 'n': 5357}]
+Q2-2025 km per swap by returned-pack cohort:
+ shape: (7, 6)
+┌───────────────┬──────────────────────┬───────────┬───────────┬───────────┬────────┐
+│ vehicle_class ┆ cohort_in            ┆ km_median ┆ km_mean   ┆ soh_mean  ┆ n      │
+│ ---           ┆ ---                  ┆ ---       ┆ ---       ┆ ---       ┆ ---    │
+│ str           ┆ str                  ┆ f32       ┆ f32       ┆ f32       ┆ u32    │
+╞═══════════════╪══════════════════════╪═══════════╪═══════════╪═══════════╪════════╡
+│ 2W            ┆ Amptek               ┆ 53.400002 ┆ 53.572021 ┆ 82.370361 ┆ 146851 │
+│ 2W            ┆ Cellora              ┆ 53.400002 ┆ 53.596565 ┆ 82.377632 ┆ 406464 │
+│ 2W            ┆ Kyron 2407/2408/2409 ┆ 39.5      ┆ 40.021343 ┆ 68.155014 ┆ 246976 │
+│ 3W            ┆ Amptek               ┆ 83.099998 ┆ 83.409454 ┆ 88.302216 ┆ 19604  │
+│ 3W            ┆ Cellora              ┆ 83.099998 ┆ 83.422005 ┆ 88.311699 ┆ 48823  │
+│ 3W            ┆ Kyron 2407/2408/2409 ┆ 68.800003 ┆ 69.185402 ┆ 73.24437  ┆ 7144   │
+│ 3W            ┆ Kyron later lots     ┆ 83.0      ┆ 83.44519  ┆ 88.365082 ┆ 16789  │
+└───────────────┴──────────────────────┴───────────┴───────────┴───────────┴────────┘
+Q2-2025 median km per swap, returned Kyron 2W pack 39.5 vs Cellora 53.4 / Amptek 53.4 -> -26.0% (mean SoH 68.2 vs 82.4)
+correlation km ~ SoC at return (2W): 0.0049
+2W same-season (Jan-Jun 2024 vs 2025, Kyron-light cities, Cellora/Amptek): 0.86 km per SoH point (monthly range 0.84-0.88); = 1.22% of Jan-24 range (70.5 km at 98.9% SoH) per point
+shape: (6, 6)
+┌─────┬───────────┬───────────┬───────────┬───────────┬───────────┐
+│ m   ┆ km        ┆ km_25     ┆ soh       ┆ soh_25    ┆ km_per_pt │
+│ --- ┆ ---       ┆ ---       ┆ ---       ┆ ---       ┆ ---       │
+│ i8  ┆ f32       ┆ f32       ┆ f32       ┆ f32       ┆ f32       │
+╞═════╪═══════════╪═══════════╪═══════════╪═══════════╪═══════════╡
+│ 1   ┆ 70.547661 ┆ 60.653362 ┆ 98.859253 ┆ 87.664955 ┆ 0.88387   │
+│ 2   ┆ 70.074051 ┆ 59.856533 ┆ 98.207397 ┆ 86.511856 ┆ 0.873625  │
+│ 3   ┆ 69.621201 ┆ 59.040073 ┆ 97.506302 ┆ 85.322258 ┆ 0.868441  │
+│ 4   ┆ 69.069847 ┆ 58.099525 ┆ 96.715965 ┆ 83.995827 ┆ 0.862437  │
+│ 5   ┆ 67.251793 ┆ 56.05645  ┆ 95.760994 ┆ 82.424644 ┆ 0.839461  │
+│ 6   ┆ 67.308472 ┆ 55.588673 ┆ 94.709961 ┆ 80.784561 ┆ 0.841613  │
+└─────┴───────────┴───────────┴───────────┴───────────┴───────────┘
+3W same-season (Jan-Jun 2024 vs 2025, Kyron-light cities, Cellora/Amptek): 1.31 km per SoH point (monthly range 1.29-1.32); = 1.33% of Jan-24 range (98.6 km at 99.0% SoH) per point
+shape: (6, 6)
+┌─────┬───────────┬───────────┬───────────┬───────────┬───────────┐
+│ m   ┆ km        ┆ km_25     ┆ soh       ┆ soh_25    ┆ km_per_pt │
+│ --- ┆ ---       ┆ ---       ┆ ---       ┆ ---       ┆ ---       │
+│ i8  ┆ f32       ┆ f32       ┆ f32       ┆ f32       ┆ f32       │
+╞═════╪═══════════╪═══════════╪═══════════╪═══════════╪═══════════╡
+│ 1   ┆ 98.581528 ┆ 89.630363 ┆ 99.014214 ┆ 92.192856 ┆ 1.312226  │
+│ 2   ┆ 98.59761  ┆ 88.920502 ┆ 98.656059 ┆ 91.352066 ┆ 1.324907  │
+│ 3   ┆ 97.840027 ┆ 87.780434 ┆ 98.288521 ┆ 90.496048 ┆ 1.290937  │
+│ 4   ┆ 97.629837 ┆ 86.625031 ┆ 97.861267 ┆ 89.509949 ┆ 1.317733  │
+│ 5   ┆ 95.623764 ┆ 83.908035 ┆ 97.356346 ┆ 88.35157  ┆ 1.301057  │
+│ 6   ┆ 96.116699 ┆ 83.639465 ┆ 96.779808 ┆ 87.121742 ┆ 1.291898  │
+└─────┴───────────┴───────────┴───────────┴───────────┴───────────┘
+light cities, 2W swaps per active rider-day, 4 weeks before vs after Kyron's arrival: 1.288 -> 1.313 (1.9%)
+light cities, 3W swaps per active rider-day, 4 weeks before vs after Kyron's arrival: 1.147 -> 1.162 (1.4%)
+2W year-on-year, light cities: swaps per active day Jan-Jun 1.290 (2024) vs 1.317 (2025), 2.1%; raw slope 0.86 km/pt -> holding km per active day fixed (2025 km x swap-frequency ratio) 0.77 km/pt
+3W year-on-year, light cities: swaps per active day Jan-Jun 1.149 (2024) vs 1.161 (2025), 1.0%; raw slope 1.31 km/pt -> holding km per active day fixed (2025 km x swap-frequency ratio) 1.20 km/pt
+2W all cities: de-noised SoH -> 0.66 km per SoH point within day x city, 0.73 within month x city (raw single reading 0.55: attenuated, reliability of raw readings 0.70); n=2,494,991
+2W light cities: de-noised SoH -> 0.69 km per SoH point within day x city, 0.72 within month x city (raw single reading 0.55: attenuated, reliability of raw readings 0.70); n=1,443,683
+3W all cities: de-noised SoH -> 0.98 km per SoH point within day x city, 1.02 within month x city (raw single reading 0.73: attenuated, reliability of raw readings 0.66); n=275,209
+3W light cities: de-noised SoH -> 0.94 km per SoH point within day x city, 1.01 within month x city (raw single reading 0.72: attenuated, reliability of raw readings 0.66); n=143,585
+2W: range proportional to SoH predicts 0.71 km per point (70.5 km at 98.9% SoH); de-noised estimates 0.66-0.73 km = 0.94-1.03% of new-pack range per point
+3W: range proportional to SoH predicts 1.00 km per point (98.6 km at 99.0% SoH); de-noised estimates 0.94-1.02 km = 0.95-1.04% of new-pack range per point
+2W Kyron 2407/2408/2409 vs Cellora/Amptek at equal SoH: matched within city x month x SoH -1.79 km (-3.2%; 177,652 swaps, 127 cells) | NOT matching on city: -4.84 km (city-mix confounding)
+3W Kyron 2407/2408/2409 vs Cellora/Amptek at equal SoH: matched within city x month x SoH -0.33 km (-0.3%; 2,347 swaps, 38 cells) | NOT matching on city: -0.09 km (city-mix confounding)
+3W Kyron later lots vs Cellora/Amptek at equal SoH: matched within city x month x SoH -0.01 km (-0.0%; 64,971 swaps, 356 cells) | NOT matching on city: -0.02 km (city-mix confounding)
+2W Kyron 2407/2408/2409 vs Cellora/Amptek matched on DE-NOISED SoH within city x month: -1.76 km (-3.2%; 137,928 swaps)
+
+2W OLS (n=250,000, R2=0.598, month+city FE, HC1): Cellora/Amptek 0.551 km per SoH point [0.518, 0.585] = 0.84% of new-pack range (65.6 km at 100% SoH) per point; Kyron Kyron 2407/2408/2409 slope 0.576 km/pt; Kyron penalty at equal SoH 95%: -2.55 km [-2.74, -2.36], at SoH 80%: -2.92 km (se 0.11); SoC-at-return coefficient -0.0052 km per pt [-0.0112, +0.0008]
+
+3W OLS (n=250,000, R2=0.273, month+city FE, HC1): Cellora/Amptek 0.748 km per SoH point [0.696, 0.799] = 0.78% of new-pack range (95.5 km at 100% SoH) per point; Kyron Kyron 2407/2408/2409 slope 0.854 km/pt; Kyron penalty at equal SoH 95%: -0.80 km [-1.06, -0.53], at SoH 80%: -2.39 km (se 0.30); SoC-at-return coefficient -0.0047 km per pt [-0.0137, +0.0042]; Kyron later lots vs Cellora/Amptek at equal SoH: -0.03 km [-0.13, +0.08]
+2W month+city FE OLS on the raw reading (0.551) is attenuated by reading noise (issue-reading noise SD 0.53 pts; reliability of raw readings within month x city 0.70); the de-noised estimate within month x city is 0.73, within day x city 0.66
+Kyron share of issued 2W packs: heavy 39.2%, light 8.5%
+2W active rider-days: 2,378,154
+Kyron arrival (20 Aug-9 Sep vs 10-30 Sep 2024): within-rider DiD (heavy - light) = +0.1253 swaps per active rider-day [+0.1153, +0.1353], p=1.1e-132, riders=5,278
+shape: (2, 9)
+┌───────┬──────────┬──────────┬──────────┬───────────┬───────────┬───────────┬───────────┬────────┐
+│ heavy ┆ pre      ┆ post     ┆ delta    ┆ km_pre    ┆ dkm       ┆ kmd_pre   ┆ dkmd      ┆ riders │
+│ ---   ┆ ---      ┆ ---      ┆ ---      ┆ ---       ┆ ---       ┆ ---       ┆ ---       ┆ ---    │
+│ i8    ┆ f64      ┆ f64      ┆ f64      ┆ f32       ┆ f32       ┆ f32       ┆ f32       ┆ u32    │
+╞═══════╪══════════╪══════════╪══════════╪═══════════╪═══════════╪═══════════╪═══════════╪════════╡
+│ 0     ┆ 1.278241 ┆ 1.307902 ┆ 0.029661 ┆ 66.224564 ┆ -2.088822 ┆ 84.048889 ┆ -0.769553 ┆ 2700   │
+│ 1     ┆ 1.281483 ┆ 1.436433 ┆ 0.15495  ┆ 66.25605  ┆ -8.165228 ┆ 84.302155 ┆ -1.728028 ┆ 2578   │
+└───────┴──────────┴──────────┴──────────┴───────────┴───────────┴───────────┴───────────┴────────┘
+Placebo (30 Jul-19 Aug vs 20 Aug-9 Sep 2024): within-rider DiD (heavy - light) = +0.0111 swaps per active rider-day [+0.0016, +0.0207], p=2.3e-02, riders=4,964
+shape: (2, 9)
+┌───────┬──────────┬──────────┬───────────┬───────────┬───────────┬───────────┬───────────┬────────┐
+│ heavy ┆ pre      ┆ post     ┆ delta     ┆ km_pre    ┆ dkm       ┆ kmd_pre   ┆ dkmd      ┆ riders │
+│ ---   ┆ ---      ┆ ---      ┆ ---       ┆ ---       ┆ ---       ┆ ---       ┆ ---       ┆ ---    │
+│ i8    ┆ f64      ┆ f64      ┆ f64       ┆ f32       ┆ f32       ┆ f32       ┆ f32       ┆ u32    │
+╞═══════╪══════════╪══════════╪═══════════╪═══════════╪═══════════╪═══════════╪═══════════╪════════╡
+│ 0     ┆ 1.282777 ┆ 1.27926  ┆ -0.003517 ┆ 66.765579 ┆ -0.520588 ┆ 85.003426 ┆ -0.872086 ┆ 2538   │
+│ 1     ┆ 1.274486 ┆ 1.282106 ┆ 0.00762   ┆ 66.669525 ┆ -0.485267 ┆ 84.351662 ┆ -0.097568 ┆ 2426   │
+└───────┴──────────┴──────────┴───────────┴───────────┴───────────┴───────────┴───────────┴────────┘
+Recorded retirement (25 May-14 Jun vs 15-30 Jun 2025): within-rider DiD (heavy - light) = -0.0043 swaps per active rider-day [-0.0129, +0.0042], p=3.2e-01, riders=8,715
+shape: (2, 9)
+┌───────┬──────────┬──────────┬───────────┬───────────┬───────────┬───────────┬───────────┬────────┐
+│ heavy ┆ pre      ┆ post     ┆ delta     ┆ km_pre    ┆ dkm       ┆ kmd_pre   ┆ dkmd      ┆ riders │
+│ ---   ┆ ---      ┆ ---      ┆ ---       ┆ ---       ┆ ---       ┆ ---       ┆ ---       ┆ ---    │
+│ i8    ┆ f64      ┆ f64      ┆ f64       ┆ f32       ┆ f32       ┆ f32       ┆ f32       ┆ u32    │
+╞═══════╪══════════╪══════════╪═══════════╪═══════════╪═══════════╪═══════════╪═══════════╪════════╡
+│ 0     ┆ 1.314005 ┆ 1.313121 ┆ -0.000884 ┆ 54.914532 ┆ -0.760577 ┆ 71.627388 ┆ -1.038005 ┆ 4522   │
+│ 1     ┆ 1.438041 ┆ 1.432808 ┆ -0.005233 ┆ 42.610123 ┆ -0.694535 ┆ 60.59782  ┆ -1.204021 ┆ 4193   │
+└───────┴──────────┴──────────┴───────────┴───────────┴───────────┴───────────┴───────────┴────────┘
+Extra placebo (Apr/May-2024): within-rider DiD (heavy - light) = +0.0026 swaps per active rider-day [-0.0085, +0.0137], p=6.4e-01, riders=3,788
+shape: (2, 9)
+┌───────┬──────────┬──────────┬──────────┬───────────┬───────────┬───────────┬───────────┬────────┐
+│ heavy ┆ pre      ┆ post     ┆ delta    ┆ km_pre    ┆ dkm       ┆ kmd_pre   ┆ dkmd      ┆ riders │
+│ ---   ┆ ---      ┆ ---      ┆ ---      ┆ ---       ┆ ---       ┆ ---       ┆ ---       ┆ ---    │
+│ i8    ┆ f64      ┆ f64      ┆ f64      ┆ f32       ┆ f32       ┆ f32       ┆ f32       ┆ u32    │
+╞═══════╪══════════╪══════════╪══════════╪═══════════╪═══════════╪═══════════╪═══════════╪════════╡
+│ 0     ┆ 1.279621 ┆ 1.284848 ┆ 0.005227 ┆ 69.573471 ┆ -1.131666 ┆ 88.350151 ┆ -1.022317 ┆ 1895   │
+│ 1     ┆ 1.275189 ┆ 1.283032 ┆ 0.007843 ┆ 67.926041 ┆ -2.309591 ┆ 86.010025 ┆ -2.426651 ┆ 1893   │
+└───────┴──────────┴──────────┴──────────┴───────────┴───────────┴───────────┴───────────┴────────┘
+Extra placebo (Jun/Jul-2024, spans price change): within-rider DiD (heavy - light) = -0.0013 swaps per active rider-day [-0.0115, +0.0088], p=7.9e-01, riders=4,258
+shape: (2, 9)
+┌───────┬──────────┬──────────┬──────────┬───────────┬──────────┬───────────┬──────────┬────────┐
+│ heavy ┆ pre      ┆ post     ┆ delta    ┆ km_pre    ┆ dkm      ┆ kmd_pre   ┆ dkmd     ┆ riders │
+│ ---   ┆ ---      ┆ ---      ┆ ---      ┆ ---       ┆ ---      ┆ ---       ┆ ---      ┆ ---    │
+│ i8    ┆ f64      ┆ f64      ┆ f64      ┆ f32       ┆ f32      ┆ f32       ┆ f32      ┆ u32    │
+╞═══════╪══════════╪══════════╪══════════╪═══════════╪══════════╪═══════════╪══════════╪════════╡
+│ 0     ┆ 1.280868 ┆ 1.285059 ┆ 0.004191 ┆ 67.722504 ┆ -0.25767 ┆ 86.221062 ┆ -0.10037 ┆ 2205   │
+│ 1     ┆ 1.264019 ┆ 1.266862 ┆ 0.002843 ┆ 65.247322 ┆ 1.079031 ┆ 81.863586 ┆ 1.539483 ┆ 2053   │
+└───────┴──────────┴──────────┴──────────┴───────────┴──────────┴───────────┴──────────┴────────┘
+NEGATIVE CONTROL: 3W riders, same cities and windows: within-rider DiD (heavy - light) = +0.0059 swaps per active rider-day [-0.0121, +0.0239], p=5.2e-01, riders=817
+shape: (2, 9)
+┌───────┬──────────┬──────────┬──────────┬───────────┬───────────┬────────────┬───────────┬────────┐
+│ heavy ┆ pre      ┆ post     ┆ delta    ┆ km_pre    ┆ dkm       ┆ kmd_pre    ┆ dkmd      ┆ riders │
+│ ---   ┆ ---      ┆ ---      ┆ ---      ┆ ---       ┆ ---       ┆ ---        ┆ ---       ┆ ---    │
+│ i8    ┆ f64      ┆ f64      ┆ f64      ┆ f32       ┆ f32       ┆ f32        ┆ f32       ┆ u32    │
+╞═══════╪══════════╪══════════╪══════════╪═══════════╪═══════════╪════════════╪═══════════╪════════╡
+│ 0     ┆ 1.142399 ┆ 1.152272 ┆ 0.009874 ┆ 95.498848 ┆ -3.607566 ┆ 108.398949 ┆ -3.108163 ┆ 430    │
+│ 1     ┆ 1.138612 ┆ 1.154367 ┆ 0.015755 ┆ 95.779945 ┆ -3.407116 ┆ 108.472275 ┆ -2.597297 ┆ 387    │
+└───────┴──────────┴──────────┴──────────┴───────────┴───────────┴────────────┴───────────┴────────┘
+near-duplicate check, 2W swaps 20-Aug..30-Sep-2024:
+ shape: (4, 8)
+┌───────┬───────┬───────┬────────┬───────────┬───────────┬─────────────┬────────────────┐
+│ heavy ┆ post  ┆ swaps ┆ km_lt5 ┆ km_p50    ┆ km_p10    ┆ gap_med_min ┆ same_stn_lt30m │
+│ ---   ┆ ---   ┆ ---   ┆ ---    ┆ ---       ┆ ---       ┆ ---         ┆ ---            │
+│ bool  ┆ bool  ┆ u32   ┆ f64    ┆ f32       ┆ f32       ┆ f64         ┆ f64            │
+╞═══════╪═══════╪═══════╪════════╪═══════════╪═══════════╪═════════════╪════════════════╡
+│ false ┆ false ┆ 50776 ┆ 0.0    ┆ 65.699997 ┆ 56.700001 ┆ 1385.825    ┆ 0.0119         │
+│ false ┆ true  ┆ 56911 ┆ 0.0    ┆ 63.5      ┆ 54.700001 ┆ 1350.316667 ┆ 0.0128         │
+│ true  ┆ false ┆ 50883 ┆ 0.0    ┆ 65.699997 ┆ 56.700001 ┆ 1369.716667 ┆ 0.0115         │
+│ true  ┆ true  ┆ 64135 ┆ 0.0    ┆ 57.299999 ┆ 48.599998 ┆ 1145.566667 ┆ 0.0164         │
+└───────┴───────┴───────┴────────┴───────────┴───────────┴─────────────┴────────────────┘
+heavy cities before -> after Kyron: km < 5 share 0.0000 -> 0.0000; median km 65.7 -> 57.3; median gap to previous swap 1,370 -> 1,146 min; same-station re-swaps < 30 min 1.15% -> 1.64% -> real, earlier visits, not duplicate records
+Kyron-arrival DiD as % of heavy-city pre level (1.281): 9.8%
+km per swap change (within rider): heavy -8.17 km (from 66.3), light -2.09 km (from 66.2) -> DiD -6.08 km per swap
+km per active day (within rider): heavy 84.3 -1.73 (-2.0%), light 84.0 -0.77 (-0.9%) -> same daily distance, more swaps
+Cellora/Amptek returned packs only: km per swap heavy 65.9 -> 56.6 (SoH 92.3 -> 91.6), light 65.9 -> 63.4 -> km falls for every supplier where swapping became more frequent
+fleet-partner contract starts/amendments 20-Aug..30-Sep-2024: []
+stations commissioned 20-Aug..30-Sep-2024 by city group: [{'heavy': False, 'len': 9}, {'heavy': True, 'len': 6}]
+shape: (6, 5)
+┌───────────┬──────────┬────────┬──────────────────┬────────────────────┐
+│ city      ┆ delta    ┆ riders ┆ kyron_share_post ┆ kyron_share_issued │
+│ ---       ┆ ---      ┆ ---    ┆ ---              ┆ ---                │
+│ str       ┆ f64      ┆ u32    ┆ f64              ┆ f64                │
+╞═══════════╪══════════╪════════╪══════════════════╪════════════════════╡
+│ Mumbai    ┆ 0.022115 ┆ 733    ┆ 0.077952         ┆ 0.083848           │
+│ Bengaluru ┆ 0.036075 ┆ 1158   ┆ 0.087366         ┆ 0.084849           │
+│ Pune      ┆ 0.027316 ┆ 809    ┆ 0.087695         ┆ 0.085256           │
+│ Jaipur    ┆ 0.157452 ┆ 639    ┆ 0.382158         ┆ 0.387394           │
+│ Delhi NCR ┆ 0.152283 ┆ 991    ┆ 0.394013         ┆ 0.39436            │
+│ Hyderabad ┆ 0.156052 ┆ 948    ┆ 0.39455          ┆ 0.392926           │
+└───────────┴──────────┴────────┴──────────────────┴────────────────────┘
+city line: +0.409 swaps per active rider-day per 100% Kyron share = +0.041 per 10 pts (intercept -0.0050, R2=0.995, 6 cities); placebo DiD = 9% of the main DiD
+   heavy cluster: Kyron share 38.2-39.5% (10-30 Sep), 38.7-39.4% (Oct-Jun); within-rider change +0.152 to +0.157
+   light cluster: Kyron share 7.8-8.8% (10-30 Sep), 8.4-8.5% (Oct-Jun); within-rider change +0.022 to +0.036
+   -> the 6 cities form two tight clusters, so the R2 only restates the two-group contrast; it is not dose-response evidence
+weekly heavy-light gap: pre-arrival mean -0.007; first full Kyron week (w/c 2024-09-16) +0.133 while Kyron packs were at 98.3% SoH vs 91.6% for the rest of the 2W fleet; mean over 16-Sep-24..23-Jun-25 +0.129; last week +0.113 with Kyron at 61.2%; corr(weekly gap, Kyron mean SoH) r = -0.04 (p = 0.79, 41 weeks) -> the gap was full-size when Kyron packs were new and never tracked their fade
+rider-week FE panel (285,224 rider-weeks, 14,097 riders): Kyron share of packs issued that week -> +0.0002 swaps per active day (95% CI -0.0060, +0.0063)
+  with mean SoH of issued packs: Kyron share +0.0025 (se 0.0038); per +10 SoH pts +0.0041 (se 0.0039)
+rider-day FE (1,450,815 rider-days): first pack of the day is Kyron -> P(2+ swaps that day) +0.14 pp (95% CI -0.06, +0.34)
+raw rider-day means by first issued pack (post period): [{'heavy': False, 'first_kyron': False, 'n': 1.316, 'len': 666291}, {'heavy': False, 'first_kyron': True, 'n': 1.326, 'len': 61374}, {'heavy': True, 'first_kyron': False, 'n': 1.433, 'len': 443303}, {'heavy': True, 'first_kyron': True, 'n': 1.467, 'len': 279847}]
+median hours between same-day swaps by SoH of the returned pack: [{'soh_bin': 60.0, 'gap_median_h': 4.495555555555556, 'n': 8653}, {'soh_bin': 65.0, 'gap_median_h': 4.436111111111111, 'n': 24099}, {'soh_bin': 70.0, 'gap_median_h': 4.360555555555556, 'n': 26501}, {'soh_bin': 75.0, 'gap_median_h': 4.436111111111111, 'n': 31929}, {'soh_bin': 80.0, 'gap_median_h': 4.532222222222222, 'n': 157024}, {'soh_bin': 85.0, 'gap_median_h': 4.482222222222222, 'n': 210670}, {'soh_bin': 90.0, 'gap_median_h': 4.421111111111111, 'n': 80017}, {'soh_bin': 95.0, 'gap_median_h': 4.392638888888889, 'n': 13996}]
+corr(gap, SoH of returned pack): 0.0019
+Kyron-light cities by month (gradual fade, little Kyron):
+ shape: (18, 4)
+┌────────────┬──────────────────────┬─────────────┬────────────┐
+│ month      ┆ swaps_per_active_day ┆ km_per_swap ┆ soh_issued │
+│ ---        ┆ ---                  ┆ ---         ┆ ---        │
+│ date       ┆ f64                  ┆ f32         ┆ f32        │
+╞════════════╪══════════════════════╪═════════════╪════════════╡
+│ 2024-01-01 ┆ 1.29                 ┆ 70.800003   ┆ 98.800003  │
+│ 2024-02-01 ┆ 1.291                ┆ 70.300003   ┆ 98.199997  │
+│ 2024-03-01 ┆ 1.29                 ┆ 69.800003   ┆ 97.5       │
+│ 2024-04-01 ┆ 1.288                ┆ 69.300003   ┆ 96.699997  │
+│ 2024-05-01 ┆ 1.292                ┆ 67.400002   ┆ 95.699997  │
+│ 2024-06-01 ┆ 1.29                 ┆ 67.5        ┆ 94.699997  │
+│ 2024-07-01 ┆ 1.288                ┆ 67.199997   ┆ 93.699997  │
+│ 2024-08-01 ┆ 1.289                ┆ 66.5        ┆ 92.699997  │
+│ 2024-09-01 ┆ 1.305                ┆ 64.599998   ┆ 92.099998  │
+│ 2024-10-01 ┆ 1.316                ┆ 63.299999   ┆ 91.199997  │
+│ 2024-11-01 ┆ 1.316                ┆ 62.5        ┆ 90.0       │
+│ 2024-12-01 ┆ 1.314                ┆ 61.599998   ┆ 88.800003  │
+│ 2025-01-01 ┆ 1.315                ┆ 60.599998   ┆ 87.400002  │
+│ 2025-02-01 ┆ 1.314                ┆ 59.599998   ┆ 86.0       │
+│ 2025-03-01 ┆ 1.313                ┆ 58.599998   ┆ 84.599998  │
+│ 2025-04-01 ┆ 1.314                ┆ 57.400002   ┆ 83.0       │
+│ 2025-05-01 ┆ 1.325                ┆ 55.099998   ┆ 81.199997  │
+│ 2025-06-01 ┆ 1.32                 ┆ 54.400002   ┆ 79.199997  │
+└────────────┴──────────────────────┴─────────────┴────────────┘
+light cities Oct-24..Jun-25: swaps/active day 1.313-1.325 while issued SoH fell 91.2 -> 79.2 and km per swap 63.3 -> 54.4 (km per active day 83.3 -> 71.8)
+range check while swap frequency was flat (light cities, Oct-24 -> Jun-25): km per swap fell 0.75 km per SoH point (endpoints; OLS across the 9 months 0.77) - spans seasons, so a corroborating check only
+Q2-2025: heavy-city 2W rider-days 284,492, heavy-city 2W swaps 412,104, all 2W swaps 803,480, all swaps 896,205
+extra swaps attributable to Kyron, Q2-2025 (DiD x heavy rider-days): 35,644 = 8.6% of heavy-city 2W swaps, 4.4% of all 2W swaps, 4.0% of all swaps; 392 per day
+upper bound (6-city dose-response incl. light cities): 55,754 = 6.9% of 2W swaps, 6.2% of all swaps
+riders/fleets paid for these extra swaps: ~₹21.0 L in Q2-2025 (avg 58.9 INR per heavy-city 2W swap)
+Kyron 2W issuance, 1-14 Jun vs 15-30 Jun 2025:
+ shape: (2, 6)
+┌───────┬─────────────────────┬──────────┬──────────────────────────────┬───────────┬───────┐
+│ after ┆ kyron_swaps_per_day ┆ swaps_2w ┆ distinct_kyron_packs_per_day ┆ kyron_soh ┆ share │
+│ ---   ┆ ---                 ┆ ---      ┆ ---                          ┆ ---       ┆ ---   │
+│ bool  ┆ f64                 ┆ f64      ┆ f64                          ┆ f64       ┆ f64   │
+╞═══════╪═════════════════════╪══════════╪══════════════════════════════╪═══════════╪═══════╡
+│ false ┆ 2169.0              ┆ 9023.0   ┆ 1095.0                       ┆ 64.4      ┆ 0.24  │
+│ true  ┆ 2199.0              ┆ 9087.0   ┆ 1099.0                       ┆ 61.8      ┆ 0.242 │
+└───────┴─────────────────────┴──────────┴──────────────────────────────┴───────────┴───────┘
+Kyron packs issued on/after the recorded retirement date (15-30 Jun 2025): [{'vehicle_class': '2W', 'swaps': 35183, 'distinct_packs': 1385}, {'vehicle_class': '3W', 'swaps': 4342, 'distinct_packs': 253}]
+shape: (18, 5)
+┌────────────┬────────────────┬───────────┬────────────────────┬───────────────┐
+│ month      ┆ kyron_share_2w ┆ kyron_soh ┆ cellora_amptek_soh ┆ sub_eol_swaps │
+│ ---        ┆ ---            ┆ ---       ┆ ---                ┆ ---           │
+│ date       ┆ f64            ┆ f64       ┆ f64                ┆ u32           │
+╞════════════╪════════════════╪═══════════╪════════════════════╪═══════════════╡
+│ 2024-01-01 ┆ 0.0            ┆ 0.0       ┆ 98.9               ┆ 0             │
+│ 2024-02-01 ┆ 0.0            ┆ 0.0       ┆ 98.2               ┆ 0             │
+│ 2024-03-01 ┆ 0.0            ┆ 0.0       ┆ 97.5               ┆ 0             │
+│ 2024-04-01 ┆ 0.0            ┆ 0.0       ┆ 96.7               ┆ 0             │
+│ 2024-05-01 ┆ 0.0            ┆ 0.0       ┆ 95.7               ┆ 0             │
+│ 2024-06-01 ┆ 0.0            ┆ 0.0       ┆ 94.7               ┆ 0             │
+│ 2024-07-01 ┆ 0.0            ┆ 0.0       ┆ 93.7               ┆ 0             │
+│ 2024-08-01 ┆ 0.0            ┆ 0.0       ┆ 92.7               ┆ 0             │
+│ 2024-09-01 ┆ 0.181          ┆ 98.2      ┆ 91.7               ┆ 0             │
+│ 2024-10-01 ┆ 0.246          ┆ 95.7      ┆ 90.8               ┆ 0             │
+│ 2024-11-01 ┆ 0.245          ┆ 92.5      ┆ 89.8               ┆ 0             │
+│ 2024-12-01 ┆ 0.246          ┆ 89.0      ┆ 88.8               ┆ 0             │
+│ 2025-01-01 ┆ 0.247          ┆ 85.2      ┆ 87.6               ┆ 0             │
+│ 2025-02-01 ┆ 0.249          ┆ 81.4      ┆ 86.5               ┆ 0             │
+│ 2025-03-01 ┆ 0.247          ┆ 77.5      ┆ 85.3               ┆ 0             │
+│ 2025-04-01 ┆ 0.245          ┆ 73.0      ┆ 83.9               ┆ 4340          │
+│ 2025-05-01 ┆ 0.239          ┆ 68.1      ┆ 82.4               ┆ 51391         │
+│ 2025-06-01 ┆ 0.241          ┆ 63.0      ┆ 80.7               ┆ 66473         │
+└────────────┴────────────────┴───────────┴────────────────────┴───────────────┘
+June service metrics (2W):
+ shape: (8, 8)
+┌──────┬───────┬───────┬──────────┬──────────┬──────────┬──────────┬────────────┐
+│ year ┆ heavy ┆ late  ┆ attempts ┆ stockout ┆ abandon  ┆ failure  ┆ qwait_s    │
+│ ---  ┆ ---   ┆ ---   ┆ ---      ┆ ---      ┆ ---      ┆ ---      ┆ ---        │
+│ i32  ┆ bool  ┆ bool  ┆ u32      ┆ f64      ┆ f64      ┆ f64      ┆ f64        │
+╞══════╪═══════╪═══════╪══════════╪══════════╪══════════╪══════════╪════════════╡
+│ 2024 ┆ false ┆ false ┆ 29267    ┆ 0.020569 ┆ 0.0109   ┆ 0.034578 ┆ 245.028666 │
+│ 2024 ┆ false ┆ true  ┆ 35248    ┆ 0.021335 ┆ 0.011377 ┆ 0.035435 ┆ 242.547238 │
+│ 2024 ┆ true  ┆ false ┆ 29879    ┆ 0.103417 ┆ 0.048161 ┆ 0.154925 ┆ 243.510803 │
+│ 2024 ┆ true  ┆ true  ┆ 35166    ┆ 0.098533 ┆ 0.0482   ┆ 0.149633 ┆ 242.588265 │
+│ 2025 ┆ false ┆ false ┆ 64723    ┆ 0.021028 ┆ 0.011449 ┆ 0.035181 ┆ 242.861211 │
+│ 2025 ┆ false ┆ true  ┆ 74109    ┆ 0.021738 ┆ 0.011659 ┆ 0.0365   ┆ 243.58471  │
+│ 2025 ┆ true  ┆ false ┆ 72473    ┆ 0.073213 ┆ 0.033861 ┆ 0.110179 ┆ 243.204388 │
+│ 2025 ┆ true  ┆ true  ┆ 84445    ┆ 0.075718 ┆ 0.036994 ┆ 0.115839 ┆ 244.418469 │
+└──────┴───────┴───────┴──────────┴──────────┴──────────┴──────────┴────────────┘
+June late-vs-early, heavy-minus-light stockout: 2025 +0.18pp, 2024 -0.56pp, triple difference +0.74pp
+June late-vs-early, heavy-minus-light abandon: 2025 +0.29pp, 2024 -0.04pp, triple difference +0.34pp
+June late-vs-early, heavy-minus-light failure: 2025 +0.43pp, 2024 -0.61pp, triple difference +1.05pp
+June late-vs-early, heavy-minus-light qwait_s: 2025 +0.49s, 2024 +1.56s, triple difference -1.07s
+Kyron arrival window service metrics (2W):
+ shape: (4, 7)
+┌───────┬───────┬──────────┬──────────┬──────────┬──────────┬────────────┐
+│ heavy ┆ post  ┆ attempts ┆ stockout ┆ abandon  ┆ failure  ┆ qwait_s    │
+│ ---   ┆ ---   ┆ ---      ┆ ---      ┆ ---      ┆ ---      ┆ ---        │
+│ bool  ┆ bool  ┆ u32      ┆ f64      ┆ f64      ┆ f64      ┆ f64        │
+╞═══════╪═══════╪══════════╪══════════╪══════════╪══════════╪════════════╡
+│ false ┆ false ┆ 52777    ┆ 0.019346 ┆ 0.011274 ┆ 0.033575 ┆ 243.182527 │
+│ false ┆ true  ┆ 59149    ┆ 0.019831 ┆ 0.01055  ┆ 0.033728 ┆ 244.005517 │
+│ true  ┆ false ┆ 52900    ┆ 0.01966  ┆ 0.011002 ┆ 0.033667 ┆ 243.39412  │
+│ true  ┆ true  ┆ 66689    ┆ 0.020123 ┆ 0.010586 ┆ 0.033799 ┆ 243.988353 │
+└───────┴───────┴──────────┴──────────┴──────────┴──────────┴────────────┘
+Kyron arrival DiD heavy-minus-light stockout: -0.00pp (heavy 1.97 -> 2.01)
+Kyron arrival DiD heavy-minus-light failure: -0.00pp (heavy 3.37 -> 3.38)
+Kyron arrival DiD heavy-minus-light qwait_s: -0.23s (heavy 243.39 -> 243.99)
+June 2024 vs June 2025 stockout rate, heavy cities: {2025: 7.46, 2024: 10.08} | light cities: {2025: 2.14, 2024: 2.1} (all stations - includes ~60 stations opened after Jun-24)
+June 2W stockout rate at the SAME 90 stations (commissioned before Jun-24): heavy 10.08% -> 9.93%, light 2.10% -> 2.19% -> the all-station fall in the heavy cities is new-station composition
+telemetry around Kyron arrival:
+ shape: (4, 7)
+┌───────┬───────┬────────────────┬─────────────┬───────────┬────────────┬───────────────┐
+│ heavy ┆ post  ┆ charged_2w_avg ┆ quarantined ┆ cabinet_c ┆ charge_min ┆ station_hours │
+│ ---   ┆ ---   ┆ ---            ┆ ---         ┆ ---       ┆ ---        ┆ ---           │
+│ bool  ┆ bool  ┆ f32            ┆ f32         ┆ f32       ┆ f32        ┆ u32           │
+╞═══════╪═══════╪════════════════╪═════════════╪═══════════╪════════════╪═══════════════╡
+│ false ┆ false ┆ 9.265          ┆ 0.0         ┆ 23.77     ┆ 71.300003  ┆ 24153         │
+│ false ┆ true  ┆ 9.296          ┆ 0.0         ┆ 24.700001 ┆ 70.300003  ┆ 26037         │
+│ true  ┆ false ┆ 8.379          ┆ 0.0         ┆ 23.799999 ┆ 81.099998  ┆ 23666         │
+│ true  ┆ true  ┆ 8.414          ┆ 0.0         ┆ 24.860001 ┆ 80.099998  ┆ 24617         │
+└───────┴───────┴────────────────┴─────────────┴───────────┴────────────┴───────────────┘
+telemetry DiD at Kyron arrival (heavy-light) charged_2w_avg: +0.004
+telemetry DiD at Kyron arrival (heavy-light) quarantined: +0.000
+telemetry DiD at Kyron arrival (heavy-light) cabinet_c: +0.130
+telemetry DiD at Kyron arrival (heavy-light) charge_min: +0.000
+telemetry June halves:
+ shape: (8, 8)
+┌──────┬───────┬───────┬────────────────┬─────────────┬───────────┬────────────┬───────────────┐
+│ year ┆ heavy ┆ late  ┆ charged_2w_avg ┆ quarantined ┆ cabinet_c ┆ charge_min ┆ station_hours │
+│ ---  ┆ ---   ┆ ---   ┆ ---            ┆ ---         ┆ ---       ┆ ---        ┆ ---           │
+│ i32  ┆ bool  ┆ bool  ┆ f32            ┆ f32         ┆ f32       ┆ f32        ┆ u32           │
+╞══════╪═══════╪═══════╪════════════════╪═════════════╪═══════════╪════════════╪═══════════════╡
+│ 2024 ┆ false ┆ false ┆ 9.05           ┆ 0.0007      ┆ 30.219999 ┆ 72.099998  ┆ 14998         │
+│ 2024 ┆ false ┆ true  ┆ 9.108          ┆ 0.0008      ┆ 29.950001 ┆ 72.199997  ┆ 17112         │
+│ 2024 ┆ true  ┆ false ┆ 7.823          ┆ 0.0048      ┆ 34.119999 ┆ 93.099998  ┆ 14285         │
+│ 2024 ┆ true  ┆ true  ┆ 7.805          ┆ 0.0031      ┆ 34.32     ┆ 93.599998  ┆ 16325         │
+│ 2025 ┆ false ┆ false ┆ 9.234          ┆ 0.0013      ┆ 30.32     ┆ 63.799999  ┆ 24770         │
+│ 2025 ┆ false ┆ true  ┆ 9.244          ┆ 0.0012      ┆ 30.530001 ┆ 63.799999  ┆ 28321         │
+│ 2025 ┆ true  ┆ false ┆ 8.347          ┆ 0.0041      ┆ 34.23     ┆ 76.5       ┆ 23728         │
+│ 2025 ┆ true  ┆ true  ┆ 8.333          ┆ 0.0034      ┆ 34.400002 ┆ 76.5       ┆ 27075         │
+└──────┴───────┴───────┴────────────────┴─────────────┴───────────┴────────────┴───────────────┘
+telemetry June triple difference charged_2w_avg: +0.052 (2025 -0.024, 2024 -0.076)
+telemetry June triple difference quarantined: +0.001 (2025 -0.001, 2024 -0.002)
+June charged-2W packs per station-hour at the same stations: heavy 7.81 -> 7.78, light 9.08 -> 9.08 (despite +33.5% 2W pack IDs since Sep-24)
+thermal quarantine vs cabinet temperature (all ok station-hours):
+ shape: (17, 4)
+┌───────────────┬──────────────────────────────┬─────────────────┬───────────────┐
+│ cabinet_bin_c ┆ quarantined_per_station_hour ┆ share_hours_any ┆ station_hours │
+│ ---           ┆ ---                          ┆ ---             ┆ ---           │
+│ f32           ┆ f32                          ┆ f64             ┆ u32           │
+╞═══════════════╪══════════════════════════════╪═════════════════╪═══════════════╡
+│ 6.0           ┆ 0.0                          ┆ 0.0             ┆ 3394          │
+│ 9.0           ┆ 0.0                          ┆ 0.0             ┆ 42512         │
+│ 12.0          ┆ 0.0                          ┆ 0.0             ┆ 120707        │
+│ 15.0          ┆ 0.0                          ┆ 0.0             ┆ 190287        │
+│ 18.0          ┆ 0.0                          ┆ 0.0             ┆ 185417        │
+│ 21.0          ┆ 0.0                          ┆ 0.0             ┆ 186279        │
+│ 24.0          ┆ 0.0                          ┆ 0.0             ┆ 181065        │
+│ 27.0          ┆ 0.0                          ┆ 0.0             ┆ 142255        │
+│ 30.0          ┆ 0.0                          ┆ 0.0             ┆ 101094        │
+│ 33.0          ┆ 0.0                          ┆ 0.0             ┆ 62317         │
+│ 36.0          ┆ 0.0                          ┆ 0.0             ┆ 57776         │
+│ 39.0          ┆ 0.0066                       ┆ 0.0066          ┆ 52887         │
+│ 42.0          ┆ 0.0106                       ┆ 0.0106          ┆ 39673         │
+│ 45.0          ┆ 0.0124                       ┆ 0.0124          ┆ 24754         │
+│ 48.0          ┆ 0.0096                       ┆ 0.0096          ┆ 13433         │
+│ 51.0          ┆ 0.0111                       ┆ 0.011           ┆ 8474          │
+│ 54.0          ┆ 0.0105                       ┆ 0.0105          ┆ 2862          │
+└───────────────┴──────────────────────────────┴─────────────────┴───────────────┘
+per-swap economics by issued-pack cohort, Oct-24..14-Jun-25:
+ shape: (7, 8)
+┌───────────────┬──────────────────────┬─────────┬────────────┬─────────────┬───────────┬─────────┬────────────────────┐
+│ vehicle_class ┆ cohort               ┆ swaps   ┆ revenue    ┆ energy_cost ┆ wear_cost ┆ cm1     ┆ margin_before_wear │
+│ ---           ┆ ---                  ┆ ---     ┆ ---        ┆ ---         ┆ ---       ┆ ---     ┆ ---                │
+│ str           ┆ str                  ┆ u32     ┆ f32        ┆ f64         ┆ f64       ┆ f64     ┆ f64                │
+╞═══════════════╪══════════════════════╪═════════╪════════════╪═════════════╪═══════════╪═════════╪════════════════════╡
+│ 2W            ┆ Amptek               ┆ 402249  ┆ 61.130001  ┆ 16.69       ┆ 31.87     ┆ 12.57   ┆ 44.44              │
+│ 2W            ┆ Cellora              ┆ 1110280 ┆ 61.099998  ┆ 16.69       ┆ 31.85     ┆ 12.56   ┆ 44.41              │
+│ 2W            ┆ Kyron 2407/2408/2409 ┆ 491254  ┆ 59.639999  ┆ 15.47       ┆ 103.84    ┆ -59.67  ┆ 44.17              │
+│ 3W            ┆ Amptek               ┆ 47894   ┆ 101.43     ┆ 40.34       ┆ 76.31     ┆ -15.22  ┆ 61.09              │
+│ 3W            ┆ Cellora              ┆ 119433  ┆ 101.440002 ┆ 40.31       ┆ 76.15     ┆ -15.03  ┆ 61.12              │
+│ 3W            ┆ Kyron 2407/2408/2409 ┆ 17697   ┆ 101.360001 ┆ 35.34       ┆ 180.3     ┆ -114.28 ┆ 66.02              │
+│ 3W            ┆ Kyron later lots     ┆ 40798   ┆ 101.440002 ┆ 40.3        ┆ 75.5      ┆ -14.35  ┆ 61.14              │
+└───────────────┴──────────────────────┴─────────┴────────────┴─────────────┴───────────┴─────────┴────────────────────┘
+Kyron wear: actual vs Cellora-like counterfactual (whole window), per-swap model and capped at purchase price:
+ shape: (3, 9)
+┌───────────────┬──────────────────────┬────────┬─────────────┬──────────┬──────────────┬─────────────┬───────────────┬───────────────┐
+│ vehicle_class ┆ cohort               ┆ swaps  ┆ wear_actual ┆ wear_cf  ┆ excess       ┆ wear_capped ┆ excess_capped ┆ wear_past_eol │
+│ ---           ┆ ---                  ┆ ---    ┆ ---         ┆ ---      ┆ ---          ┆ ---         ┆ ---           ┆ ---           │
+│ str           ┆ str                  ┆ u32    ┆ f64         ┆ f64      ┆ f64          ┆ f64         ┆ f64           ┆ f64           │
+╞═══════════════╪══════════════════════╪════════╪═════════════╪══════════╪══════════════╪═════════════╪═══════════════╪═══════════════╡
+│ 2W            ┆ Kyron 2407/2408/2409 ┆ 556365 ┆ 5.7794e7    ┆ 1.7712e7 ┆ 4.0082e7     ┆ 4.4294633e7 ┆ 2.6583e7      ┆ 1.3571e7      │
+│ 3W            ┆ Kyron 2407/2408/2409 ┆ 29101  ┆ 5.2534e6    ┆ 2.2196e6 ┆ 3.0338e6     ┆ 5.0828e6    ┆ 2.8632e6      ┆ 175579.471683 │
+│ 3W            ┆ Kyron later lots     ┆ 67388  ┆ 5.0901e6    ┆ 5.0968e6 ┆ -6745.844786 ┆ 5.0901e6    ┆ -6745.844786  ┆ 0.0           │
+└───────────────┴──────────────────────┴────────┴─────────────┴──────────┴──────────────┴─────────────┴───────────────┴───────────────┘
+excess wear, PER-SWAP MODEL: Kyron 2W ₹4.01 Cr (40,082,412 INR) | Kyron 3W fast-fade lots ₹30.3 L | Kyron 3W later lots ₹-6.7K | total ₹4.31 Cr
+excess wear, CAPPED AT PURCHASE PRICE (value destroyed to date): 2W ₹2.66 Cr + 3W ₹28.6 L = ₹2.94 Cr; the other ₹1.37 Cr of the per-swap total is wear charged after packs passed their own 70% point (wear charged on past-EOL Kyron swaps: ₹1.37 Cr)
+Kyron 2W swaps were charged ₹5.78 Cr of wear against a fleet purchase value of ₹4.43 Cr (capped: ₹4.43 Cr)
+shape: (18, 11)
+┌────────────┬────────┬───────────────┬──────────────────┬──────────────┬─────────────────────┬─────────────────┬────────────┬───────────────┬─────────────┬───────────────────┐
+│ month      ┆ swaps  ┆ wear_per_swap ┆ wear_per_swap_cf ┆ cm1_per_swap ┆ cm1_per_swap_capped ┆ cm1_per_swap_cf ┆ excess     ┆ excess_capped ┆ excess_cum  ┆ excess_capped_cum │
+│ ---        ┆ ---    ┆ ---           ┆ ---              ┆ ---          ┆ ---                 ┆ ---             ┆ ---        ┆ ---           ┆ ---         ┆ ---               │
+│ date       ┆ u32    ┆ f64           ┆ f64              ┆ f64          ┆ f64                 ┆ f64             ┆ f64        ┆ f64           ┆ f64         ┆ f64               │
+╞════════════╪════════╪═══════════════╪══════════════════╪══════════════╪═════════════════════╪═════════════════╪════════════╪═══════════════╪═════════════╪═══════════════════╡
+│ 2024-01-01 ┆ 103508 ┆ 37.79         ┆ 36.83            ┆ 0.09         ┆ 0.09                ┆ 1.05            ┆ 99616.0    ┆ 99616.0       ┆ 99616.0     ┆ 99616.0           │
+│ 2024-02-01 ┆ 104437 ┆ 37.79         ┆ 36.87            ┆ 0.21         ┆ 0.21                ┆ 1.13            ┆ 95928.0    ┆ 95928.0       ┆ 195544.0    ┆ 195544.0          │
+│ 2024-03-01 ┆ 116148 ┆ 37.66         ┆ 36.77            ┆ 0.49         ┆ 0.49                ┆ 1.38            ┆ 103105.0   ┆ 103105.0      ┆ 298649.0    ┆ 298649.0          │
+│ 2024-04-01 ┆ 120117 ┆ 37.76         ┆ 36.85            ┆ 0.62         ┆ 0.62                ┆ 1.53            ┆ 108303.0   ┆ 108303.0      ┆ 406952.0    ┆ 406952.0          │
+│ 2024-05-01 ┆ 125454 ┆ 37.64         ┆ 36.76            ┆ 0.92         ┆ 0.92                ┆ 1.8             ┆ 110793.0   ┆ 110793.0      ┆ 517744.0    ┆ 517744.0          │
+│ 2024-06-01 ┆ 130880 ┆ 37.5          ┆ 36.6             ┆ 1.28         ┆ 1.28                ┆ 2.18            ┆ 117815.0   ┆ 117815.0      ┆ 635560.0    ┆ 635560.0          │
+│ 2024-07-01 ┆ 148611 ┆ 37.53         ┆ 36.66            ┆ 6.66         ┆ 6.66                ┆ 7.53            ┆ 129423.0   ┆ 129423.0      ┆ 764983.0    ┆ 764983.0          │
+│ 2024-08-01 ┆ 161688 ┆ 37.52         ┆ 36.65            ┆ 6.83         ┆ 6.83                ┆ 7.7             ┆ 140753.0   ┆ 140753.0      ┆ 905736.0    ┆ 905736.0          │
+│ 2024-09-01 ┆ 184051 ┆ 48.89         ┆ 36.31            ┆ -4.68        ┆ -4.68               ┆ 7.9             ┆ 2.315307e6 ┆ 2.315307e6    ┆ 3.221043e6  ┆ 3.221043e6        │
+│ 2024-10-01 ┆ 216551 ┆ 53.02         ┆ 36.22            ┆ -6.98        ┆ -6.98               ┆ 9.81            ┆ 3.636861e6 ┆ 3.636861e6    ┆ 6.857904e6  ┆ 6.857904e6        │
+│ 2024-11-01 ┆ 224857 ┆ 52.98         ┆ 36.24            ┆ -8.28        ┆ -8.28               ┆ 8.45            ┆ 3.76264e6  ┆ 3.76264e6     ┆ 1.0620544e7 ┆ 1.0620544e7       │
+│ 2024-12-01 ┆ 248954 ┆ 53.05         ┆ 36.29            ┆ -8.04        ┆ -8.04               ┆ 8.72            ┆ 4.172318e6 ┆ 4.172318e6    ┆ 1.4792862e7 ┆ 1.4792862e7       │
+│ 2025-01-01 ┆ 265834 ┆ 53.03         ┆ 36.26            ┆ -7.7         ┆ -7.7                ┆ 9.07            ┆ 4.458551e6 ┆ 4.458551e6    ┆ 1.9251413e7 ┆ 1.9251413e7       │
+│ 2025-02-01 ┆ 252750 ┆ 53.24         ┆ 36.3             ┆ -7.47        ┆ -7.47               ┆ 9.47            ┆ 4.282777e6 ┆ 4.282777e6    ┆ 2.353419e7  ┆ 2.353419e7        │
+│ 2025-03-01 ┆ 286630 ┆ 53.11         ┆ 36.3             ┆ -6.83        ┆ -6.83               ┆ 9.97            ┆ 4.81634e6  ┆ 4.815775e6    ┆ 2.835053e7  ┆ 2.8349965e7       │
+│ 2025-04-01 ┆ 289261 ┆ 53.03         ┆ 36.4             ┆ -6.25        ┆ -2.95               ┆ 10.38           ┆ 4.812229e6 ┆ 3.858096e6    ┆ 3.316276e7  ┆ 3.2208062e7       │
+│ 2025-05-01 ┆ 303748 ┆ 52.79         ┆ 36.48            ┆ -5.42        ┆ 13.49               ┆ 10.89           ┆ 4.95442e6  ┆ -788269.0     ┆ 3.811718e7  ┆ 3.1419793e7       │
+│ 2025-06-01 ┆ 303196 ┆ 52.96         ┆ 36.49            ┆ -5.04        ┆ 17.96               ┆ 11.42           ┆ 4.992321e6 ┆ -1.980335e6   ┆ 4.3109501e7 ┆ 2.9439458e7       │
+└────────────┴────────┴───────────────┴──────────────────┴──────────────┴─────────────────────┴─────────────────┴────────────┴───────────────┴─────────────┴───────────────────┘
+H1-2025 (1,701,419 swaps): per-swap model - Kyron excess ₹2.83 Cr = 16.64 INR per network swap, CM1/swap actual -6.39 vs Cellora-like counterfactual +10.25; excess = 25.7% of revenue
+H1-2025 capped at purchase price: excess ₹1.46 Cr = 8.61 INR per swap; CM1/swap actual +1.64 vs counterfactual +10.25
+Jun-2025 (per-swap model): wear/swap 52.96 actual vs 36.49 counterfactual; cm1/swap -5.04 vs 11.42; excess wear in Jun-2025 alone ₹49.9 L (capped: ₹-19.8 L)
+excess accrued Nov-2024..Jun-2025 (after the fade was visible in Sep-Oct 2024): per-swap model ₹3.63 Cr of ₹4.31 Cr; capped ₹2.26 Cr of ₹2.94 Cr (recoverable only through a warranty/replacement claim)
+excess before Sep-2024 (Kyron 3W fast-fade packs, in service since Jan-24): ₹9.1 L; Sep-24 bar ₹23.2 L
+Jun-2025: 73,784 Kyron issues, 89.9% past their own end-of-life cycle (fast-fade lots: 97.5%); of June's ₹49.9 L excess, ₹48.3 L was charged on past-EOL Kyron swaps
+1:1 replacement of the fast-fade lots at June volumes: new packs depreciate ₹22.8 L/month vs ₹2.9 L still being depreciated on those packs (capped) -> adds ₹19.8 L/month = 6.53 INR per June swap (all Kyron incl. later 3W lots: ₹27.1 L vs ₹7.3 L -> ₹19.8 L)
+excess with a per-DAY reference: uncapped ₹4.64 Cr, capped ₹3.16 Cr (2W ₹2.87 Cr, 3W fast-fade ₹28.8 L capped)
+lost-life value 2W_2.1kWh fast-fade lots: purchase value ₹4.43 Cr x (1 - 1/fade ratio) = ₹3.07 Cr (per-issue ratio 3.26x) to ₹3.26 Cr (per-day ratio 3.77x)
+lost-life value 3W_4.8kWh fast-fade lots: purchase value ₹51.9 L x (1 - 1/fade ratio) = ₹30.1 L (per-issue ratio 2.38x) to ₹30.3 L (per-day ratio 2.40x)
+lost-life value, all fast-fade packs: ₹3.37 Cr - ₹3.56 Cr
+2W pack payback:
+ shape: (3, 8)
+┌──────────────────────┬────────────────────┬───────────────────┬────────────────────┬────────────┬────────────────────────┬────────────────────┬───────────────────────┐
+│ cohort               ┆ margin_before_wear ┆ cycles_to_eol_med ┆ purchase_cost_mean ┆ cycles_med ┆ lifetime_margin_to_eol ┆ cycles_to_pay_back ┆ cost_recovered_by_eol │
+│ ---                  ┆ ---                ┆ ---               ┆ ---                ┆ ---        ┆ ---                    ┆ ---                ┆ ---                   │
+│ str                  ┆ f64                ┆ f64               ┆ f64                ┆ f64        ┆ f64                    ┆ f64                ┆ f64                   │
+╞══════════════════════╪════════════════════╪═══════════════════╪════════════════════╪════════════╪════════════════════════╪════════════════════╪═══════════════════════╡
+│ Amptek               ┆ 44.44              ┆ 1004.0            ┆ 31995.0            ┆ 642.0      ┆ 44618.0                ┆ 720.0              ┆ 1.395                 │
+│ Cellora              ┆ 44.41              ┆ 1005.0            ┆ 31983.0            ┆ 643.0      ┆ 44632.0                ┆ 720.0              ┆ 1.395                 │
+│ Kyron 2407/2408/2409 ┆ 44.17              ┆ 308.0             ┆ 31982.0            ┆ 402.0      ┆ 13604.0                ┆ 724.0              ┆ 0.425                 │
+└──────────────────────┴────────────────────┴───────────────────┴────────────────────┴────────────┴────────────────────────┴────────────────────┴───────────────────────┘
+Kyron 2W: pays back after 724 cycles but reaches 70% SoH after 308 -> recovers 42.5% of its price; Cellora: 720 vs 1005 (projected: no Cellora pack has been issued more than 725 times) -> 139.5%
+Kyron 2W fleet purchase value: ₹4.43 Cr for 1385 packs
+Kyron 2W mean SoH at issue on 2025-06-30: 60.6%
+q4_04 right panel: Kyron-share spread within a cluster <= 1.2 pts, between clusters ~31 pts (10-30 Sep 2024)
+figures saved: ['q4_01_soh_vs_cycles.png', 'q4_02_degradation_by_lot.png', 'q4_03_range_vs_soh.png', 'q4_04_swap_frequency_did.png', 'q4_05_kyron_timeline.png', 'q4_06_kyron_economics.png']
+runtime 15.3s

@@ -1,0 +1,41 @@
+metric,value,period,source_analysis
+Completed swaps growth (x),2.43,H1-25 vs H1-24,"q1, q9 recomputed"
+Revenue growth (x),2.63,H1-25 vs H1-24,"q1, q9 recomputed"
+Service-failure rate (%),7.04 -> 6.06,H1-24 -> H1-25,"q1, q9 recomputed"
+Naive failures vs swaps growth (x),6.26 vs 2.93,Jan-24 -> Jun-25 (winter vs summer),"q1, q9 recomputed"
+"Apr-Jun failure rate, same 90 Launch stations (%)",9.52 -> 9.55,Apr-Jun 2024 -> 2025,"q1/q3, q9 recomputed"
+"Apr-Jun failure rate, whole network (%)",9.52 -> 7.92,Apr-Jun 2024 -> 2025 (dilution by new sites),"q1/q3, q9 recomputed"
+"Failed attempts, Apr-Jun","39,820 -> 77,445",Apr-Jun 2024 -> 2025,"q3, q9 recomputed"
+Off-season (Jul-Mar) failure-rate baseline (%),3.91,Jul-24..Mar-25 and Jul-Mar months,"q2, q9 recomputed"
+36 hot-city Gen1 stations: share of attempts / failures / excess failures (%),27.4 / 52.6 / 77.1,Apr-Jun 2025,"q2/q3, q9 recomputed"
+Hot-city failure rate Gen1 vs Gen3 (%),15.2 vs 5.1,Apr-Jun 2025,"q2, q9 recomputed"
+City-day failure rate below 34C vs at 36-38C vs 38-42C (%),3.9 / 10.0 / 14.1,Jan-24..Jun-25,"q2, q9 recomputed"
+"Share of city-days with an official heat alert, below 42C vs at/above 42C (%)",0.0 vs 99,Jan-24..Jun-25,"q2, q9 recomputed"
+"Gen1 charge time, cabinet <40C vs 50C (min)",88 -> ~168,Jan-24..Jun-25,q3 (cited)
+Stockout rate on hot vs cool days at hot-city Gen1 stations (%),12.0 vs 2.3,"Apr-Jun, station-days",q2 (cited)
+Hot-day 19-22h 2W stockout rate across charged-stock buckets 0 / 1-2 / 3-5 / 6+ (%),17.6 / 16.9 / 16.9 / 16.7,"Apr-Jun, hot-city Gen1","q2, q9 recomputed"
+Gen1 fix: failed attempts avoided per summer (Gen2-like to Gen3-like),"19,212 to 27,266",Apr-Jun 2025 volume,"q1/q2/q3, q9 recomputed"
+Gen1 fix: network Apr-Jun failure rate (%),7.92 -> 5.95 to 5.13,Apr-Jun 2025 volume,q9
+Gen1 fix: summer-entry new-rider non-retention (pp),-0.63 to -0.96,Apr-Jun 2025 entrants,q9 (q6 effect size)
+Same-season new-rider D31-60 retention (%),86.3 vs 86.3 (p=0.98),Jan-Mar 2024 vs Jan-Mar 2025 cohorts,q6 (cited)
+Non-retention with 2+ vs 0-1 early failures (%),22.6 vs 13.1 (q9 re-derivation 22.7 vs 13.3),cohorts Jan-24..Apr-25,"q6 (cited), q9 recomputed"
+"Adjusted odds ratio, 2+ vs 0-1 early failures",1.67 (1.43-1.94),cohorts Jan-24..Apr-25,q6 (cited)
+Share of summer retention dip explained by early failures (%),40-50,Apr-Jun 2024 vs Jan-Mar 2024,q6 (cited)
+"cm1 per swap, same season (Rs)",+0.27 -> -7.32,Q1-24 -> Q1-25,"q1, q9 recomputed"
+cm1 per swap H1-25 under three wear conventions (Rs),-6.39 / -1.12 / +1.19,H1-25 (per-cycle / post-EOL at Cellora wear / wear stops at EOL),"q1/q4/q7, q9 recomputed"
+Kyron-grade vs Cellora-grade wear gap (Rs per swap; Rs lakh per month),16.82; 47.7,Q1-25 per-swap gap (clean window) x H1-25 volume,"q1, q9 recomputed"
+Gen1 fix: revenue recovered per summer if each failure is a lost swap (Rs M),1.20 to 1.71,Apr-Jun 2025 volume (upper bound),q9
+Kyron bad-lot fade vs other lots (per day),3.8x,Sep-24..Jun-25,q4 (cited)
+Swaps that issued a pack below 70% SoH,"122,204",Apr-Jun 2025,"q1/q4/q7, q9 recomputed"
+"Median km per returned 2W pack, Kyron vs others",39.5 vs 53.4,Q2-25,q4 (cited)
+Non-Kyron 2W fleet: median projected date at 70% SoH,Apr-2026 (trend method Jan-2026),projection from 30-Jun-25,"q1/q4, q9 recomputed"
+Pack capex: Kyron bad lots now / non-Kyron 2W renewal Jan-May 2026 / non-Kyron 3W renewal 2027 (Rs Cr),4.95 / 13.22 / 4.95,"purchase cost, batteries master",q9
+Pricing rollout cm1 uplift (Rs lakh per month),9.5,"four non-pilot cities, H1-25 volume","q5 effect, q9 volumes"
+Pilot effect on peak stockouts (pp),+0.05 (CI -0.09 to +0.18),Oct-24..Mar-25,q5 (cited)
+ZipDrop share of network swaps (%),15.4,H1-25,"q5, q9 recomputed"
+ZipDrop steady-state cm1 per swap (Rs),-4.12,Nov-24..Jun-25 terms,"q5, q9 recomputed"
+FeastFly steady-state cm1 per swap (Rs),12.12,Nov-24..Jun-25 terms,"q5, q9 recomputed"
+3W steady-state cm1 per swap (Rs) / break-even list price (Rs),-14.90 / 126,Nov-24..Jun-25,"q5, q9 recomputed"
+Wave-1 vs legacy fixed cost per swap (Rs),14.73 vs 11.33,Apr-Jun 2025,"q3, q9 recomputed"
+Battery-health share of support tickets (%),49.5 (official 15.1),Jan-24..Jun-25,q8 (cited)
+cm2 per swap: Q1-25 actual -> with recommended levers (Rs),-18.48 -> +6.79,"Q1-25 unit costs, H1-25 volume",q9

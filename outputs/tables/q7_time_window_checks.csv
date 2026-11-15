@@ -1,0 +1,8 @@
+check,effect,low,high,p,n,note
+"1-Jul-24 hot cities: failure change 7d after - before (pts, mean of 3)",-11.716651291818907,-15.17805025851461,-7.95130182378847,,3,range over cities; same price rise
+"1-Jul-24 cool cities: failure change 7d after - before (pts, mean of 3)",-0.3361013217858013,-0.76258643993163,0.11505037364329329,,3,range over cities; same price rise
+"heat-alert day vs same city-month (pts, unweighted)",0.26744741678248635,-0.2007576367590185,0.7356524703239912,0.21169082487506113,7,95% CI; uninformative: within city-month temp SD 1.52 C
+flood day vs same city +-7 d (pts),0.19688757602251045,-0.7076629398151343,1.7278412374673764,,7,range over flood days
+Kyron retirement: stockout rate 7d after - before (pts),0.32214685709254165,,,,153791,
+competitor entry DiD attempts/station-day (ratio),0.9988582292585252,,,,997445,
+firmware window DiD system-error rate (pts),0.024709502017317087,,,,1078683,

@@ -1,0 +1,5 @@
+vehicle_class,cities,km_per_pt_denoised_day_x_city,km_per_pt_denoised_month_x_city,km_per_pt_raw_reading_month_x_city,reliability_raw_reading,swaps
+2W,all cities,0.664,0.73,0.555,0.702,2494991
+2W,light cities,0.689,0.718,0.553,0.703,1443683
+3W,all cities,0.984,1.023,0.729,0.657,275209
+3W,light cities,0.938,1.008,0.723,0.657,143585

@@ -1,0 +1,26 @@
+metric,value
+ZipDrop swaps per year (current run-rate),504633.0
+share of network swaps,0.15466042671349697
+revenue per year (Rs),24546639.149311066
+realised discount,0.28000001000848285
+STEADY STATE (non-Kyron energy + wear; all Kyron packs retired 2025-06-15): cm1 per swap (Rs),-4.181039064661189
+steady-state cm1 per year (Rs),-2109890.2863171697
+steady-state cm2 after WC per swap (Rs; cm2 includes allocated station cost an exclusive does not avoid),-16.00134506487581
+steady-state cm2 after WC per year (Rs),-8074806.764123475
+HISTORICAL Nov-24..Jun-25 run-rate (incl. wear on retired Kyron packs): cm1 per swap (Rs),-20.598572160994674
+historical cm2 after working capital per swap (Rs),-32.41887816120929
+historical cm1 per year (Rs),-10394719.265319224
+historical cm2 after working capital per year (Rs),-16359635.74312553
+"working-capital cost per year (45-day terms, Rs)",363155.7572774788
+peak-hour share of swaps,0.7263526166540832
+"amendment revenue given up per year (16 pp of list, Rs)",5454808.800000001
+break-even discount for steady-state cm1 = 0 (2W),0.24576354510257548
+break-even discount for steady-state cm2 after WC = 0 (2W),0.06123722823449451
+"other partners' cm1 per swap (avg, Rs)",-8.07145401048752
+"other partners' steady-state cm1 per swap (avg, Rs)",7.92539862393327
+FeastFly (largest by revenue and riders) share of network swaps,0.14431025684640245
+FeastFly revenue per year (Rs),30138313.5
+FeastFly steady-state cm1 per swap (Rs),12.219858920364658
+FeastFly steady-state cm1 per year (Rs),5753867.210960743
+FeastFly steady-state cm2 after WC per swap (Rs),0.025171166409652557
+"FeastFly historical cm1 per swap, Nov-24..Jun-25 (Rs)",-4.401951631638736

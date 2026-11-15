@@ -1,0 +1,335 @@
+Cellora reference wear per swap (full window, Rs): {'3W': 76.19, '2W': 31.85}
+
+--- Window KPIs (per swap in Rs; rates as shares)
+                  swaps_pm  fail_rate  launch_fail_rate  rev_ps  cm1_ps  cm1_cap_ps  cm1_celwear_ps  cm2_ps  kyron_gap_ps  cm1_allcellora_ps  cm2_allcellora_ps  post_eol_swaps
+H1-24           116757.333      0.070             0.070  59.887   0.637       0.637           0.637 -17.427         0.896              1.533            -16.531             0.0
+Q1-24           108031.000      0.040             0.040  59.884   0.273       0.273           0.273 -19.250         0.910              1.183            -18.340             0.0
+Q2-24           125483.667      0.095             0.095  59.889   0.951       0.951           0.951 -15.857         0.884              1.835            -14.973             0.0
+Jul-Aug-24      155149.500      0.039             0.039  65.020   6.747       6.747           6.747  -7.151         0.861              7.608             -6.290             0.0
+Oct-24..Mar-25  249262.667      0.039             0.039  64.865  -7.534      -7.534          -7.534 -19.163        16.789              9.255             -2.374             0.0
+Q1-25           268404.667      0.039             0.039  64.631  -7.317      -7.317          -7.317 -18.481        16.825              9.508             -1.656             0.0
+Q2-25           298735.000      0.079             0.096  64.890  -5.557       8.833           4.438 -17.320        16.454             10.898             -0.866        122204.0
+H1-25           283569.833      0.061             0.067  64.768  -6.390       1.190          -1.125 -17.870        16.630             10.240             -1.240        122204.0
+
+H1-25 vs H1-24 multiples: {'attempts': 2.4, 'swaps': 2.43, 'failures': 2.07, 'revenue_pm': 2.63}
+Jun-25: 303,196 completed swaps, revenue Rs19.69M (Jan-24: 103,508, Rs6.20M)
+Naive Jan-24 -> Jun-25: failures x6.26, swaps x2.93 (4.00% -> 8.16%)
+Same season Apr-Jun: network 9.52% -> 7.92%; Launch panel 9.52% -> 9.55%; failed attempts 39,820 -> 77,445 (+94.5%); swaps x2.38
+cm1/swap same season Q1-24 +0.27 -> Q1-25 -7.32; Kyron gap Q1-25 +16.82/swap; Q1-25 with Cellora-grade packs: cm1 +9.51, cm2 -1.66
+H1-25 cm1/swap: per-cycle model -6.39 | post-EOL at Cellora wear -1.12 | wear stops at EOL +1.19; post-EOL swaps 122,204, wear charged on them Rs12.90M
+hot-city Gen1 stations: 36 [('Delhi NCR', 13), ('Hyderabad', 13), ('Jaipur', 10)]
+Jul-Mar baseline failure rate: 3.91%
+
+--- Apr-Jun failure concentration by segment
+shape: (7, 11)
+┌──────┬───────────────┬────────┬───────┬────────┬─────────────┬──────────────┬──────────┬──────────┬──────────┬───────────┐
+│ year ┆ seg           ┆ att    ┆ fail  ┆ swaps  ┆ rev         ┆ excess       ┆ rate     ┆ sh_att   ┆ sh_fail  ┆ sh_excess │
+│ ---  ┆ ---           ┆ ---    ┆ ---   ┆ ---    ┆ ---         ┆ ---          ┆ ---      ┆ ---      ┆ ---      ┆ ---       │
+│ i32  ┆ str           ┆ u32    ┆ u32   ┆ u32    ┆ f32         ┆ f64          ┆ f64      ┆ f64      ┆ f64      ┆ f64       │
+╞══════╪═══════════════╪════════╪═══════╪════════╪═════════════╪══════════════╪══════════╪══════════╪══════════╪═══════════╡
+│ 2024 ┆ Hot city Gen1 ┆ 172800 ┆ 26746 ┆ 145328 ┆ 8.705631e6  ┆ 19989.393939 ┆ 0.15478  ┆ 0.413338 ┆ 0.671673 ┆ 0.851571  │
+│ 2024 ┆ Hot city Gen2 ┆ 36078  ┆ 2864  ┆ 33060  ┆ 1.9677e6    ┆ 1453.32388   ┆ 0.079384 ┆ 0.086299 ┆ 0.071924 ┆ 0.061913  │
+│ 2024 ┆ Other cities  ┆ 209182 ┆ 10210 ┆ 198063 ┆ 1.1871489e7 ┆ 2030.831197  ┆ 0.048809 ┆ 0.500364 ┆ 0.256404 ┆ 0.086516  │
+│ 2025 ┆ Hot city Gen1 ┆ 267903 ┆ 40723 ┆ 226028 ┆ 1.4175224e7 ┆ 30247.797259 ┆ 0.152007 ┆ 0.273947 ┆ 0.525831 ┆ 0.771492  │
+│ 2025 ┆ Hot city Gen2 ┆ 102633 ┆ 8243  ┆ 93939  ┆ 5.921893e6  ┆ 4229.974827  ┆ 0.080315 ┆ 0.104948 ┆ 0.106437 ┆ 0.107889  │
+│ 2025 ┆ Hot city Gen3 ┆ 143772 ┆ 7280  ┆ 135868 ┆ 8.576872e6  ┆ 1658.409915  ┆ 0.050636 ┆ 0.147015 ┆ 0.094002 ┆ 0.042299  │
+│ 2025 ┆ Other cities  ┆ 463631 ┆ 21199 ┆ 440370 ┆ 2.9479742e7 ┆ 3070.689671  ┆ 0.045724 ┆ 0.47409  ┆ 0.27373  ┆ 0.07832   │
+└──────┴───────────────┴────────┴───────┴────────┴─────────────┴──────────────┴──────────┴──────────┴──────────┴───────────┘
+Hot-city Gen1, Apr-Jun 2025: 27.4% of attempts, 52.6% of failures, 77.1% of excess, rate 15.20%; both summers: 31.6% of Apr-Jun attempts, 80.1% of excess
+
+--- Gen1 counterfactual by city-month (Apr-Jun 2025)
+shape: (9, 8)
+┌────────────┬───────────┬───────┬──────┬──────────┬──────────┬─────────────┬─────────────┐
+│ month      ┆ city      ┆ att   ┆ fail ┆ r_Gen2   ┆ r_Gen3   ┆ avoid_g2    ┆ avoid_g3    │
+│ ---        ┆ ---       ┆ ---   ┆ ---  ┆ ---      ┆ ---      ┆ ---         ┆ ---         │
+│ date       ┆ str       ┆ u32   ┆ u32  ┆ f64      ┆ f64      ┆ f64         ┆ f64         │
+╞════════════╪═══════════╪═══════╪══════╪══════════╪══════════╪═════════════╪═════════════╡
+│ 2025-06-01 ┆ Jaipur    ┆ 23960 ┆ 4618 ┆ 0.096057 ┆ 0.057188 ┆ 2316.473154 ┆ 3247.766903 │
+│ 2025-05-01 ┆ Delhi NCR ┆ 32292 ┆ 6239 ┆ 0.092843 ┆ 0.057516 ┆ 3240.917536 ┆ 4381.686874 │
+│ 2025-06-01 ┆ Hyderabad ┆ 33168 ┆ 4465 ┆ 0.073918 ┆ 0.049085 ┆ 2013.277234 ┆ 2836.96416  │
+│ 2025-04-01 ┆ Delhi NCR ┆ 31266 ┆ 3842 ┆ 0.071903 ┆ 0.047249 ┆ 1593.879501 ┆ 2364.716628 │
+│ 2025-05-01 ┆ Jaipur    ┆ 24582 ┆ 4564 ┆ 0.098047 ┆ 0.054777 ┆ 2153.799751 ┆ 3217.470064 │
+│ 2025-06-01 ┆ Delhi NCR ┆ 31797 ┆ 5788 ┆ 0.088335 ┆ 0.053412 ┆ 2979.219433 ┆ 4089.643917 │
+│ 2025-04-01 ┆ Jaipur    ┆ 22940 ┆ 2659 ┆ 0.062542 ┆ 0.044757 ┆ 1224.296075 ┆ 1632.283241 │
+│ 2025-04-01 ┆ Hyderabad ┆ 32679 ┆ 1872 ┆ 0.048075 ┆ 0.038723 ┆ 300.94799   ┆ 606.587417  │
+│ 2025-05-01 ┆ Hyderabad ┆ 35219 ┆ 6676 ┆ 0.093317 ┆ 0.050742 ┆ 3389.463913 ┆ 4888.929729 │
+└────────────┴───────────┴───────┴──────┴──────────┴──────────┴─────────────┴─────────────┘
+Avoided failed attempts, Apr-Jun 2025: Gen2-like 19,212 (24.8% of network failures), Gen3-like 27,266 (35.2%); network Apr-Jun rate 7.92% -> 5.95% / 5.13%
+Share of hot-city Gen1 failures avoided: Gen2-like 47.2%, Gen3-like 67.0%; revenue per swap at these stations Rs62.71; revenue recovered per summer if each failure is a lost swap: Rs1.20M-Rs1.71M
+Tickets avoided per summer (q3 slope, cited): 1,941-2,754
+
+--- C1 pooled (crude): stockout rate, zero-stock hour vs stocked
+shape: (2, 4)
+┌───────┬────────┬───────┬──────────┐
+│ stock ┆ att    ┆ so    ┆ rate     │
+│ ---   ┆ ---    ┆ ---   ┆ ---      │
+│ bool  ┆ u32    ┆ u32   ┆ f64      │
+╞═══════╪════════╪═══════╪══════════╡
+│ false ┆ 347395 ┆ 34783 ┆ 0.100125 │
+│ true  ┆ 32805  ┆ 3025  ┆ 0.092212 │
+└───────┴────────┴───────┴──────────┘
+
+--- C1 within day type x window: 2W stockout rate by charged-2W stock
+shape: (16, 7)
+┌──────────────────────────────┬─────────────┬───────┬───────┬───────┬───────┬──────────┐
+│ day                          ┆ win         ┆ stock ┆ att   ┆ so    ┆ hours ┆ rate     │
+│ ---                          ┆ ---         ┆ ---   ┆ ---   ┆ ---   ┆ ---   ┆ ---      │
+│ str                          ┆ str         ┆ str   ┆ u32   ┆ u32   ┆ u32   ┆ f64      │
+╞══════════════════════════════╪═════════════╪═══════╪═══════╪═══════╪═══════╪══════════╡
+│ hot day (peak cabinet >=45C) ┆ 19-22h      ┆ 0     ┆ 1652  ┆ 291   ┆ 238   ┆ 0.17615  │
+│ hot day (peak cabinet >=45C) ┆ 19-22h      ┆ 1-2   ┆ 10626 ┆ 1791  ┆ 1619  ┆ 0.168549 │
+│ hot day (peak cabinet >=45C) ┆ 19-22h      ┆ 3-5   ┆ 37132 ┆ 6273  ┆ 5823  ┆ 0.168938 │
+│ hot day (peak cabinet >=45C) ┆ 19-22h      ┆ 6+    ┆ 66677 ┆ 11162 ┆ 11039 ┆ 0.167404 │
+│ hot day (peak cabinet >=45C) ┆ other hours ┆ 0     ┆ 30230 ┆ 2703  ┆ 9340  ┆ 0.089414 │
+│ hot day (peak cabinet >=45C) ┆ other hours ┆ 1-2   ┆ 32563 ┆ 2774  ┆ 9760  ┆ 0.085189 │
+│ hot day (peak cabinet >=45C) ┆ other hours ┆ 3-5   ┆ 51384 ┆ 4373  ┆ 16777 ┆ 0.085104 │
+│ hot day (peak cabinet >=45C) ┆ other hours ┆ 6+    ┆ 59878 ┆ 5133  ┆ 24897 ┆ 0.085724 │
+│ other Apr-Jun day            ┆ 19-22h      ┆ 0     ┆ 232   ┆ 8     ┆ 38    ┆ 0.034483 │
+│ other Apr-Jun day            ┆ 19-22h      ┆ 1-2   ┆ 2370  ┆ 86    ┆ 387   ┆ 0.036287 │
+│ other Apr-Jun day            ┆ 19-22h      ┆ 3-5   ┆ 10379 ┆ 490   ┆ 1726  ┆ 0.047211 │
+│ other Apr-Jun day            ┆ 19-22h      ┆ 6+    ┆ 23029 ┆ 1032  ┆ 3823  ┆ 0.044813 │
+│ other Apr-Jun day            ┆ other hours ┆ 0     ┆ 691   ┆ 23    ┆ 222   ┆ 0.033285 │
+│ other Apr-Jun day            ┆ other hours ┆ 1-2   ┆ 5385  ┆ 219   ┆ 1786  ┆ 0.040669 │
+│ other Apr-Jun day            ┆ other hours ┆ 3-5   ┆ 18771 ┆ 556   ┆ 6290  ┆ 0.02962  │
+│ other Apr-Jun day            ┆ other hours ┆ 6+    ┆ 29201 ┆ 894   ┆ 10684 ┆ 0.030615 │
+└──────────────────────────────┴─────────────┴───────┴───────┴───────┴───────┴──────────┘
+Hot days, 19-22h: stockout rate across stock buckets 16.7%-17.6%; other hours 8.5%-8.9%
+
+--- C2 failure rate by city-day max temperature
+shape: (5, 6)
+┌────────┬──────┬─────────┬────────┬─────────────┬──────────┐
+│ tbin   ┆ days ┆ att     ┆ fail   ┆ alert_share ┆ rate     │
+│ ---    ┆ ---  ┆ ---     ┆ ---    ┆ ---         ┆ ---      │
+│ enum   ┆ u32  ┆ u32     ┆ u32    ┆ f64         ┆ f64      │
+╞════════╪══════╪═════════╪════════╪═════════════╪══════════╡
+│ <34C   ┆ 2620 ┆ 2941016 ┆ 115265 ┆ 0.0         ┆ 0.039192 │
+│ 34-36C ┆ 149  ┆ 202049  ┆ 9687   ┆ 0.0         ┆ 0.047944 │
+│ 36-38C ┆ 156  ┆ 209264  ┆ 20960  ┆ 0.0         ┆ 0.100161 │
+│ 38-42C ┆ 206  ┆ 271529  ┆ 38194  ┆ 0.0         ┆ 0.140663 │
+│ >=42C  ┆ 151  ┆ 191124  ┆ 27743  ┆ 0.993377    ┆ 0.145157 │
+└────────┴──────┴─────────┴────────┴─────────────┴──────────┘
+
+--- C3 fleet end-of-life projection (per-pack calendar fade)
+                grp vehicle_class  packs     cost_mean  cost_total    soh_now  fade_pd_median  life_days_median                       eol_p10                       eol_p50                       eol_p90  \
+0    Cellora/Amptek            2W   4133  31986.486813   132200150  79.966949        0.035255        827.236657 2026-02-24 13:29:27.073170944 2026-04-08 10:19:37.202072576 2026-05-27 06:29:22.635260416   
+1    Cellora/Amptek            3W    729  67918.648834    49512695  86.520027        0.023287       1252.833356 2027-03-19 18:50:53.627242240 2027-06-08 15:19:26.701612800 2027-09-12 21:50:22.122856960   
+2    Kyron bad lots            2W   1385  31981.684477    44294633  60.532274        0.132164        220.774166 2025-04-06 20:03:33.395963136 2025-04-19 11:03:45.773195776 2025-05-03 08:42:04.128048384   
+3    Kyron bad lots            3W     76  68237.802632     5186073  69.217105        0.055263        528.476092 2025-05-13 10:11:30.896144128 2025-06-14 15:06:53.533222400 2025-07-20 06:13:58.038105856   
+4  Kyron later lots            3W    177  67784.898305    11997927  86.557062        0.023383       1252.516790 2027-03-22 19:46:47.081773568 2027-06-06 23:53:34.656000000 2027-08-31 10:43:13.138090752   
+
+   share_eol_by_apr26  
+0            0.414227  
+1            0.000000  
+2            1.000000  
+3            1.000000  
+4            0.000000  
+Issued non-Kyron 2W SoH Jan-Jun 2025: 87.6 -> 80.7 (-1.37 pts/month) -> 70% in 7.8 months (about Jan-2026)
+Per-pack calendar fade: non-Kyron 2W median EOL Apr-2026 (p10 Feb-2026, p90 May-2026); 41% before Apr-2026; renewal capex Rs13.22 Cr for 4,133 packs; 3W non-Kyron median EOL Jun-2027, Rs4.95 Cr for 729 packs
+Kyron bad-lot replacement capex (1:1): Rs4.95 Cr for 1,461 packs
+Kyron-grade vs Cellora-grade wear gap, Q1-25 (clean window): +16.82 Rs/swap; Oct-24..Mar-25 +16.79; at H1-25 volume Rs47.7 L/month
+
+--- q6 cross-check: D31-60 non-retention by early failures (0-1 vs 2+)
+shape: (2, 3)
+┌───────┬───────┬──────────┐
+│ two   ┆ n     ┆ nonret   │
+│ ---   ┆ ---   ┆ ---      │
+│ bool  ┆ u32   ┆ f64      │
+╞═══════╪═══════╪══════════╡
+│ false ┆ 11551 ┆ 0.133408 │
+│ true  ┆ 2246  ┆ 0.22707  │
+└───────┴───────┴──────────┘
+eligible new riders 13,797; overall non-retention 14.9%; 2+ early failures: 2,246 riders (16.3%); non-retention 22.7% vs 13.3%
+Effect of moving a rider from 2+ to 0-1 early failures (pp of non-retention): {'central': 7.11, 'lo': 4.7, 'hi': 9.66}
+
+--- Retention effect of a Gen1 fix (negative = fewer riders lost)
+                                              cohort  riders  share_2plus  hot_share_of_early_failures  drop_2plus_gen2  nonret_pp_gen2_central  nonret_pp_gen2_lo  nonret_pp_gen2_hi  drop_2plus_gen3  \
+0     All eligible new riders (Jan-24..Apr-25 entry)   13797       0.1628                       0.2429           0.0250                 -0.1780            -0.1177            -0.2418           0.0372   
+1    Summer-entry, eligible (Apr-Jun 2024, Apr 2025)    3202       0.3057                       0.5920           0.0974                 -0.6924            -0.4579            -0.9404           0.1451   
+2  Summer-2025 entry (Apr 1 - Jun 16, full 14-day...    3068       0.3211                       0.5284           0.0888                 -0.6311            -0.4173            -0.8570           0.1346   
+
+   nonret_pp_gen3_central  nonret_pp_gen3_lo  nonret_pp_gen3_hi  
+0                 -0.2642            -0.1747            -0.3587  
+1                 -1.0321            -0.6824            -1.4016  
+2                 -0.9571            -0.6328            -1.2998  
+Summer-2025 new riders: 3,652; riders kept per summer by the fix: 23 (Gen2-like) to 35 (Gen3-like); swaps per retained rider in days 31-60: 27.1
+Rollout (four non-pilot cities, H1-25 volume): independents 63,745/month x Rs7.90 + billable partners 81,851/month x Rs5.43 = Rs9.5 L/month (= cm1; costs do not change with price), Rs3.34 per network swap
+Surcharge not collected from non-billable partners: four cities Rs4.13 L/month (29,898 peak, 4,400 off-peak swaps/month); all six cities Rs6.31 L/month
+ZipDrop: 43,733 swaps/month (15.4% of network); 72.6% of its swaps in PEAK bands = 19.6% of all network PEAK-band swaps (H1-25)
+
+--- Partner steady-state cm1 per swap, Nov-24..Jun-25 (null partner = independents)
+shape: (13, 10)
+┌────────────┬────────┬─────────────┬────────────────┬────────────────┬─────────────┬────────────┬────────────┬───────────┬──────────────┐
+│ partner_id ┆ swaps  ┆ rev         ┆ cm1            ┆ cm1_ss         ┆ list_sum    ┆ cm1_ps     ┆ cm1_ss_ps  ┆ disc      ┆ partner_name │
+│ ---        ┆ ---    ┆ ---         ┆ ---            ┆ ---            ┆ ---         ┆ ---        ┆ ---        ┆ ---       ┆ ---          │
+│ str        ┆ u32    ┆ f32         ┆ f64            ┆ f64            ┆ f32         ┆ f64        ┆ f64        ┆ f32       ┆ str          │
+╞════════════╪════════╪═════════════╪════════════════╪════════════════╪═════════════╪════════════╪════════════╪═══════════╪══════════════╡
+│ FP-04      ┆ 78750  ┆ 7.984089e6  ┆ -1.7518e6      ┆ -1.1602e6      ┆ 8.6625e6    ┆ -22.244915 ┆ -14.733269 ┆ 0.078316  ┆ CargoTuk     │
+│ FP-09      ┆ 30913  ┆ 3.1664e6    ┆ -662145.971259 ┆ -423826.559741 ┆ 3.40043e6   ┆ -21.419661 ┆ -13.710302 ┆ 0.06881   ┆ HaulKing     │
+│ FP-03      ┆ 336422 ┆ 1.6366561e7 ┆ -6.9298e6      ┆ -1.3870e6      ┆ 2.2728372e7 ┆ -20.598572 ┆ -4.122774  ┆ 0.279906  ┆ ZipDrop      │
+│ FP-02      ┆ 177744 ┆ 1.0213287e7 ┆ -2.0281e6      ┆ 1.0150e6       ┆ 1.196313e7  ┆ -11.410512 ┆ 5.710631   ┆ 0.14627   ┆ ParcelNest   │
+│ FP-10      ┆ 50895  ┆ 3.03779e6   ┆ -489450.013737 ┆ 390125.883085  ┆ 3.434895e6  ┆ -9.616859  ┆ 7.665309   ┆ 0.115609  ┆ MetroMove    │
+│ FP-05      ┆ 141753 ┆ 8.538925e6  ┆ -1.1886e6      ┆ 1.1233e6       ┆ 9.59469e6   ┆ -8.385297  ┆ 7.924407   ┆ 0.110036  ┆ Swiggle Go   │
+│ FP-11      ┆ 49263  ┆ 3.028058e6  ┆ -410222.740155 ┆ 428637.754029  ┆ 3.3483e6    ┆ -8.327198  ┆ 8.701008   ┆ 0.095643  ┆ LastMileHub  │
+│ FP-01      ┆ 313908 ┆ 2.0092208e7 ┆ -1.3818e6      ┆ 3.8034e6       ┆ 2.1157948e7 ┆ -4.401952  ┆ 12.116338  ┆ 0.050371  ┆ FeastFly     │
+│ FP-06      ┆ 74859  ┆ 4.801607e6  ┆ -325914.507399 ┆ 937078.055516  ┆ 5.029185e6  ┆ -4.353712  ┆ 12.517908  ┆ 0.045251  ┆ RideMitra    │
+│ FP-07      ┆ 75532  ┆ 4.848629e6  ┆ -282207.01803  ┆ 977937.75995   ┆ 5.057495e6  ┆ -3.736258  ┆ 12.94733   ┆ 0.041298  ┆ QuickCart    │
+│ FP-12      ┆ 48043  ┆ 3.1232e6    ┆ -184619.060833 ┆ 630381.539097  ┆ 3.234485e6  ┆ -3.842788  ┆ 13.121194  ┆ 0.034393  ┆ UrbanErrand  │
+│ FP-08      ┆ 56785  ┆ 3719214.5   ┆ -161103.09837  ┆ 789249.716373  ┆ 3.82085e6   ┆ -2.837071  ┆ 13.898912  ┆ 0.0266    ┆ DabbaXpress  │
+│ null       ┆ 740363 ┆ 5.1896016e7 ┆ 1.0568e6       ┆ 1.3488e7       ┆ 4.9907608e7 ┆ 1.427439   ┆ 18.218612  ┆ -0.039842 ┆ null         │
+└────────────┴────────┴─────────────┴────────────────┴────────────────┴─────────────┴────────────┴────────────┴───────────┴──────────────┘
+ZipDrop steady-state cm1 -4.12/swap (actual -20.60; realised discount 28.0%) -> exclusive on current terms Rs-1.80 L/month cm1; discount 28%->15% +Rs3.84 L/month, ->12% +Rs4.73 L/month; billable surcharge (network-wide bands) +Rs4.39 L/month
+FeastFly steady-state cm1 +12.12/swap; realised discount 5.0%
+ZipDrop break-even discount at steady-state cm1 = 0: 21.9%
+3W steady state: revenue 101.31, energy 39.98, wear 76.23 -> cm1 -14.90/swap; realised/list 0.921; break-even list Rs126; 28,926 3W swaps/month; pricing to break-even +Rs4.3 L/month (if demand holds; 3W elasticity n.s. in q5)
+
+--- Station economics by wave, Apr-Jun 2025 (steady-state cm1 Rs9.51/swap)
+shape: (3, 10)
+┌────────────────┬──────────┬────────────┬────────┬─────┬──────────────┬─────────────┬───────────┬────────────────────┬──────────────┐
+│ expansion_wave ┆ stations ┆ fixed      ┆ swaps  ┆ sm  ┆ fixed_pm     ┆ swaps_pm    ┆ fixed_ps  ┆ breakeven_swaps_pm ┆ cm2_pm_at_ss │
+│ ---            ┆ ---      ┆ ---        ┆ ---    ┆ --- ┆ ---          ┆ ---         ┆ ---       ┆ ---                ┆ ---          │
+│ str            ┆ u32      ┆ f64        ┆ u32    ┆ u32 ┆ f64          ┆ f64         ┆ f64       ┆ f64                ┆ f64          │
+╞════════════════╪══════════╪════════════╪════════╪═════╪══════════════╪═════════════╪═══════════╪════════════════════╪══════════════╡
+│ Launch         ┆ 90       ┆ 6.327288e6 ┆ 558437 ┆ 270 ┆ 23434.4      ┆ 2068.285185 ┆ 11.330352 ┆ 2464.822993        ┆ -3770.098551 │
+│ Wave1_2024H2   ┆ 30       ┆ 2.1876e6   ┆ 148486 ┆ 89  ┆ 24580.059079 ┆ 1668.382022 ┆ 14.732872 ┆ 2585.323063        ┆ -8717.852427 │
+│ Wave2_2025H1   ┆ 30       ┆ 2027659.3  ┆ 189282 ┆ 90  ┆ 22529.547778 ┆ 2103.133333 ┆ 10.712373 ┆ 2369.650914        ┆ -2533.926211 │
+└────────────────┴──────────┴────────────┴────────┴─────┴──────────────┴─────────────┴───────────┴────────────────────┴──────────────┘
+Another wave of 30 Wave-1-like sites: +Rs7.37 L/month fixed cost; at Wave-1 utilisation and steady-state cm1 the wave contributes Rs-2.62 L/month cm2 if every swap is incremental, -Rs7.37 L/month if swaps are only redistributed
++10% 2W packs = 552 packs x Rs31,986 = Rs1.77 Cr; calendar life 27.2 months -> Rs6.50 L/month depreciation with no measured stockout benefit
+Quality-gated replacement (Cellora-grade vs Kyron-grade at ~25% of issues): +Rs16.82/swap, Rs47.7 L/month at H1-25 volume
+CITED | q2: hot-city Gen1 station-days stockout rate, peak cabinet >=45C vs <40C: 12.00% vs 2.34%
+CITED | q2: completed queue wait, lightest vs busiest station-hours (s): 244.0 vs 243.8
+CITED | q2: Gen1 vs Gen3 risk ratio, hot cities, Apr-Jun 2025: 3.05 (2.97-3.12)
+CITED | q3: Gen1 charge time at <40C vs 50C cabinet (min): 88 -> ~168 (Gen3 42 -> 44)
+CITED | q3: heat x generation lifts station-month R2: 0.552 -> 0.945
+CITED | q3: within-Gen1 load effect on failure rate (pp per log-unit): -0.03 (CI -0.70 to +0.65, p=0.94)
+CITED | q3: hotspot attempts Apr-Jun 2024 -> 2025 at flat 16.7% -> 16.6% rate: +50.9%
+CITED | q3: new-slot DiD on legacy failure rate at median intensity (pp): -0.16
+CITED | q3: fixed cost per swap Wave-1 vs legacy, Apr-Jun 2025 (Rs): 14.73 vs 11.33
+CITED | q3: 3 unserved-zone sites vs 16 served-zone fuel pumps (swaps/slot-day): 11.56 vs 3.05
+CITED | q4: Kyron bad-lot fade vs Cellora/Amptek, per day: 3.8x (3.26x per issue)
+CITED | q4: adding 1,385 packs (+33.5% 2W fleet): change in stockouts / charged packs per station-hour: -0.00 pp / +0.004
+CITED | q4: Kyron vs Cellora/Amptek median km per returned 2W pack, Q2-25: 39.5 vs 53.4 (-26%)
+CITED | q4: June-25 Kyron 2W issues below 70% SoH: 99.94% (65,504 of 65,543)
+CITED | q4: warranty/claim basis, lost-life value (2W + 3W): Rs3.37-3.56 Cr
+CITED | q5: pilot revenue per independent swap: +Rs7.90 (+11.7%)
+CITED | q5: pilot effect on peak stockouts (pp): +0.05 (CI -0.09 to +0.18)
+CITED | q5: ZipDrop amendment revenue effect per 2W swap / bought volume: -Rs10.40 / none (+56.5% vs +53.2%)
+CITED | q6: same-season D31-60 retention, Jan-Mar 2024 vs 2025 cohorts: 86.3% vs 86.3% (p=0.98)
+CITED | q6: 2+ vs 0-1 early failures, adjusted OR: 1.67 (1.43-1.94)
+CITED | q6: D31-60 non-retention with 2+ vs 0-1 early failures (n=2,246 with 2+): 22.6% vs 13.1%
+CITED | q6: share of summer-2024 retention dip explained by early failures: 40-50%
+CITED | q6: what-if early failures capped at 1 (non-retention pp, overall / summer-entry): -1.45 / -2.72
+CITED | q6: pilot DiD on independent new-rider non-retention: OR 1.28 (0.91-1.79), p=0.15
+CITED | q7: wear charged on post-EOL swaps: Rs12.9M
+CITED | q7: test stations excluded (paid swaps / revenue): 59,134 / Rs3.93M
+CITED | q7: 1-Jul-24 failure drop in hot cities vs cool cities (pts): -8 to -15 vs within +/-0.8 (heat, not price)
+CITED | q8: battery-health share of tickets (central; official low_range): 49.5% (15.1%)
+CITED | q1: 2W price per km H1-24 -> H1-25: Rs0.819 -> Rs1.165 (+42.3%)
+CITED | q1: km per 2W swap Jan-24 -> Jun-25: 70.5 -> 48.0
+CITED | q1: cm1 bridge Q1-24 -> Q1-25 (Rs/swap): Kyron -16.04, price +5.12, kWh +2.80, ZipDrop -1.70, pilot +1.68, mix +0.46
+CITED | q1: cm1 bridge Jul-Aug-24 -> Oct-24..Mar-25 (Rs/swap): Kyron -16.00, ZipDrop -1.45, pilot +1.69, kWh +1.31
+CITED | q2: Apr-Jun failure rate by city (Jaipur / Delhi NCR / Hyderabad / Mumbai): 13.60% / 12.20% / 10.36% / 4.03%
+CITED | q2: avoidable failures per Gen1 site per summer (Delhi / Jaipur / Hyderabad / Pune): ~835 / ~810 / ~644 / ~208
+CITED | q2: 3W vs 2W stockout risk ratio within station-month: 2.08 (2.06-2.11)
+CITED | q2: completed queue wait mean, every month (min): 4.05-4.07
+CITED | q3: competitor entry effect on completed swaps: -3.9% (CI -10.7% to +3.3%), MDE ~10%
+CITED | q5: cm1 per swap by segment, current terms (quick commerce / cargo 3W / independents): -17.51 / -22.01 / +1.43
+CITED | q5: ZipDrop steady-state cm2 after working capital: -Rs16.00/swap = -Rs80.7 L/yr
+CITED | q5: ZipDrop 2W break-even discount at steady-state cm1: 24.6%
+CITED | q6: competitor exposure, attempt-level exit OR / landmark Cox HR: 1.42 / 1.20
+CITED | q7: system-error rate in every connectivity tier: 0.29-0.30%
+CITED | q8: stock-out + queue share of tickets: 39.5%
+CITED | q4: Kyron share of 2W packs issued from Oct-24: ~24-25%
+CITED | q1: monthly active riders H1-25 vs H1-24 / real stations Jun-25: x2.18 / 149
+CITED | q1: Q2-25 attempts per slot-day, new vs Launch stations: 4.8 vs 5.0
+CITED | q2: Gen1 vs Gen3 RR in Mumbai / Pune, Apr-Jun 2025: 1.00 / 1.72
+CITED | q2: O/E of all 36 hot-city Gen1 sites vs their city x month x class rate: 0.95-1.05 (no rogue stations)
+CITED | q2: Jul-Mar failure rate range across cities: 3.85-4.00%
+CITED | q3: excess stockouts per hot hour within Gen1 station: +0.81 pp (0.78-0.85)
+CITED | q3: tickets per extra failed attempt: ~1 per 9.9
+CITED | q4: wear per swap, Kyron 2W vs Cellora 2W: Rs103.84 vs Rs31.85
+CITED | q4: battery value destroyed by the bad lots, capped vs per-swap model: Rs2.94 Cr vs Rs4.31 Cr
+CITED | q4: H1-25 cm1 with depreciation capped at purchase price: +Rs1.64/swap
+CITED | q4: early-warning back-test, bad lots' fade ratio by week 8: 2.47-4.50x (others <=1.37x)
+CITED | q4: sub-EOL swaps in Jun-25 / extra swaps per rider-day in Kyron-heavy cities: 66,473 / +9.8%
+CITED | q5: pilot peak-share shift / city-permutation p (floor of the design): -2.49 pp / 0.067
+CITED | q5: partner cost-to-serve gaps vs peers (Rs/swap): -0.71 to +0.80
+CITED | q6: within-rider exit OR after stockout/abandon / subgroups adverse: 1.525 / 15 of 15
+CITED | q6: competitor-exposed eligible riders / 3W OR: 640 / 1.18 (1.01-1.37)
+CITED | q6: SoH OR per +10 pts / Kyron share OR / peak share OR: 1.07 / 0.90 / 1.06
+CITED | q6: pilot placebo on partner riders / churn model AUC: OR 1.20 / 0.60-0.68
+CITED | q6: share of each summer dip closed by removing early failures (q6_01): 28-61%
+CITED | q7: cm1/swap May/Jun-25 without wear past EOL / tariff_code share of pilot pricing hidden: +12.4 / +18.0; 54.0%
+CITED | q7: hot-city temperature fall across 1-Jul-24: 11-17C
+CITED | q8: battery-complaint floor / Kyron dose ratio / hidden vs official multiple: 36.7% / 1.74 / 2.4-3.3x
+CITED | q8: pilot billing-complaint IRR vs Mumbai: 0.94 (0.78-1.12)
+CITED | q3: competitor DiD treated stations: 8
+CITED | q2: load at hot-city Gen3 vs Gen1 sites, Apr-Jun (attempts per station-day): 84.1 vs 81.8
+
+--- Budget scorecard
+                                              option                        verdict                                            fail_pp                            ret_pp                     cm1_lakh_pm  \
+0           (a) More stations (another 30-site wave)  REJECT; demand-led sites only  ~0 (-0.16 pp at existing sites; hotspot load e...                    ~0 (wave n.s.)              -2.6 to -7.4 (cm2)   
+1                 (b) More batteries (+10% 2W packs)        REJECT; replace instead         ~0 (+33.5% packs moved stockouts -0.00 pp)       ~0 (SoH not a churn driver)             -6.5 (depreciation)   
+2             (c) Network-wide peak/off-peak pricing           SUPPORT with changes                   ~0 (+0.05 pp, CI -0.09 to +0.18)            n.s. (OR 1.28, p=0.15)  +9.5 (+6.3 if partners billed)   
+3  (d) Long-term exclusive with ZipDrop (largest ...        REJECT on current terms                            locks 20% of peak swaps                      ~0 (OR 1.06)             -1.8 (steady state)   
+4       ALT 1: Gen1 thermal fix at 36 hot-city sites      FUND as pilot, then scale                   -2.0 to -2.8 pp (7.92% -> 5.13%)  -0.63 to -0.96 (summer entrants)          +1.0 to +1.5 (revenue)   
+5  ALT 2: EOL lockout + quality-gated pack replac...     FUND (replace, not expand)                                                 ~0                                ~0        +48 vs Kyron-grade packs   
+6                 ALT 3: Contract and price re-terms                  DO (no capex)                                                 ~0                           monitor                           +14.5   
+7            ALT 4: New-rider failure recovery (A/B)                TEST (low cost)                                                 ~0    up to -1.45 (cap at 1 failure)                  small (volume)   
+
+                                            oneoff                                                why  
+0                           site capex not in data  Hotspot rates are set by heat x Gen1, not load...  
+1                                         Rs1.8 Cr  Hourly stock does not predict stockouts; hot-d...  
+2                                               ~0  A revenue lever, not a congestion lever: +Rs7....  
+3                                                -  28% discount, no billable surcharge: cm1 -4.1/...  
+4            capex not in data: pilot sets ceiling  77% of Apr-Jun-25 excess failures; same-city G...  
+5  Rs4.9 Cr now; Rs13.2 Cr 2W renewal Jan-May 2026  Kyron lots fade 3.8x/day; 122K sub-EOL swaps; ...  
+6                                               ~0  ZipDrop to 15% (+3.8 L), billable surcharge (+...  
+7                                     credits only  2+ early failures: 22.6% vs 13.1% not retained...  
+Gen1 fix revenue (12-month average): lost swaps recovered Rs1.00-1.42 L/month; retained new riders (second month only) Rs0.03-0.05 L/month
+Gen1 fix value per site per summer (revenue, 2025 volume): Rs33.5K-47.5K; share of the 4.58 pp summer retention dip closed: 14%-21%; Gen1 sites' Apr-Jun attempts 2024 -> 2025: 172,800 -> 267,903
+Commercial levers total: rollout 9.48 + billable surcharge 6.31 + ZipDrop 15% 3.84 + 3W 4.31 = Rs23.9 L/month cm1; re-terms excl. rollout Rs14.5 L/month
+cm2 per swap path (Rs): start -18.48, kyron +16.82, rollout +3.34, partner +3.58, three_w +1.52, end +6.79
+KEY | Completed swaps growth (x) = 2.43 | H1-25 vs H1-24 | q1, q9 recomputed
+KEY | Revenue growth (x) = 2.63 | H1-25 vs H1-24 | q1, q9 recomputed
+KEY | Service-failure rate (%) = 7.04 -> 6.06 | H1-24 -> H1-25 | q1, q9 recomputed
+KEY | Naive failures vs swaps growth (x) = 6.26 vs 2.93 | Jan-24 -> Jun-25 (winter vs summer) | q1, q9 recomputed
+KEY | Apr-Jun failure rate, same 90 Launch stations (%) = 9.52 -> 9.55 | Apr-Jun 2024 -> 2025 | q1/q3, q9 recomputed
+KEY | Apr-Jun failure rate, whole network (%) = 9.52 -> 7.92 | Apr-Jun 2024 -> 2025 (dilution by new sites) | q1/q3, q9 recomputed
+KEY | Failed attempts, Apr-Jun = 39,820 -> 77,445 | Apr-Jun 2024 -> 2025 | q3, q9 recomputed
+KEY | Off-season (Jul-Mar) failure-rate baseline (%) = 3.91 | Jul-24..Mar-25 and Jul-Mar months | q2, q9 recomputed
+KEY | 36 hot-city Gen1 stations: share of attempts / failures / excess failures (%) = 27.4 / 52.6 / 77.1 | Apr-Jun 2025 | q2/q3, q9 recomputed
+KEY | Hot-city failure rate Gen1 vs Gen3 (%) = 15.2 vs 5.1 | Apr-Jun 2025 | q2, q9 recomputed
+KEY | City-day failure rate below 34C vs at 36-38C vs 38-42C (%) = 3.9 / 10.0 / 14.1 | Jan-24..Jun-25 | q2, q9 recomputed
+KEY | Share of city-days with an official heat alert, below 42C vs at/above 42C (%) = 0.0 vs 99 | Jan-24..Jun-25 | q2, q9 recomputed
+KEY | Gen1 charge time, cabinet <40C vs 50C (min) = 88 -> ~168 | Jan-24..Jun-25 | q3 (cited)
+KEY | Stockout rate on hot vs cool days at hot-city Gen1 stations (%) = 12.0 vs 2.3 | Apr-Jun, station-days | q2 (cited)
+KEY | Hot-day 19-22h 2W stockout rate across charged-stock buckets 0 / 1-2 / 3-5 / 6+ (%) = 17.6 / 16.9 / 16.9 / 16.7 | Apr-Jun, hot-city Gen1 | q2, q9 recomputed
+KEY | Gen1 fix: failed attempts avoided per summer (Gen2-like to Gen3-like) = 19,212 to 27,266 | Apr-Jun 2025 volume | q1/q2/q3, q9 recomputed
+KEY | Gen1 fix: network Apr-Jun failure rate (%) = 7.92 -> 5.95 to 5.13 | Apr-Jun 2025 volume | q9
+KEY | Gen1 fix: summer-entry new-rider non-retention (pp) = -0.63 to -0.96 | Apr-Jun 2025 entrants | q9 (q6 effect size)
+KEY | Same-season new-rider D31-60 retention (%) = 86.3 vs 86.3 (p=0.98) | Jan-Mar 2024 vs Jan-Mar 2025 cohorts | q6 (cited)
+KEY | Non-retention with 2+ vs 0-1 early failures (%) = 22.6 vs 13.1 (q9 re-derivation 22.7 vs 13.3) | cohorts Jan-24..Apr-25 | q6 (cited), q9 recomputed
+KEY | Adjusted odds ratio, 2+ vs 0-1 early failures = 1.67 (1.43-1.94) | cohorts Jan-24..Apr-25 | q6 (cited)
+KEY | Share of summer retention dip explained by early failures (%) = 40-50 | Apr-Jun 2024 vs Jan-Mar 2024 | q6 (cited)
+KEY | cm1 per swap, same season (Rs) = +0.27 -> -7.32 | Q1-24 -> Q1-25 | q1, q9 recomputed
+KEY | cm1 per swap H1-25 under three wear conventions (Rs) = -6.39 / -1.12 / +1.19 | H1-25 (per-cycle / post-EOL at Cellora wear / wear stops at EOL) | q1/q4/q7, q9 recomputed
+KEY | Kyron-grade vs Cellora-grade wear gap (Rs per swap; Rs lakh per month) = 16.82; 47.7 | Q1-25 per-swap gap (clean window) x H1-25 volume | q1, q9 recomputed
+KEY | Gen1 fix: revenue recovered per summer if each failure is a lost swap (Rs M) = 1.20 to 1.71 | Apr-Jun 2025 volume (upper bound) | q9
+KEY | Kyron bad-lot fade vs other lots (per day) = 3.8x | Sep-24..Jun-25 | q4 (cited)
+KEY | Swaps that issued a pack below 70% SoH = 122,204 | Apr-Jun 2025 | q1/q4/q7, q9 recomputed
+KEY | Median km per returned 2W pack, Kyron vs others = 39.5 vs 53.4 | Q2-25 | q4 (cited)
+KEY | Non-Kyron 2W fleet: median projected date at 70% SoH = Apr-2026 (trend method Jan-2026) | projection from 30-Jun-25 | q1/q4, q9 recomputed
+KEY | Pack capex: Kyron bad lots now / non-Kyron 2W renewal Jan-May 2026 / non-Kyron 3W renewal 2027 (Rs Cr) = 4.95 / 13.22 / 4.95 | purchase cost, batteries master | q9
+KEY | Pricing rollout cm1 uplift (Rs lakh per month) = 9.5 | four non-pilot cities, H1-25 volume | q5 effect, q9 volumes
+KEY | Pilot effect on peak stockouts (pp) = +0.05 (CI -0.09 to +0.18) | Oct-24..Mar-25 | q5 (cited)
+KEY | ZipDrop share of network swaps (%) = 15.4 | H1-25 | q5, q9 recomputed
+KEY | ZipDrop steady-state cm1 per swap (Rs) = -4.12 | Nov-24..Jun-25 terms | q5, q9 recomputed
+KEY | FeastFly steady-state cm1 per swap (Rs) = 12.12 | Nov-24..Jun-25 terms | q5, q9 recomputed
+KEY | 3W steady-state cm1 per swap (Rs) / break-even list price (Rs) = -14.90 / 126 | Nov-24..Jun-25 | q5, q9 recomputed
+KEY | Wave-1 vs legacy fixed cost per swap (Rs) = 14.73 vs 11.33 | Apr-Jun 2025 | q3, q9 recomputed
+KEY | Battery-health share of support tickets (%) = 49.5 (official 15.1) | Jan-24..Jun-25 | q8 (cited)
+KEY | cm2 per swap: Q1-25 actual -> with recommended levers (Rs) = -18.48 -> +6.79 | Q1-25 unit costs, H1-25 volume | q9
+
+key_numbers.csv: 40 rows
+figures saved: q9_01_causal_chain.png q9_02_budget_decision.png

@@ -1,0 +1,9 @@
+item,window,rs_per_month,basis,rs_M_per_month
+Kyron 2W excess battery wear vs Cellora,Q1-25 (no post-EOL issues),-4301650.968687604,"59,816 Kyron-2W swaps/month x (Kyron wear - Cellora 31.9)",-4.301650968687604
+"Kyron 2W excess battery wear vs Cellora, per-cycle model",H1-25,-4484259.900648885,"62,291 Kyron-2W swaps/month; includes post-EOL issues",-4.484259900648885
+"Kyron 2W excess battery wear vs Cellora, pre-EOL issues only",H1-25,-3010505.244615026,"42,095 Kyron-2W pre-EOL swaps/month",-3.0105052446150258
+Wear charged on Kyron 2W packs issued below 70% EOL (beyond purchase cost),H1-25,-2117065.4521577763,all of it is depreciation beyond the purchase cost,-2.1170654521577763
+Kyron 3W excess battery wear vs Cellora,H1-25,-231376.93021750488,3W packs,-0.23137693021750488
+ZipDrop discount 12% -> 28%,H1-25,-472667.33333333343,"43,733 ZipDrop swaps/month x list x 16 pts",-0.47266733333333344
+"Base price rise (Jul-24), net of partner discounts",H1-25,1416145.464170564,"2W +Rs5, 3W +Rs10 x H1-25 swaps",1.416145464170564
+Peak/off-peak pilot net surcharge (gross of volume response),H1-25,483818.4882534345,Bengaluru + Pune,0.4838184882534345

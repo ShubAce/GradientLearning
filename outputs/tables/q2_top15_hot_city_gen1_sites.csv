@@ -1,0 +1,16 @@
+station_id,city,zone,expansion_wave,charger_generation,location_type,host_type,connectivity_tier,slots_2w,slots_3w,swaps_per_slot_day,attempts_per_day,att,att_AJ,fail,excess,oe_vs_city_month_class,failure_rate,fr_AprJun24,fr_AprJun25,fr_JulMar,stockout_rate,abandon_rate,nb_lq_tickets_per_1k
+STN-DEL-043,Delhi NCR,DEL-East,Launch,Gen1,commercial_hub,mall_parking,poor,12,0,6.91,90.7,49597,16892,4060,2130.0,1.006,0.0819,0.1676,0.1658,0.0382,0.0526,0.0263,6.13
+STN-DEL-050,Delhi NCR,DEL-East,Launch,Gen1,commercial_hub,fuel_retailer,poor,12,0,6.55,86.0,47060,16312,3849,2086.0,1.0,0.0818,0.1683,0.1617,0.0382,0.0534,0.0255,5.95
+STN-JAI-138,Jaipur,JAI-Malviya Nagar,Launch,Gen1,market,kirana,poor,12,0,6.81,89.5,48945,15763,4024,2081.0,1.028,0.0822,0.183,0.166,0.0391,0.0538,0.0253,6.76
+STN-JAI-141,Jaipur,JAI-Malviya Nagar,Launch,Gen1,commercial_hub,mall_parking,good,16,0,4.75,83.4,45594,16176,3796,2074.0,1.013,0.0833,0.1643,0.1732,0.0358,0.0543,0.0266,6.25
+STN-HYD-072,Hyderabad,HYD-Hitech City,Launch,Gen1,commercial_hub,kirana,good,12,0,7.25,94.6,51765,19661,3962,1976.0,1.049,0.0765,0.136,0.1374,0.0396,0.0489,0.0246,5.93
+STN-JAI-137,Jaipur,JAI-Malviya Nagar,Launch,Gen1,commercial_hub,owned_lot,fair,8,0,9.25,81.1,44371,15336,3690,1939.0,1.0,0.0832,0.1721,0.1641,0.0388,0.0536,0.0269,6.22
+STN-JAI-140,Jaipur,JAI-Malviya Nagar,Launch,Gen1,commercial_hub,mall_parking,fair,16,0,4.61,80.6,44115,14750,3552,1851.0,1.007,0.0805,0.1748,0.1625,0.0368,0.0532,0.0246,6.28
+STN-JAI-134,Jaipur,JAI-Malviya Nagar,Launch,Gen1,commercial_hub,kirana,good,16,4,3.59,78.5,42925,14362,3419,1783.0,0.999,0.0797,0.1701,0.1654,0.0356,0.0517,0.0253,6.24
+STN-DEL-047,Delhi NCR,DEL-South,Launch,Gen1,market,owned_lot,good,12,4,4.35,76.0,41594,13632,3331,1717.0,0.998,0.0801,0.169,0.162,0.0388,0.0515,0.0257,6.06
+STN-DEL-040,Delhi NCR,DEL-South,Launch,Gen1,market,mall_parking,fair,16,6,3.06,73.7,40335,13952,3304,1698.0,0.959,0.0819,0.1499,0.1665,0.0405,0.0515,0.0276,5.88
+STN-HYD-070,Hyderabad,HYD-South,Launch,Gen1,market,kirana,good,16,6,3.82,90.8,49688,17442,3561,1610.0,1.002,0.0717,0.1345,0.1283,0.0398,0.0465,0.022,5.41
+STN-DEL-048,Delhi NCR,DEL-West,Launch,Gen1,market,owned_lot,good,16,0,3.6,63.3,34646,11727,2953,1590.0,1.047,0.0852,0.1682,0.1786,0.0394,0.0547,0.0278,7.1
+STN-DEL-036,Delhi NCR,DEL-Noida,Launch,Gen1,market,fuel_retailer,good,16,6,2.7,64.9,35499,11812,2878,1552.0,1.016,0.0811,0.1709,0.1657,0.038,0.0519,0.0262,5.55
+STN-DEL-037,Delhi NCR,DEL-Noida,Launch,Gen1,commercial_hub,owned_lot,good,16,0,3.2,56.4,30838,11201,2677,1469.0,1.003,0.0868,0.1689,0.1648,0.0415,0.056,0.0277,7.59
+STN-JAI-142,Jaipur,JAI-Vaishali,Launch,Gen1,commercial_hub,mall_parking,poor,12,6,3.09,60.9,33319,11103,2778,1438.0,0.973,0.0834,0.1643,0.1659,0.0425,0.0522,0.0282,6.57

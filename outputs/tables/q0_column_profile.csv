@@ -1,0 +1,120 @@
+table,column,dtype,null_%,distinct,top_values
+swap_events,event_id,String,0.0,3877013,"SW-000000001(1), SW-000000002(1), SW-000000003(1), SW-000000004(1)"
+swap_events,rider_id,String,0.0,19950,"RD-1001634(936), RD-1002008(905), RD-1000594(891), RD-1002095(887)"
+swap_events,station_id,String,0.0,152,"STN-BLR-019(58067), STN-BLR-004(52094), STN-HYD-072(51765), STN-HYD-070(49688)"
+swap_events,event_ts,"Datetime(time_unit='us', time_zone=None)",0.0,,
+swap_events,event_type,String,0.0,5,"swap_completed(3645809), failed_no_charged_battery(134389), abandoned_queue(68533), cancelled_by_rider(16712)"
+swap_events,attempt_seq,Int16,0.0,1,min 1 | median 1 | max 1
+swap_events,queue_wait_sec,Int32,0.0,2018,min 0 | median 206 | max 2400
+swap_events,battery_in_id,String,0.73,6501,"None(28282), BAT-2W-106267(735), BAT-2W-105354(732), BAT-2W-103293(730)"
+swap_events,battery_out_id,String,5.96,6501,"None(231204), BAT-2W-104960(743), BAT-2W-102112(735), BAT-2W-100884(734)"
+swap_events,soc_in_pct,Float32,0.73,262,min 1 | median 9.3 | max 28.4
+swap_events,soh_in_pct,Float32,0.73,461,min 55.2 | median 89.3 | max 101.4
+swap_events,soc_out_pct,Float32,5.96,218,min 80 | median 97.3 | max 103
+swap_events,soh_out_pct,Float32,5.96,464,min 54.7 | median 89.2 | max 101.3
+swap_events,km_since_last_swap,Float32,0.73,2306,min -20 | median 60 | max 420
+swap_events,tariff_code,String,0.0,4,"PARTNER(2565478), STD(1095936), PEAK(177879), OFFPEAK(37720)"
+swap_events,list_price_inr,Float32,0.0,4,min 60 | median 65 | max 110
+swap_events,discount_inr,Float32,0.0,33,min 0 | median 6.5 | max 30.8
+swap_events,amount_charged_inr,Float32,0.0,253,min 0 | median 58.5 | max 135
+swap_events,payment_mode,String,0.0,1,partner_invoice(3877013)
+swap_events,energy_to_recharge_kwh,Float32,5.96,4263,min 0.809 | median 1.869 | max 5.519
+swap_events,station_firmware,String,0.0,2,"v3.2.1(2315839), v3.2.0(1561174)"
+swap_events,sync_mode,String,0.0,2,"realtime(3285899), offline_batch(591114)"
+station_hourly_status,station_id,String,0.0,152,"STN-BLR-001(13128), STN-BLR-002(13128), STN-BLR-003(13128), STN-BLR-004(13128)"
+station_hourly_status,hour_start,"Datetime(time_unit='us', time_zone=None)",0.0,,
+station_hourly_status,charged_2w_avg,Float32,0.63,2250,min 0.08 | median 8.34 | max 22.81
+station_hourly_status,charged_2w_min,Float32,0.63,23,min 0 | median 7 | max 22
+station_hourly_status,charged_3w_min,Float32,55.24,6,min 0 | median 3 | max 5
+station_hourly_status,packs_charging,Float32,0.63,23,min 0 | median 4 | max 22
+station_hourly_status,packs_quarantined,Float32,0.63,3,min 0 | median 0 | max 2
+station_hourly_status,chargers_online,Float32,0.0,16,min 6 | median 16 | max 22
+station_hourly_status,ambient_temp_c,Float32,0.63,472,min 1 | median 17.2 | max 48.9
+station_hourly_status,cabinet_temp_c,Float32,0.63,541,min 4.1 | median 23.6 | max 60.5
+station_hourly_status,avg_charge_minutes,Float32,0.63,2237,min 30.9 | median 69.1 | max 301.9
+station_hourly_status,outage_minutes,Float32,0.0,2,min 0 | median 0 | max 60
+station_hourly_status,grid_kwh,Float32,0.63,3475,min 0 | median 7.15 | max 46.44
+station_hourly_status,telemetry_status,String,0.0,3,"ok(1441341), partial(36987), missing(9384)"
+riders,rider_id,String,0.0,20000,"RD-1000000(1), RD-1000001(1), RD-1000002(1), RD-1000003(1)"
+riders,partner_id,String,38.14,13,"None(7628), FP-01(2710), FP-03(2381), FP-02(1766)"
+riders,vehicle_class,String,0.0,2,"2W(17107), 3W(2893)"
+riders,vehicle_model,String,0.0,8,"Zipp E2(5674), Kranti Spark(2370), Volt Cub(2283), Orbit Lite(2273)"
+riders,home_zone,String,0.0,28,"JAI-Malviya Nagar(1528), PUN-South(1339), DEL-East(1154), BLR-Electronic City(1117)"
+riders,signup_date,Date,0.0,,
+riders,signup_channel,String,0.0,4,"partner_onboarding(9376), app_store(4215), field_agent(4144), referral(2265)"
+riders,plan_type,String,0.0,3,"partner_billed(12372), pay_as_you_go(5299), prepaid_pack(2329)"
+riders,declared_shift,String,18.31,5,"evening(5961), day(4366), None(3662), mixed(3185)"
+riders,age_band,String,7.74,5,"25-34(6878), 18-24(5608), 35-44(4024), 45+(1943)"
+riders,kyc_verified,Boolean,0.0,,
+riders,home_city,String,0.0,21,"Bengaluru(4175), Delhi NCR(3783), Hyderabad(3396), Pune(2843)"
+batteries,battery_id,String,0.0,6500,"BAT-2W-100000(1), BAT-2W-100001(1), BAT-3W-100002(1), BAT-2W-100003(1)"
+batteries,pack_type,String,0.0,2,"2W_2.1kWh(5518), 3W_4.8kWh(982)"
+batteries,supplier,String,0.0,3,"Cellora(3555), Kyron(1638), Amptek(1307)"
+batteries,manufacturing_lot,String,0.0,55,"KY-2408(500), KY-2409(481), KY-2407(480), CE-2404(158)"
+batteries,manufacture_date,Date,0.0,,
+batteries,commission_date,Date,0.0,,
+batteries,rated_capacity_kwh,Float64,0.0,2,min 2.1 | median 2.1 | max 4.8
+batteries,purchase_cost_inr,Int64,0.0,4111,min 2.747e+04 | median 3.225e+04 | max 7.504e+04
+batteries,initial_soh_pct,Float64,0.0,23,min 97.8 | median 99.2 | max 100
+batteries,bms_firmware,String,0.0,3,"BMS-4.1(2197), BMS-4.0(2155), BMS-4.2(2148)"
+batteries,retired_date,Date,77.88,,
+batteries,retirement_reason,String,77.88,2,"None(5062), end_of_life(1438)"
+batteries,current_soh_pct,Float64,0.0,247,min 55.4 | median 79.8 | max 88.6
+support_tickets,ticket_id,String,0.0,44000,"TK-0000001(1), TK-0000002(1), TK-0000003(1), TK-0000004(1)"
+support_tickets,rider_id,String,0.0,13979,"RD-1002888(21), RD-1008186(18), RD-1003490(17), RD-1000594(17)"
+support_tickets,station_id,String,5.06,153,"None(2227), STN-HYD-072(689), STN-DEL-043(681), STN-JAI-138(674)"
+support_tickets,battery_id,String,30.08,6429,"None(13235), BAT-2W-100649(15), BAT-2W-106191(14), BAT-2W-104611(14)"
+support_tickets,created_ts,"Datetime(time_unit='us', time_zone=None)",0.0,,
+support_tickets,channel,String,0.0,4,"app_chat(19921), whatsapp(11022), call_center(8692), partner_escalation(4365)"
+support_tickets,category,String,0.0,6,"no_battery_available(11647), other(9484), low_range(6636), app_issue(5787)"
+support_tickets,rider_comment,String,0.0,89,"general issue with the vehicle performance(3274), bike problem lag raha hai overall(3153), scooter weak lag raha hai aajkal(3057), reached station but sab batteries discharge the(2378)"
+support_tickets,priority,String,0.0,3,"medium(19884), low(17649), high(6467)"
+support_tickets,resolution_status,String,0.0,3,"resolved(37888), unresolved(5175), duplicate(937)"
+support_tickets,resolution_hours,Float64,13.89,774,min 0.9 | median 13.2 | max 155.8
+support_tickets,csat_score,Int64,65.62,5,min 1 | median 4 | max 5
+stations,station_id,String,0.0,152,"STN-BLR-001(1), STN-BLR-002(1), STN-BLR-003(1), STN-BLR-004(1)"
+stations,city,String,0.0,6,"Bengaluru(34), Delhi NCR(30), Hyderabad(26), Pune(22)"
+stations,zone,String,0.0,28,"PUN-South(12), BLR-Central(10), HYD-Central(10), JAI-Malviya Nagar(10)"
+stations,latitude,Float64,0.0,151,min 12.8 | median 18.59 | max 28.75
+stations,longitude,Float64,0.0,151,min 72.89 | median 77.1 | max 78.59
+stations,location_type,String,0.0,6,"market(47), commercial_hub(46), residential(21), highway_fuel_pump(21)"
+stations,host_type,String,0.0,4,"mall_parking(44), owned_lot(39), kirana(38), fuel_retailer(31)"
+stations,commissioned_date,Date,0.0,,
+stations,decommissioned_date,Date,99.34,,
+stations,expansion_wave,String,0.0,3,"Launch(92), Wave1_2024H2(30), Wave2_2025H1(30)"
+stations,charger_generation,String,0.0,3,"Gen2(64), Gen1(51), Gen3(37)"
+stations,slots_2w,Int64,0.0,3,min 8 | median 12 | max 16
+stations,slots_3w,Int64,0.0,3,min 0 | median 0 | max 6
+stations,inventory_target_2w,Int64,0.0,40,min 6 | median 21 | max 46
+stations,inventory_target_3w,Int64,0.0,5,min 0 | median 0 | max 8
+stations,monthly_rent_inr,Int64,0.0,150,min 9054 | median 1.69e+04 | max 3.572e+04
+stations,monthly_maintenance_inr,Int64,0.0,145,min 4503 | median 5890 | max 7497
+stations,grid_tariff_inr_kwh,Float64,0.0,114,min 7.5 | median 9.215 | max 11.7
+stations,connectivity_tier,String,0.0,3,"good(100), fair(29), poor(23)"
+stations,firmware_version,String,0.0,2,"v3.2.1(91), v3.2.0(61)"
+stations,firmware_updated_date,Date,0.0,,
+stations,competitor_within_1_5km_since,Date,93.42,,
+city_daily_context,city,String,0.0,6,"Bengaluru(547), Delhi NCR(547), Hyderabad(547), Pune(547)"
+city_daily_context,date,Date,0.0,,
+city_daily_context,max_temp_c,Float64,0.0,402,min 6.7 | median 23.9 | max 48.9
+city_daily_context,min_temp_c,Float64,0.0,194,min 1 | median 10.1 | max 21.2
+city_daily_context,rainfall_mm,Float64,0.0,407,min 0 | median 0.4 | max 235.3
+city_daily_context,heat_alert,Boolean,0.0,,
+city_daily_context,flood_disruption,Boolean,0.0,,
+city_daily_context,festival_or_event,String,96.65,6,"None(3172), Big Sale(60), Diwali week(30), Holi(12)"
+city_daily_context,is_public_holiday,Boolean,0.0,,
+city_daily_context,grid_outage_hours,Float64,0.0,15,min 0 | median 0.1 | max 1.5
+city_daily_context,competitor_promo_active,Boolean,0.0,,
+city_daily_context,ecommerce_sale_event,Boolean,0.0,,
+fleet_partners,partner_id,String,0.0,12,"FP-01(1), FP-02(1), FP-03(1), FP-04(1)"
+fleet_partners,partner_name,String,0.0,12,"FeastFly(1), ParcelNest(1), ZipDrop(1), CargoTuk(1)"
+fleet_partners,partner_segment,String,0.0,5,"food_delivery(3), ecom_logistics(3), quick_commerce(2), cargo_3w(2)"
+fleet_partners,vehicle_class,String,0.0,3,"2W(9), 3W(2), mixed(1)"
+fleet_partners,contract_type,String,0.0,2,"pay_per_swap(8), volume_tiered(4)"
+fleet_partners,contract_start_date,Date,0.0,,
+fleet_partners,discount_pct,Float64,0.0,9,min 5 | median 9.5 | max 15
+fleet_partners,amendment_date,Date,91.67,,
+fleet_partners,discount_pct_after_amendment,Float64,91.67,1,min 28 | median 28 | max 28
+fleet_partners,peak_surcharge_billable,String,0.0,2,"Y(10), N(2)"
+fleet_partners,payment_terms_days,Int64,0.0,3,min 15 | median 30 | max 45
+fleet_partners,cities_active,String,0.0,11,"BLR|DEL|HYD|PUN|MUM|JAI(2), BLR|DEL|HYD|MUM(1), DEL|HYD|JAI(1), BLR|PUN|MUM(1)"

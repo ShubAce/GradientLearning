@@ -1,0 +1,7 @@
+city,raw_exact_match,clean,variants_absorbed,pct_undercount_if_raw
+Bengaluru,4175,4310,"'BLR', 'Bangalore', 'bengaluru '",3.23
+Delhi NCR,3783,3886,"'Delhi', 'Gurgaon', 'New Delhi'",2.72
+Hyderabad,3396,3485,"'HYD', 'Hyd', 'hyderabad'",2.62
+Pune,2843,2929,"'PUN', 'pune'",3.02
+Mumbai,2772,2874,"'Bombay', 'MUM'",3.68
+Jaipur,2446,2516,"'JAI', 'jaipur'",2.86

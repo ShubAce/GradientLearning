@@ -1,0 +1,10 @@
+relationship,child_rows_with_key,matched,match_%
+swap_events.rider_id -> riders,3877013,3877013,100.0
+swap_events.station_id -> stations,3877013,3877013,100.0
+swap_events.battery_in_id -> batteries,3848731,3848731,100.0
+swap_events.battery_out_id -> batteries,3645809,3645809,100.0
+riders.partner_id -> fleet_partners,12372,12372,100.0
+support_tickets.rider_id -> riders,44000,44000,100.0
+support_tickets.station_id -> stations,41773,41773,100.0
+support_tickets.battery_id -> batteries,30765,30765,100.0
+station_hourly_status.station_id -> stations,1487712,1487712,100.0

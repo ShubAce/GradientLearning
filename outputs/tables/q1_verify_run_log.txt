@@ -1,0 +1,721 @@
+[A] monthly panel
+shape: (18, 9)
+┌────────────┬────────┬────────┬───────┬───┬───────┬────────┬────────┬──────────┐
+│ month      ┆ att    ┆ sw     ┆ fail% ┆ … ┆ cm1ps ┆ cm2ps  ┆ riders ┆ stations │
+│ ---        ┆ ---    ┆ ---    ┆ ---   ┆   ┆ ---   ┆ ---    ┆ ---    ┆ ---      │
+│ date       ┆ u32    ┆ u32    ┆ f64   ┆   ┆ f64   ┆ f64    ┆ u32    ┆ u32      │
+╞════════════╪════════╪════════╪═══════╪═══╪═══════╪════════╪════════╪══════════╡
+│ 2024-01-01 ┆ 108278 ┆ 103508 ┆ 4.0   ┆ … ┆ 0.09  ┆ -20.29 ┆ 4179   ┆ 90       │
+│ 2024-02-01 ┆ 109271 ┆ 104437 ┆ 4.01  ┆ … ┆ 0.21  ┆ -19.98 ┆ 4441   ┆ 90       │
+│ 2024-03-01 ┆ 121487 ┆ 116148 ┆ 3.95  ┆ … ┆ 0.49  ┆ -17.67 ┆ 4738   ┆ 90       │
+│ 2024-04-01 ┆ 128991 ┆ 120117 ┆ 6.48  ┆ … ┆ 0.62  ┆ -16.93 ┆ 5075   ┆ 90       │
+│ 2024-05-01 ┆ 143189 ┆ 125454 ┆ 11.93 ┆ … ┆ 0.92  ┆ -15.89 ┆ 5477   ┆ 90       │
+│ …          ┆ …      ┆ …      ┆ …     ┆ … ┆ …     ┆ …      ┆ …      ┆ …        │
+│ 2025-02-01 ┆ 264060 ┆ 252750 ┆ 3.85  ┆ … ┆ -7.47 ┆ -19.18 ┆ 10162  ┆ 129      │
+│ 2025-03-01 ┆ 299730 ┆ 286630 ┆ 3.93  ┆ … ┆ -6.83 ┆ -17.94 ┆ 10545  ┆ 141      │
+│ 2025-04-01 ┆ 308847 ┆ 289261 ┆ 5.89  ┆ … ┆ -6.25 ┆ -18.18 ┆ 10905  ┆ 150      │
+│ 2025-05-01 ┆ 337373 ┆ 303748 ┆ 9.54  ┆ … ┆ -5.42 ┆ -17.11 ┆ 11621  ┆ 150      │
+│ 2025-06-01 ┆ 331719 ┆ 303196 ┆ 8.16  ┆ … ┆ -5.04 ┆ -16.72 ┆ 11999  ┆ 149      │
+└────────────┴────────┴────────┴───────┴───┴───────┴────────┴────────┴──────────┘
+  total attempts 3,814,982  completed 3,586,675
+
+[A] Headline / finding 1
+  H1 attempts x                                                  2.4032
+  H1 swaps x                                                     2.4287
+  H1 revenue x                                                   2.6267
+  H1 failures x                                                  2.0668
+  H1 avg monthly active riders x                                 2.1822
+  H1-24 failure rate %                                           7.0426
+  H1-25 failure rate %                                           6.0566
+  H1-24 cm1/swap                                                 0.6361
+  H1-24 cm2/swap                                                 -17.4278
+  H1-24 wear/swap                                                37.6812
+  H1-24 fixed/swap                                               18.0639
+  H1-24 total cm2 per month (M)                                  -2.0348
+  Jul-Aug-24 cm1/swap                                            6.7490
+  Jul-Aug-24 cm2/swap                                            -7.1487
+  Jul-Aug-24 wear/swap                                           37.5257
+  Jul-Aug-24 fixed/swap                                          13.8977
+  Jul-Aug-24 total cm2 per month (M)                             -1.1091
+  H1-25 cm1/swap                                                 -6.3916
+  H1-25 cm2/swap                                                 -17.8713
+  H1-25 wear/swap                                                53.0200
+  H1-25 fixed/swap                                               11.4797
+  H1-25 total cm2 per month (M)                                  -5.0678
+  Q2-24 cm1/swap                                                 0.9490
+  Q2-24 cm2/swap                                                 -15.8587
+  Q2-24 wear/swap                                                37.6276
+  Q2-24 fixed/swap                                               16.8077
+  Q2-24 total cm2 per month (M)                                  -1.9900
+  Q2-25 cm1/swap                                                 -5.5587
+  Q2-25 cm2/swap                                                 -17.3223
+  Q2-25 wear/swap                                                52.9260
+  Q2-25 fixed/swap                                               11.7636
+  Q2-25 total cm2 per month (M)                                  -5.1748
+  Jan-24 -> Jun-25 swaps x                                       2.9292
+  Jan-24 -> Jun-25 revenue x                                     3.1765
+  Jan-24 revenue (M)                                             6.1988
+  Jun-25 revenue (M)                                             19.6908
+  Jan-24 active stations                                         90.0000
+  Jun-25 active stations                                         149.0000
+  Index Jun-25 swaps (H1-24 avg=100)                             259.6805
+  Index Jun-25 revenue                                           281.6164
+  Index Jun-25 riders                                            242.1024
+
+[B] growth multiples (failures vs swaps) and failure rates
+  Jan-24->Jun-25: failures x6.257  swaps x2.929  rate 4.00% -> 8.16%
+  Jan-24->Jun-25 failures x                                      6.2568
+  Jan-24->Jun-25 swaps x                                         2.9292
+  Jan-24 fail rate %                                             3.9962
+  Jun-25 fail rate %                                             8.1614
+  Q1-24->Q1-25: failures x2.426  swaps x2.485  rate 3.98% -> 3.89%
+  Q1-24->Q1-25 failures x                                        2.4265
+  Q1-24->Q1-25 swaps x                                           2.4845
+  Q1-24 fail rate %                                              3.9816
+  Q1-25 fail rate %                                              3.8922
+  Q2-24->Q2-25: failures x1.945  swaps x2.381  rate 9.52% -> 7.92%
+  Q2-24->Q2-25 failures x                                        1.9449
+  Q2-24->Q2-25 swaps x                                           2.3807
+  Q2-24 fail rate %                                              9.5249
+  Q2-25 fail rate %                                              7.9192
+  H1-24->H1-25: failures x2.067  swaps x2.429  rate 7.04% -> 6.06%
+  H1-24->H1-25 failures x                                        2.0668
+  H1-24->H1-25 swaps x                                           2.4287
+  H1-24 fail rate %                                              7.0426
+  H1-25 fail rate %                                              6.0566
+  Jun-24->Jun-25: failures x1.883  swaps x2.317  rate 9.85% -> 8.16%
+  Jun-24->Jun-25 failures x                                      1.8835
+  Jun-24->Jun-25 swaps x                                         2.3166
+  Jun-24 fail rate %                                             9.8533
+  Jun-25 fail rate %                                             8.1614
+  May-24 fail rate %                                             11.9290
+  May-25 fail rate %                                             9.5408
+  May-24 stockout % of attempts                                  7.8162
+  May-24 abandoned % of attempts                                 3.8076
+  Jul-Mar months fail rate range min %                           3.8178
+  Jul-Mar months fail rate range max %                           4.0056
+  System error rate, all months min %                            0.2724
+  System error rate, all months max %                            0.3164
+  Cancel rate, all months min %                                  0.3946
+  Cancel rate, all months max %                                  0.4567
+
+[C] decomposition and Launch panel
+  Q1 network rate 2024 %                                         3.9816
+  Q1 network rate 2025 %                                         3.8922
+  Q1 within-Launch term pp                                       -0.0728
+  Q1 new-station mix term pp                                     -0.0166
+  Q1-25 new-station share of attempts %                          25.6524
+  Q1-25 new-station fail rate %                                  3.9170
+  Q1-25 Launch fail rate %                                       3.8837
+  Q1 network change pp, paired-cluster CI lo                     -0.1690
+  Q1 network change pp, paired-cluster CI hi                     -0.0113
+  Q1 network change pp, unpaired CI lo                           -0.1805
+  Q1 network change pp, unpaired CI hi                           -0.0004
+  Q1 Launch pooled change pp                                     -0.0979
+  Q1 Launch pooled change CI lo                                  -0.1794
+  Q1 Launch pooled change CI hi                                  -0.0188
+  Q1 Launch median station change pp                             -0.1112
+  Q1 Launch stations worse (n of 90)                             33
+  Q1 Launch Wilcoxon p                                           0.0396
+  Q1 Launch attempts growth %                                    84.5447
+  Q1 Spearman(demand growth, fail change) rho                    -0.0631
+  Q1 Spearman p                                                  0.5544
+  Q2 network rate 2024 %                                         9.5249
+  Q2 network rate 2025 %                                         7.9192
+  Q2 within-Launch term pp                                       0.0191
+  Q2 new-station mix term pp                                     -1.6248
+  Q2-25 new-station share of attempts %                          36.5584
+  Q2-25 new-station fail rate %                                  5.0806
+  Q2-25 Launch fail rate %                                       9.5550
+  Q2 network change pp, paired-cluster CI lo                     -2.0885
+  Q2 network change pp, paired-cluster CI hi                     -1.1444
+  Q2 network change pp, unpaired CI lo                           -2.9809
+  Q2 network change pp, unpaired CI hi                           -0.2278
+  Q2 Launch pooled change pp                                     0.0300
+  Q2 Launch pooled change CI lo                                  -0.2102
+  Q2 Launch pooled change CI hi                                  0.2635
+  Q2 Launch median station change pp                             -0.1215
+  Q2 Launch stations worse (n of 90)                             41
+  Q2 Launch Wilcoxon p                                           0.0449
+  Q2 Launch attempts growth %                                    48.4045
+  Q2 Spearman(demand growth, fail change) rho                    -0.0065
+  Q2 Spearman p                                                  0.9513
+  May-24 Launch fail rate %                                      11.9290
+  May-25 New fail rate %                                         5.5554
+  May-25 Launch fail rate %                                      11.8912
+
+[D] Q2 failure by group x generation
+  Q1-24 Launch Gen1 fail rate % (n=51)                           3.9096
+  Q1-24 Launch Gen2 fail rate % (n=39)                           4.0789
+  Q1-25 Launch Gen1 fail rate % (n=51)                           3.8527
+  Q1-25 Launch Gen2 fail rate % (n=39)                           3.9302
+  Q1-25 New Gen2 fail rate % (n=23)                              3.9603
+  Q1-25 New Gen3 fail rate % (n=28)                              3.8537
+  Q2-24 Launch Gen1 fail rate % (n=51)                           12.6435
+  Q2-24 Launch Gen2 fail rate % (n=39)                           5.2524
+  Q2-25 Launch Gen1 fail rate % (n=51)                           12.4086
+  Q2-25 Launch Gen2 fail rate % (n=39)                           5.2315
+  Q2-25 New Gen2 fail rate % (n=23)                              5.8719
+  Q2-25 New Gen3 fail rate % (n=37)                              4.6935
+  Q2-25 Launch attempts per slot-day (days with activity)        5.0428
+  Q2-25 Launch attempts per station-day                          75.7534
+  Q2-25 New attempts per slot-day (days with activity)           4.8249
+  Q2-25 New attempts per station-day                             67.5839
+  Q2-25 Launch attempts per slot-day (calendar active days)      5.0428
+  Q2-25 New attempts per slot-day (calendar active days)         4.8239
+  Q2-25 Gen1 stations                                            51
+  Q2-25 Gen1 share of stations %                                 34.0000
+  Q2-25 Gen1 share of attempts %                                 38.2173
+  Q2-25 Gen1 failures                                            46376
+  Q2-25 network failures                                         77445
+  Q2-25 Gen1 share of failures %                                 59.8825
+  Q2-25 hot-city Gen1 stations                                   36
+  Q2-25 hot-city Gen1 share of failures %                        52.5831
+  Q2-25 hot-city Gen1 fail rate %                                15.2007
+                                      n     att   rate
+city      charger_generation grp                      
+Bengaluru Gen1               Launch   9   64858   4.79
+          Gen2               Launch  11   65976   4.31
+                             New      5   24939   4.06
+          Gen3               New      7   36842   4.08
+Delhi NCR Gen1               Launch  13   95355  16.64
+          Gen2               Launch   5   33689   8.46
+                             New      5   18453   8.42
+          Gen3               New      7   54348   5.30
+Hyderabad Gen1               Launch  13  101066  12.88
+          Gen2               Launch   3   18937   7.21
+                             New      3   17463   7.23
+          Gen3               New      7   50021   4.66
+Jaipur    Gen1               Launch  10   71482  16.57
+          Gen2               New      3   14091   8.60
+          Gen3               New      5   39403   5.25
+Mumbai    Gen1               Launch   2   14048   4.03
+          Gen2               Launch  11   68430   4.07
+                             New      4   27623   3.91
+          Gen3               New      5   23752   4.00
+Pune      Gen1               Launch   4   26933   7.36
+          Gen2               Launch   9   59646   5.13
+                             New      3   14854   5.21
+          Gen3               New      6   35730   4.30
+
+[D] Gen1 vs Gen2 load and capacity, same city (Launch stations)
+Q2-24
+                                 n  att_per_slot_day  att_per_station_day  slots  inv_per_slot  fail%
+city      charger_generation                                                                         
+Bengaluru Gen1                 9.0              3.26                48.49  14.89          1.74   4.90
+          Gen2                11.0              3.45                45.20  13.09          2.17   4.44
+Delhi NCR Gen1                13.0              3.15                48.04  15.23          1.60  16.35
+          Gen2                 5.0              4.22                49.00  11.60          1.61   8.19
+Hyderabad Gen1                13.0              3.20                52.61  16.46          1.57  13.31
+          Gen2                 3.0              3.61                50.49  14.00          1.76   7.53
+Jaipur    Gen1                10.0              3.99                59.05  14.80          1.89  17.08
+Mumbai    Gen1                 2.0              3.40                54.39  16.00          1.97   4.22
+          Gen2                11.0              3.28                50.08  15.27          1.53   4.00
+Pune      Gen1                 4.0              3.31                52.88  16.00          2.35   7.51
+          Gen2                 9.0              3.29                54.87  16.67          1.72   5.30
+Q2-25
+                                 n  att_per_slot_day  att_per_station_day  slots  inv_per_slot  fail%
+city      charger_generation                                                                         
+Bengaluru Gen1                 9.0              5.32                79.19  14.89          1.74   4.79
+          Gen2                11.0              5.03                65.91  13.09          2.17   4.31
+Delhi NCR Gen1                13.0              5.29                80.60  15.23          1.60  16.64
+          Gen2                 5.0              6.38                74.04  11.60          1.61   8.46
+Hyderabad Gen1                13.0              5.19                85.43  16.46          1.57  12.88
+          Gen2                 3.0              4.95                69.37  14.00          1.76   7.21
+Jaipur    Gen1                10.0              5.31                78.55  14.80          1.89  16.57
+Mumbai    Gen1                 2.0              4.82                77.19  16.00          1.97   4.03
+          Gen2                11.0              4.48                68.36  15.27          1.53   4.07
+Pune      Gen1                 4.0              4.62                73.99  16.00          2.35   7.36
+          Gen2                 9.0              4.37                72.83  16.67          1.72   5.13
+  What-if Gen1->same-city Gen2: avoided failures Q2-25           20,177
+  What-if network Q2-25 rate after %                             5.8560
+
+[D] demand deciles, Q2-25 (attempts per day with activity)
+         n        att          fail         rate      
+grp Launch New Launch    New Launch   New Launch   New
+dec                                                   
+1        4  11  13132  35787    992  2005   7.55  5.60
+2        5  10  19535  39562   1604  1876   8.21  4.74
+3        7   8  32535  33206   3092  2115   9.50  6.37
+4        9   6  48065  32671   3913  1843   8.14  5.64
+5       11   4  66612  23443   5588  1243   8.39  5.30
+6       12   3  78593  19351   5953   919   7.57  4.75
+7       11   4  78838  27821   6904  1459   8.76  5.24
+8       12   3  92382  23310   9048   933   9.79  4.00
+9       11   4  97656  34109  12204  1534  12.50  4.50
+10       8   7  93072  88259   9983  4237  10.73  4.80
+  Q2-25 D9 Launch fail rate %                                    12.4969
+  Q2-25 D9 New fail rate %                                       4.4973
+  Q2-25 D10 Launch fail rate %                                   10.7261
+  Q2-25 D10 New fail rate %                                      4.8006
+  Q2-25 new-station share, deciles 1-3 min                       0.5333
+  Q2-25 new-station share, deciles 1-3 max                       0.7333
+  Q2-25 Spearman(decile demand, decile rate)                     0.7091
+          a24     a25    f24    f25    r24    r25   chg  growth
+quint                                                          
+1       60123   83836   5274   7761   8.77   9.26  0.49   39.44
+2       75411  109398   6866  10079   9.10   9.21  0.11   45.07
+3       83363  119203   8253  11296   9.90   9.48 -0.42   42.99
+4       91378  129459   6829   9766   7.47   7.54  0.07   41.67
+5      107785  178524  12598  20379  11.69  11.42 -0.27   65.63
+  Launch busiest 2024 quintile Q2 rate 2024 %                    11.6881
+  Launch busiest 2024 quintile Q2 rate 2025 %                    11.4153
+  Launch busiest quintile attempt growth %                       65.6297
+  Launch quintiles max |change| pp                               0.4853
+
+[E] queue wait by month and event type (minutes)
+shape: (18, 7)
+┌────────────┬──────────────┬──────────────┬─────────────┬─────────────┬─────────────┬─────────────┐
+│ month      ┆ mean_abandon ┆ mean_failed_ ┆ mean_swap_c ┆ p90_abandon ┆ p90_failed_ ┆ p90_swap_co │
+│ ---        ┆ ed_queue     ┆ no_charged_b ┆ ompleted    ┆ ed_queue    ┆ no_charged_ ┆ mpleted     │
+│ date       ┆ ---          ┆ attery       ┆ ---         ┆ ---         ┆ battery     ┆ ---         │
+│            ┆ f64          ┆ ---          ┆ f64         ┆ f64         ┆ ---         ┆ f64         │
+│            ┆              ┆ f64          ┆             ┆             ┆ f64         ┆             │
+╞════════════╪══════════════╪══════════════╪═════════════╪═════════════╪═════════════╪═════════════╡
+│ 2024-01-01 ┆ 11.714819    ┆ 0.485011     ┆ 4.048791    ┆ 18.15       ┆ 0.883333    ┆ 7.066667    │
+│ 2024-02-01 ┆ 11.704129    ┆ 0.494425     ┆ 4.069639    ┆ 18.15       ┆ 0.9         ┆ 7.1         │
+│ 2024-03-01 ┆ 11.570392    ┆ 0.481594     ┆ 4.050497    ┆ 17.85       ┆ 0.883333    ┆ 7.066667    │
+│ 2024-04-01 ┆ 11.729789    ┆ 0.492159     ┆ 4.068789    ┆ 18.183333   ┆ 0.883333    ┆ 7.066667    │
+│ 2024-05-01 ┆ 11.759119    ┆ 0.490824     ┆ 4.056743    ┆ 18.383333   ┆ 0.883333    ┆ 7.066667    │
+│ …          ┆ …            ┆ …            ┆ …           ┆ …           ┆ …           ┆ …           │
+│ 2025-02-01 ┆ 11.760885    ┆ 0.489293     ┆ 4.07013     ┆ 18.3        ┆ 0.883333    ┆ 7.083333    │
+│ 2025-03-01 ┆ 11.812976    ┆ 0.489428     ┆ 4.069059    ┆ 18.35       ┆ 0.9         ┆ 7.083333    │
+│ 2025-04-01 ┆ 11.726358    ┆ 0.495089     ┆ 4.062036    ┆ 18.283333   ┆ 0.9         ┆ 7.066667    │
+│ 2025-05-01 ┆ 11.720636    ┆ 0.493911     ┆ 4.058548    ┆ 18.016667   ┆ 0.9         ┆ 7.066667    │
+│ 2025-06-01 ┆ 11.673614    ┆ 0.493054     ┆ 4.060657    ┆ 18.0        ┆ 0.9         ┆ 7.05        │
+└────────────┴──────────────┴──────────────┴─────────────┴─────────────┴─────────────┴─────────────┘
+  Completed wait mean, min over months                           4.0488
+  Completed wait mean, max over months                           4.0701
+  Completed wait p90, min over months                            7.0500
+  Completed wait p90, max over months                            7.1000
+shape: (2, 3)
+┌──────┬──────────┬──────────┐
+│ yr   ┆ mean     ┆ p90      │
+│ ---  ┆ ---      ┆ ---      │
+│ i32  ┆ f64      ┆ f64      │
+╞══════╪══════════╪══════════╡
+│ 2024 ┆ 4.060806 ┆ 7.066667 │
+│ 2025 ┆ 4.060387 ┆ 7.066667 │
+└──────┴──────────┴──────────┘
+May-25 wait by event type x generation x hot city:
+shape: (12, 5)
+┌─────────────────┬────────────────────┬───────┬───────────┬───────┐
+│ event_type      ┆ charger_generation ┆ hot   ┆ mean_min  ┆ n     │
+│ ---             ┆ ---                ┆ ---   ┆ ---       ┆ ---   │
+│ str             ┆ str                ┆ bool  ┆ f64       ┆ u32   │
+╞═════════════════╪════════════════════╪═══════╪═══════════╪═══════╡
+│ abandoned_queue ┆ Gen1               ┆ false ┆ 11.776835 ┆ 813   │
+│ abandoned_queue ┆ Gen1               ┆ true  ┆ 11.80808  ┆ 5454  │
+│ abandoned_queue ┆ Gen2               ┆ false ┆ 11.752761 ┆ 1485  │
+│ abandoned_queue ┆ Gen2               ┆ true  ┆ 11.413123 ┆ 1077  │
+│ abandoned_queue ┆ Gen3               ┆ false ┆ 11.442471 ┆ 487   │
+│ …               ┆ …                  ┆ …     ┆ …         ┆ …     │
+│ swap_completed  ┆ Gen1               ┆ true  ┆ 4.056275  ┆ 74221 │
+│ swap_completed  ┆ Gen2               ┆ false ┆ 4.052678  ┆ 84638 │
+│ swap_completed  ┆ Gen2               ┆ true  ┆ 4.059537  ┆ 31274 │
+│ swap_completed  ┆ Gen3               ┆ false ┆ 4.087816  ┆ 33861 │
+│ swap_completed  ┆ Gen3               ┆ true  ┆ 4.060274  ┆ 46593 │
+└─────────────────┴────────────────────┴───────┴───────────┴───────┘
+  Completed wait mean by hour, min                               4.0485
+  Completed wait mean by hour, max                               4.0879
+
+[F] segment rows 600; check revenue vs monthly panel: 0.00
+vehicle_class  supplier_out
+2W             Amptek           31.88
+               Cellora          31.85
+               Kyron           103.88
+3W             Amptek           76.34
+               Cellora          76.19
+               Kyron           107.20
+dtype: float64
+  Ref wear Kyron 2W Rs/swap                                      103.8779
+  Ref wear Cellora 2W Rs/swap                                    31.8544
+  Ref wear Amptek 2W Rs/swap                                     31.8801
+  Ref wear Kyron 3W Rs/swap                                      107.1988
+  Ref wear Cellora 3W Rs/swap                                    76.1921
+  Kyron/Cellora 2W wear ratio                                    3.2610
+Kyron share of issued packs by month %: Jan-24=2.9, Feb-24=2.9, Mar-24=2.8, Apr-24=2.9, May-24=2.9, Jun-24=2.8, Jul-24=2.8, Aug-24=2.8, Sep-24=18.9, Oct-24=24.7, Nov-24=24.7, Dec-24=24.8, Jan-25=24.8, Feb-25=25.0, Mar-25=24.8, Apr-25=24.7, May-25=24.1, Jun-25=24.3
+  Kyron share Aug-24 %                                           2.7813
+  Kyron share Sep-24 %                                           18.8882
+  Kyron share Jun-25 %                                           24.3354
+  Kyron share of 2W issues, Jan-24 %                             0.0000
+
+[F] class-level bridges (Rs per swap)
+  H1-24 -> Jul-Aug-24: cm1 0.64 -> 6.75 (chg +6.11); residual +9.77e-15; fixed/swap 18.06 -> 13.90; vol 155,150/month
+      price                      +5.15  (+0.80 M/month)
+      discount(all partners)     +0.05  (+0.01 M/month)
+      pilot                      +0.00  (+0.00 M/month)
+      kWh/swap                   +0.71  (+0.11 M/month)
+      tariff                     +0.07  (+0.01 M/month)
+      Kyron share                +0.01  (+0.00 M/month)
+      wear within                +0.05  (+0.01 M/month)
+      class mix                  +0.07  (+0.01 M/month)
+  bridge H1-24->Jul-Aug-24 cm1 change                            6.1128
+  bridge H1-24->Jul-Aug-24 Kyron share effect                    0.0088
+  bridge H1-24->Jul-Aug-24 price effect                          5.1525
+  bridge H1-24->Jul-Aug-24 pilot effect                          0.0002
+  bridge H1-24->Jul-Aug-24 kWh effect                            0.7095
+  bridge H1-24->Jul-Aug-24 discount effect                       0.0496
+  bridge H1-24->Jul-Aug-24 Kyron effect M/month                  0.0014
+  bridge H1-24->Jul-Aug-24 cm2 start                             -17.4278
+  bridge H1-24->Jul-Aug-24 cm2 end                               -7.1487
+  Jul-Aug-24 -> H1-25: cm1 6.75 -> -6.39 (chg -13.14); residual -3.55e-15; fixed/swap 13.90 -> 11.48; vol 283,570/month
+      price                      +0.00  (+0.00 M/month)
+      discount(all partners)     -1.69  (-0.48 M/month)
+      pilot                      +1.71  (+0.48 M/month)
+      kWh/swap                   +2.53  (+0.72 M/month)
+      tariff                     -0.08  (-0.02 M/month)
+      Kyron share               -15.82  (-4.49 M/month)
+      wear within                -0.02  (-0.01 M/month)
+      class mix                  +0.23  (+0.07 M/month)
+  bridge Jul-Aug-24->H1-25 cm1 change                            -13.1406
+  bridge Jul-Aug-24->H1-25 Kyron share effect                    -15.8225
+  bridge Jul-Aug-24->H1-25 price effect                          0.0000
+  bridge Jul-Aug-24->H1-25 pilot effect                          1.7057
+  bridge Jul-Aug-24->H1-25 kWh effect                            2.5303
+  bridge Jul-Aug-24->H1-25 discount effect                       -1.6884
+  bridge Jul-Aug-24->H1-25 Kyron effect M/month                  -4.4868
+  bridge Jul-Aug-24->H1-25 cm2 start                             -7.1487
+  bridge Jul-Aug-24->H1-25 cm2 end                               -17.8713
+  H1-24 -> H1-25: cm1 0.64 -> -6.39 (chg -7.03); residual +6.22e-15; fixed/swap 18.06 -> 11.48; vol 283,570/month
+      price                      +5.12  (+1.45 M/month)
+      discount(all partners)     -1.64  (-0.46 M/month)
+      pilot                      +1.71  (+0.48 M/month)
+      kWh/swap                   +3.25  (+0.92 M/month)
+      tariff                     -0.02  (-0.01 M/month)
+      Kyron share               -15.81  (-4.48 M/month)
+      wear within                +0.03  (+0.01 M/month)
+      class mix                  +0.34  (+0.10 M/month)
+  bridge H1-24->H1-25 cm1 change                                 -7.0277
+  bridge H1-24->H1-25 Kyron share effect                         -15.8142
+  bridge H1-24->H1-25 price effect                               5.1220
+  bridge H1-24->H1-25 pilot effect                               1.7059
+  bridge H1-24->H1-25 kWh effect                                 3.2475
+  bridge H1-24->H1-25 discount effect                            -1.6387
+  bridge H1-24->H1-25 Kyron effect M/month                       -4.4844
+  bridge H1-24->H1-25 cm2 start                                  -17.4278
+  bridge H1-24->H1-25 cm2 end                                    -17.8713
+  Q2-24 -> Q2-25: cm1 0.95 -> -5.56 (chg -6.51); residual -1.78e-15; fixed/swap 16.81 -> 11.76; vol 298,735/month
+      price                      +5.13  (+1.53 M/month)
+      discount(all partners)     -1.63  (-0.49 M/month)
+      pilot                      +1.73  (+0.52 M/month)
+      kWh/swap                   +3.68  (+1.10 M/month)
+      tariff                     -0.04  (-0.01 M/month)
+      Kyron share               -15.61  (-4.66 M/month)
+      wear within                -0.02  (-0.01 M/month)
+      class mix                  +0.25  (+0.08 M/month)
+  bridge Q2-24->Q2-25 cm1 change                                 -6.5077
+  bridge Q2-24->Q2-25 Kyron share effect                         -15.6096
+  bridge Q2-24->Q2-25 price effect                               5.1311
+  bridge Q2-24->Q2-25 pilot effect                               1.7292
+  bridge Q2-24->Q2-25 kWh effect                                 3.6756
+  bridge Q2-24->Q2-25 discount effect                            -1.6300
+  bridge Q2-24->Q2-25 Kyron effect M/month                       -4.6631
+  bridge Q2-24->Q2-25 cm2 start                                  -15.8587
+  bridge Q2-24->Q2-25 cm2 end                                    -17.3223
+  ZipDrop discount rate Jul-Aug-24 %                             12.0000
+  ZipDrop discount rate H1-25 %                                  28.0000
+  ZipDrop share of H1-25 swaps %                                 15.4222
+  ZipDrop share of partner-billed H1-25 swaps %                  23.4197
+  ZipDrop amendment cost Rs/swap (network, H1-25)                -1.6668
+  ZipDrop amendment cost M/month (H1-25)                         -0.4727
+  Pilot net adjustment Rs per pilot-city swap                    4.9705
+  Pilot net adjustment M/month (H1-25)                           0.4838
+  Kyron 2W excess wear vs Cellora M/month (H1-25)                -4.4843
+  Kyron 2W swaps per month (H1-25)                               62,291
+  Kyron 3W excess wear vs Cellora M/month (H1-25)                -0.2314
+  Kyron 3W swaps per month (H1-25)                               7,479
+
+[G] counterfactual
+  H1-24 cm1 actual                                               0.6361
+  H1-24 cm1 Kyron-at-Cellora                                     1.5321
+  H1-24 cm2 Kyron-at-Cellora                                     -16.5319
+  H1-24 uplift M/month                                           0.1046
+  Jul-Aug-24 cm1 actual                                          6.7490
+  Jul-Aug-24 cm1 Kyron-at-Cellora                                7.6097
+  Jul-Aug-24 cm2 Kyron-at-Cellora                                -6.2880
+  Jul-Aug-24 uplift M/month                                      0.1335
+  H1-25 cm1 actual                                               -6.3916
+  H1-25 cm1 Kyron-at-Cellora                                     10.2380
+  H1-25 cm2 Kyron-at-Cellora                                     -1.2417
+  H1-25 uplift M/month                                           4.7156
+  Q2-25 cm1 actual                                               -5.5587
+  Q2-25 cm1 Kyron-at-Cellora                                     10.8956
+  Q2-25 cm2 Kyron-at-Cellora                                     -0.8679
+  Q2-25 uplift M/month                                           4.9155
+  Jun-25 cm1 actual                                              -5.0408
+  Jun-25 cm1 Kyron-at-Cellora                                    11.4106
+  Jun-25 cm2 Kyron-at-Cellora                                    -0.2660
+  Jun-25 uplift M/month                                          4.9880
+
+[H] issued-pack rows 105,920; unmatched 0
+  Sensitivity base vs event wear, max |diff| Rs/month            0.0000
+  EOL70/s0 H1-25 cm1                                             -6.3916
+  EOL70/s0 H1-25 cm2                                             -17.8713
+  EOL70/s0 chg Jul-Aug-24 -> H1-25                               -13.1406
+  EOL70/s0 chg H1-24 -> H1-25                                    -7.0277
+  EOL70/s0 chg Q1-24 -> Q1-25 (no post-EOL issues)               -7.5913
+  EOL70/s20 H1-25 cm1                                            4.2124
+  EOL70/s20 H1-25 cm2                                            -7.2673
+  EOL70/s20 chg Jul-Aug-24 -> H1-25                              -10.0417
+  EOL70/s20 chg H1-24 -> H1-25                                   -3.9599
+  EOL70/s20 chg Q1-24 -> Q1-25 (no post-EOL issues)              -4.5151
+  EOL60/s0 H1-25 cm1                                             7.1391
+  EOL60/s0 H1-25 cm2                                             -4.3406
+  EOL60/s0 chg Jul-Aug-24 -> H1-25                               -9.1872
+  EOL60/s0 chg H1-24 -> H1-25                                    -3.1140
+  EOL60/s0 chg Q1-24 -> Q1-25 (no post-EOL issues)               -3.6666
+  EOL60/s20 H1-25 cm1                                            15.0369
+  EOL60/s20 H1-25 cm2                                            3.5572
+  EOL60/s20 chg Jul-Aug-24 -> H1-25                              -6.8790
+  EOL60/s20 chg H1-24 -> H1-25                                   -0.8290
+  EOL60/s20 chg Q1-24 -> Q1-25 (no post-EOL issues)              -1.3753
+
+[I] 2W health by month
+shape: (18, 9)
+┌────────────┬───────────┬──────────┬──────────┬───┬─────────┬────────┬──────────────┬─────────────┐
+│ month      ┆ soh       ┆ soc      ┆ kwh      ┆ … ┆ km_null ┆ n      ┆ soh_nonkyron ┆ km_nonkyron │
+│ ---        ┆ ---       ┆ ---      ┆ ---      ┆   ┆ ---     ┆ ---    ┆ ---          ┆ ---         │
+│ date       ┆ f32       ┆ f32      ┆ f32      ┆   ┆ u32     ┆ u32    ┆ f32          ┆ f32         │
+╞════════════╪═══════════╪══════════╪══════════╪═══╪═════════╪════════╪══════════════╪═════════════╡
+│ 2024-01-01 ┆ 98.861473 ┆ 9.311311 ┆ 2.068684 ┆ … ┆ 385     ┆ 91987  ┆ 98.861473    ┆ 70.507935   │
+│ 2024-02-01 ┆ 98.210724 ┆ 9.321275 ┆ 2.05502  ┆ … ┆ 365     ┆ 92729  ┆ 98.210724    ┆ 70.073006   │
+│ 2024-03-01 ┆ 97.507774 ┆ 9.319248 ┆ 2.040046 ┆ … ┆ 411     ┆ 103331 ┆ 97.507774    ┆ 69.554939   │
+│ 2024-04-01 ┆ 96.717873 ┆ 9.319369 ┆ 2.023319 ┆ … ┆ 425     ┆ 106618 ┆ 96.717873    ┆ 68.301353   │
+│ 2024-05-01 ┆ 95.760124 ┆ 9.34527  ┆ 2.000041 ┆ … ┆ 462     ┆ 111676 ┆ 95.760124    ┆ 65.448708   │
+│ …          ┆ …         ┆ …        ┆ …        ┆ … ┆ …       ┆ …      ┆ …            ┆ …           │
+│ 2025-02-01 ┆ 84.9412   ┆ 9.239059 ┆ 1.769044 ┆ … ┆ 928     ┆ 227335 ┆ 86.510376    ┆ 57.368382   │
+│ 2025-03-01 ┆ 82.879326 ┆ 9.260797 ┆ 1.724258 ┆ … ┆ 1060    ┆ 257834 ┆ 85.324242    ┆ 56.598389   │
+│ 2025-04-01 ┆ 80.615692 ┆ 9.243765 ┆ 1.675131 ┆ … ┆ 1024    ┆ 259628 ┆ 83.996597    ┆ 55.265408   │
+│ 2025-05-01 ┆ 78.106392 ┆ 9.249902 ┆ 1.623377 ┆ … ┆ 1097    ┆ 272141 ┆ 82.428154    ┆ 52.850433   │
+│ 2025-06-01 ┆ 75.35807  ┆ 9.263655 ┆ 1.571015 ┆ … ┆ 1068    ┆ 271711 ┆ 80.783836    ┆ 52.742622   │
+└────────────┴───────────┴──────────┴──────────┴───┴─────────┴────────┴──────────────┴─────────────┘
+  2W kWh/swap Jan-24                                             2.0687
+  2W kWh/swap Jun-25                                             1.5710
+  2W SoH in Jan-24                                               98.8615
+  2W SoH in Jun-25                                               75.3581
+  2W SoC in Jan-24                                               9.3113
+  2W SoC in Jun-25                                               9.2637
+  2W km Jan-24                                                   70.5079
+  2W km Jun-25                                                   47.9651
+  2W km change %                                                 -31.9720
+  2W non-Kyron SoH in Jun-25                                     80.7838
+  2W non-Kyron km Jun-25                                         52.7426
+  2W km null share overall %                                     0.4048
+
+[J1] Kyron packs issued after their recorded retirement date
+shape: (4, 6)
+┌──────────┬───────────────┬──────────────┬────────┬──────────────┬────────────┐
+│ supplier ┆ vehicle_class ┆ after_retire ┆ swaps  ┆ soh_out_mean ┆ last_date  │
+│ ---      ┆ ---           ┆ ---          ┆ ---    ┆ ---          ┆ ---        │
+│ str      ┆ str           ┆ bool         ┆ u32    ┆ f32          ┆ date       │
+╞══════════╪═══════════════╪══════════════╪════════╪══════════════╪════════════╡
+│ Kyron    ┆ 2W            ┆ false        ┆ 523462 ┆ 81.716995    ┆ 2025-06-15 │
+│ Kyron    ┆ 2W            ┆ true         ┆ 32903  ┆ 61.731911    ┆ 2025-06-30 │
+│ Kyron    ┆ 3W            ┆ false        ┆ 19382  ┆ 84.578896    ┆ 2025-06-15 │
+│ Kyron    ┆ 3W            ┆ true         ┆ 858    ┆ 69.066437    ┆ 2025-06-30 │
+└──────────┴───────────────┴──────────────┴────────┴──────────────┴────────────┘
+shape: (7, 7)
+┌──────────┬───────────────┬───────────────────┬──────┬────────────┬────────────┬───────────┐
+│ supplier ┆ vehicle_class ┆ retirement_reason ┆ len  ┆ rmin       ┆ rmax       ┆ soh_now   │
+│ ---      ┆ ---           ┆ ---               ┆ ---  ┆ ---        ┆ ---        ┆ ---       │
+│ str      ┆ str           ┆ str               ┆ u32  ┆ date       ┆ date       ┆ f64       │
+╞══════════╪═══════════════╪═══════════════════╪══════╪════════════╪════════════╪═══════════╡
+│ Amptek   ┆ 2W            ┆ null              ┆ 1098 ┆ null       ┆ null       ┆ 79.956648 │
+│ Amptek   ┆ 3W            ┆ null              ┆ 209  ┆ null       ┆ null       ┆ 86.513876 │
+│ Cellora  ┆ 2W            ┆ null              ┆ 3035 ┆ null       ┆ null       ┆ 79.970675 │
+│ Cellora  ┆ 3W            ┆ null              ┆ 520  ┆ null       ┆ null       ┆ 86.5225   │
+│ Kyron    ┆ 2W            ┆ end_of_life       ┆ 1385 ┆ 2025-06-15 ┆ 2025-06-15 ┆ 60.532274 │
+│ Kyron    ┆ 3W            ┆ null              ┆ 200  ┆ null       ┆ null       ┆ 84.7655   │
+│ Kyron    ┆ 3W            ┆ end_of_life       ┆ 53   ┆ 2025-06-15 ┆ 2025-06-15 ┆ 68.45283  │
+└──────────┴───────────────┴───────────────────┴──────┴────────────┴────────────┴───────────┘
+shape: (4, 4)
+┌─────────────┬───────────────┬─────────────┬───────────────┐
+│ after_jun15 ┆ vehicle_class ┆ kyron_share ┆ kyron_soh_out │
+│ ---         ┆ ---           ┆ ---         ┆ ---           │
+│ bool        ┆ str           ┆ f64         ┆ f32           │
+╞═════════════╪═══════════════╪═════════════╪═══════════════╡
+│ false       ┆ 2W            ┆ 0.240465    ┆ 64.271332     │
+│ true        ┆ 2W            ┆ 0.24198     ┆ 61.731911     │
+│ false       ┆ 3W            ┆ 0.26638     ┆ 82.490738     │
+│ true        ┆ 3W            ┆ 0.257066    ┆ 81.765007     │
+└─────────────┴───────────────┴─────────────┴───────────────┘
+[J1b] non-Kyron 2W packs: n=4133, current SoH mean 80.0, share <=80% 53.4%, share <=75% 0.0%
+
+[J2] Q2-25 service failures followed by a completed swap by the same rider
+  Q2-25 failures followed by own completed swap within 60 min %  5.3080
+  Q2-25 failures followed by own completed swap within 180 min % 11.5160
+  Q2-25 failures followed by own completed swap within 1440 min % 59.5406
+  Q2-25 failures never followed by a completed swap in Q2-25 %   2.0130
+  Q2-25 revenue per completed swap                               64.8886
+  Q2-25 failures x revenue/swap, Rs M (upper bound of lost revenue) 5.0253
+
+[K1] lifetime wear charged / purchase cost, by supplier x class
+shape: (6, 7)
+┌──────────┬───────────────┬───────┬─────────────┬───────────────┬───────────────────┬────────────┐
+│ supplier ┆ vehicle_class ┆ packs ┆ cycles_mean ┆ cycles_to_eol ┆ charged_over_cost ┆ cost_total │
+│ ---      ┆ ---           ┆ ---   ┆ ---         ┆ ---           ┆ ---               ┆ ---        │
+│ str      ┆ str           ┆ u32   ┆ f64         ┆ f64           ┆ f64               ┆ i64        │
+╞══════════╪═══════════════╪═══════╪═════════════╪═══════════════╪═══════════════════╪════════════╡
+│ Amptek   ┆ 2W            ┆ 1098  ┆ 643.064663  ┆ 1006.170935   ┆ 0.640755          ┆ 35130568   │
+│ Amptek   ┆ 3W            ┆ 209   ┆ 377.382775  ┆ 891.322658    ┆ 0.424779          ┆ 14174852   │
+│ Cellora  ┆ 2W            ┆ 3035  ┆ 643.150247  ┆ 1006.611987   ┆ 0.640557          ┆ 97069582   │
+│ Cellora  ┆ 3W            ┆ 520   ┆ 378.657692  ┆ 895.725403    ┆ 0.424541          ┆ 35337843   │
+│ Kyron    ┆ 2W            ┆ 1385  ┆ 401.707581  ┆ 308.900647    ┆ 1.304763          ┆ 44294633   │
+│ Kyron    ┆ 3W            ┆ 253   ┆ 381.379447  ┆ 744.487181    ┆ 0.601927          ┆ 17184000   │
+└──────────┴───────────────┴───────┴─────────────┴───────────────┴───────────────────┴────────────┘
+  Kyron 2W lifetime wear charged / purchase cost                 1.3048
+  Kyron 2W mean cycles issued                                    401.7076
+  Kyron 2W mean cycles to 70% EOL                                308.9006
+Kyron issues past 70% EOL by month (Jan-25 on):
+              pre   post  pct_post_eol
+month                                 
+2025-01-01  65894      0           0.0
+2025-02-01  63213      0           0.0
+2025-03-01  71164      0           0.0
+2025-04-01  66965   4340           6.1
+2025-05-01  21866  51391          70.2
+2025-06-01   7311  66473          90.1
+  Kyron issues past EOL Apr-Jun-25 (count)                       122,204
+  Kyron issues past EOL, May-25 %                                70.1517
+  Kyron issues past EOL, Jun-25 %                                90.0913
+  Jul-Aug-24 cm1 base (uncapped)                                 6.7490
+  Jul-Aug-24 cm1 (a) wear capped at EOL                          6.7490
+  Jul-Aug-24 cm1 (b) post-EOL at Cellora wear                    6.7490
+  Jul-Aug-24 post-EOL wear Rs per network swap                   0.0000
+  Jul-Aug-24 post-EOL wear M/month                               0.0000
+  Jul-Aug-24 cm2 (a) wear capped                                 -7.1487
+  H1-24 cm1 base (uncapped)                                      0.6361
+  H1-24 cm1 (a) wear capped at EOL                               0.6361
+  H1-24 cm1 (b) post-EOL at Cellora wear                         0.6361
+  H1-24 post-EOL wear Rs per network swap                        0.0000
+  H1-24 post-EOL wear M/month                                    0.0000
+  H1-24 cm2 (a) wear capped                                      -17.4278
+  H1-25 cm1 base (uncapped)                                      -6.3916
+  H1-25 cm1 (a) wear capped at EOL                               1.1882
+  H1-25 cm1 (b) post-EOL at Cellora wear                         -1.1267
+  H1-25 post-EOL wear Rs per network swap                        7.5797
+  H1-25 post-EOL wear M/month                                    2.1494
+  H1-25 cm2 (a) wear capped                                      -10.2915
+  Q2-24 cm1 base (uncapped)                                      0.9490
+  Q2-24 cm1 (a) wear capped at EOL                               0.9490
+  Q2-24 cm1 (b) post-EOL at Cellora wear                         0.9490
+  Q2-24 post-EOL wear Rs per network swap                        0.0000
+  Q2-24 post-EOL wear M/month                                    0.0000
+  Q2-24 cm2 (a) wear capped                                      -15.8587
+  Q2-25 cm1 base (uncapped)                                      -5.5587
+  Q2-25 cm1 (a) wear capped at EOL                               8.8312
+  Q2-25 cm1 (b) post-EOL at Cellora wear                         4.4366
+  Q2-25 post-EOL wear Rs per network swap                        14.3899
+  Q2-25 post-EOL wear M/month                                    4.2988
+  Q2-25 cm2 (a) wear capped                                      -2.9324
+  Jun-25 cm1 base (uncapped)                                     -5.0408
+  Jun-25 cm1 (a) wear capped at EOL                              18.0422
+  Jun-25 cm1 (b) post-EOL at Cellora wear                        10.9167
+  Jun-25 post-EOL wear Rs per network swap                       23.0830
+  Jun-25 post-EOL wear M/month                                   6.9987
+  Jun-25 cm2 (a) wear capped                                     6.3656
+  Kyron excess wear Rs/swap H1-25, base                          -16.6295
+  Kyron excess wear M/month H1-25, base                          -4.7156
+  Kyron excess-wear change Jul-Aug-24 -> H1-25, base             -15.7688
+  Kyron excess wear Rs/swap H1-25, (a) cap                       -9.0498
+  Kyron excess wear M/month H1-25, (a) cap                       -2.5663
+  Kyron excess-wear change Jul-Aug-24 -> H1-25, (a) cap          -8.1890
+  Kyron excess wear Rs/swap H1-25, (b) replacement               -11.3646
+  Kyron excess wear M/month H1-25, (b) replacement               -3.2227
+  Kyron excess-wear change Jul-Aug-24 -> H1-25, (b) replacement  -10.5039
+  Cellora 2W mean cycles to EOL                                  1006.6120
+  Kyron 2W lifetime shortfall vs Cellora life, Rs M (one-off)    30.7019
+  Kyron 2W total purchase cost, Rs M                             44.2946
+
+[K1b] windows with NO post-EOL issues (wear model internally consistent): Q1 same season, Oct-24..Mar-25
+  Q1-24 -> Q1-25: cm1 0.27 -> -7.32 (chg -7.59); fixed/swap 19.52 -> 11.16; cm2 -19.25 -> -18.48
+      price                      +5.11  (+1.37 M/month)
+      discount(all partners)     -1.65  (-0.44 M/month)
+      pilot                      +1.68  (+0.45 M/month)
+      kWh/swap                   +2.78  (+0.75 M/month)
+      tariff                     -0.01  (-0.00 M/month)
+      Kyron share               -16.04  (-4.31 M/month)
+      wear within                +0.09  (+0.02 M/month)
+      class mix                  +0.44  (+0.12 M/month)
+  bridge Q1-24->Q1-25 cm1 change                                 -7.5913
+  bridge Q1-24->Q1-25 cm1 end                                    -7.3186
+  bridge Q1-24->Q1-25 Kyron share effect                         -16.0420
+  bridge Q1-24->Q1-25 price effect                               5.1118
+  bridge Q1-24->Q1-25 Kyron effect M/month                       -4.3057
+  bridge Q1-24->Q1-25 cm2 end                                    -18.4823
+  Jul-Aug-24 -> Oct-24-Mar-25: cm1 6.75 -> -7.53 (chg -14.28); fixed/swap 13.90 -> 11.63; cm2 -7.15 -> -19.16
+      price                      +0.00  (+0.00 M/month)
+      discount(all partners)     -1.50  (-0.37 M/month)
+      pilot                      +1.69  (+0.42 M/month)
+      kWh/swap                   +1.29  (+0.32 M/month)
+      tariff                     -0.08  (-0.02 M/month)
+      Kyron share               -16.00  (-3.99 M/month)
+      wear within                +0.01  (+0.00 M/month)
+      class mix                  +0.30  (+0.07 M/month)
+  bridge Jul-Aug-24->Oct-24-Mar-25 cm1 change                    -14.2839
+  bridge Jul-Aug-24->Oct-24-Mar-25 cm1 end                       -7.5349
+  bridge Jul-Aug-24->Oct-24-Mar-25 Kyron share effect            -15.9971
+  bridge Jul-Aug-24->Oct-24-Mar-25 price effect                  0.0000
+  bridge Jul-Aug-24->Oct-24-Mar-25 Kyron effect M/month          -3.9875
+  bridge Jul-Aug-24->Oct-24-Mar-25 cm2 end                       -19.1637
+  Oct-24..Mar-25 post-EOL wear (should be 0)                     0.0000
+
+[K2] per-pack energy link: 2W kWh to recharge by returned-pack SoH band, H1-25 (association within one period)
+shape: (8, 5)
+┌──────────┬────────┬──────────┬───────────┬──────────┐
+│ soh_band ┆ n      ┆ kwh      ┆ km        ┆ soc_in   │
+│ ---      ┆ ---    ┆ ---      ┆ ---       ┆ ---      │
+│ f32      ┆ u32    ┆ f32      ┆ f32       ┆ f32      │
+╞══════════╪════════╪══════════╪═══════════╪══════════╡
+│ 55.0     ┆ 6828   ┆ 1.506511 ┆ 34.891182 ┆ 9.209125 │
+│ 60.0     ┆ 63817  ┆ 1.526051 ┆ 36.937614 ┆ 9.298035 │
+│ 65.0     ┆ 81027  ┆ 1.575441 ┆ 39.018387 ┆ 9.285997 │
+│ 70.0     ┆ 86720  ┆ 1.640539 ┆ 43.039604 ┆ 9.221678 │
+│ 75.0     ┆ 138010 ┆ 1.669723 ┆ 48.576797 ┆ 9.259233 │
+│ 80.0     ┆ 646653 ┆ 1.669269 ┆ 53.34692  ┆ 9.244314 │
+│ 85.0     ┆ 503981 ┆ 1.775539 ┆ 57.006443 ┆ 9.237215 │
+│ 90.0     ┆ 827    ┆ 1.814855 ┆ 58.930218 ┆ 9.469649 │
+└──────────┴────────┴──────────┴───────────┴──────────┘
+  H1-25 2W kWh per swap, lowest populated SoH band               1.5065
+  H1-25 2W kWh per swap, highest populated SoH band              1.7755
+  H1-25 2W km per swap, lowest populated SoH band                34.8912
+  H1-25 2W km per swap, highest populated SoH band               57.0064
+
+[K3] what riders pay per km (2W, completed swaps with valid km)
+  2W Rs per km Jan-24                                            0.7913
+  2W Rs per km Jun-25                                            1.2654
+  2W Rs per km change Jan-24 -> Jun-25 %                         59.9204
+  2W Rs per km H1-24 -> H1-25 change %                           42.3041
+
+[K4] early detectability: mean SoH of issued 2W packs by supplier, first months of Kyron use
+shape: (5, 4)
+┌────────────┬───────────┬───────────┬───────────┐
+│ month      ┆ Kyron     ┆ Cellora   ┆ Amptek    │
+│ ---        ┆ ---       ┆ ---       ┆ ---       │
+│ date       ┆ f32       ┆ f32       ┆ f32       │
+╞════════════╪═══════════╪═══════════╪═══════════╡
+│ 2024-09-01 ┆ 98.166412 ┆ 91.716866 ┆ 91.73053  │
+│ 2024-10-01 ┆ 95.622131 ┆ 90.782082 ┆ 90.810791 │
+│ 2024-11-01 ┆ 92.422333 ┆ 89.806816 ┆ 89.823143 │
+│ 2024-12-01 ┆ 88.965309 ┆ 88.758446 ┆ 88.773636 │
+│ 2025-01-01 ┆ 85.209419 ┆ 87.617493 ┆ 87.63221  │
+└────────────┴───────────┴───────────┴───────────┘
+  Kyron 2W issued SoH Sep-24                                     98.1664
+  Kyron 2W issued SoH Nov-24                                     92.4223
+  Cellora 2W issued SoH Sep-24                                   91.7169
+  Cellora 2W issued SoH Nov-24                                   89.8068
+
+[K5] Gen1 what-if with the same-city Gen3 (new-station) rate as the target, Q2-25
+              att   fail    avoid  avoid_g3  r_g3
+city                                             
+Bengaluru   64858   3104   353.88    456.30  4.08
+Delhi NCR   95355  15869  7816.99  10819.47  5.30
+Hyderabad  101066  13013  5716.26   8299.24  4.66
+Jaipur      71482  11841  5692.67   8087.57  5.25
+Mumbai      14048    566     0.29      4.13  4.00
+Pune        26933   1983   596.94    825.93  4.30
+  What-if Gen1->same-city Gen3: avoided failures Q2-25           28,493
+  What-if Gen1->same-city Gen3: network Q2-25 rate after %       5.0057
+
+[done] 358 numbers saved to outputs/tables/q1_verify_numbers.csv; runtime 1.1s

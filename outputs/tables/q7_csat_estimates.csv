@@ -1,0 +1,9 @@
+estimator,value,ci_low,ci_high
+naive mean of responders,3.5603179860881085,3.5424246439218283,3.581916197416363
+"IPW (logistic response model, resolved tickets)",3.5629473663625824,,
+post-stratified (speed decile x category x channel),3.5629349724235384,3.5433601364959104,3.5829511525826625
+scenario: all resolved+unresolved if unresolved scored 1,3.255050182926558,,
+scenario: all resolved+unresolved if unresolved scored 2,3.3751842081028154,,
+scenario: all resolved+unresolved if unresolved scored 3,3.495318233279072,,
+scenario: all resolved+unresolved if unresolved scored 4,3.6154522584553295,,
+scenario: all resolved+unresolved if unresolved scored 5,3.7355862836315867,,

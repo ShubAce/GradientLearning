@@ -1,0 +1,7 @@
+category,battery_range_health,vehicle_phrased,no_battery_stockout,long_queue,billing_wrong_amount,pricing_surcharge,app_tech,station_hw_system,competitor_switching,other_praise
+low_range,6551,0,0,0,0,0,0,0,0,0
+other,0,9361,0,0,0,0,0,0,0,0
+app_issue,0,0,0,0,0,0,3800,1917,0,0
+no_battery_available,0,0,11486,0,0,0,0,0,0,0
+long_queue,0,0,0,5648,0,0,0,0,0,0
+billing_dispute,0,0,0,0,1541,3076,0,0,0,0
